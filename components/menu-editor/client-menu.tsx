@@ -464,7 +464,13 @@ function ProductCard({
         aria-label={`${viewImageLabel}: ${translate(item.name, language)}`}
       >
         <div className="aspect-square w-full shrink-0 overflow-hidden bg-[#faf7f1]">
-          <img src={item.image || '/placeholder.jpg'} alt={translate(item.name, language)} className="h-full w-full object-cover object-center" />
+          <img
+            src={item.image || '/placeholder.jpg'}
+            alt={translate(item.name, language)}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover object-center"
+          />
         </div>
         <div className="flex min-w-0 flex-1 flex-col p-3 pb-2">
           <div className="flex flex-col gap-1">

@@ -1,3 +1,5 @@
+import rawProducts from './productos.json'
+
 export interface MenuItem {
   id: string
   name: string
@@ -5,6 +7,14 @@ export interface MenuItem {
   price: number
   image: string
   category: string
+}
+
+interface RawProduct {
+  nombre?: string
+  precio?: number
+  descripcion?: string
+  categoria_busqueda?: string
+  imagen_fuente?: string
 }
 
 export interface MenuCategory {
@@ -73,79 +83,60 @@ export const defaultMenuStyle: MenuStyle = {
   headerStyle: 'centered'
 }
 
-export const sampleMenuData: MenuCategory[] = [
-  {
-    id: '1',
-    name: 'Crepes Dulces',
-    items: [
-      {
-        id: '1-1',
-        name: 'Crepe de Nutella',
-        description: 'Crepe relleno de Nutella, fresas frescas y crema batida.',
-        price: 28000,
-        image: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=900&q=80',
-        category: '1'
-      },
-      {
-        id: '1-2',
-        name: 'Crepe de Frutas',
-        description: 'Mezcla de frutas de temporada, miel y helado de vainilla.',
-        price: 32000,
-        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80',
-        category: '1'
-      },
-      {
-        id: '1-3',
-        name: 'Crepe Banano Split',
-        description: 'Banano, chocolate, helado y nueces caramelizadas.',
-        price: 35000,
-        image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80',
-        category: '1'
-      }
-    ]
-  },
-  {
-    id: '2',
-    name: 'Waffles',
-    items: [
-      {
-        id: '2-1',
-        name: 'Waffle Clásico',
-        description: 'Waffle belga tradicional con mantequilla y miel de maple.',
-        price: 25000,
-        image: 'https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=900&q=80',
-        category: '2'
-      },
-      {
-        id: '2-2',
-        name: 'Waffle con Helado',
-        description: 'Waffle crujiente con dos bolas de helado y salsa de chocolate.',
-        price: 30000,
-        image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=80',
-        category: '2'
-      }
-    ]
-  },
-  {
-    id: '3',
-    name: 'Crepes Salados',
-    items: [
-      {
-        id: '3-1',
-        name: 'Crepe de Pollo',
-        description: 'Pollo desmechado, champiñones y salsa bechamel.',
-        price: 38000,
-        image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80',
-        category: '3'
-      },
-      {
-        id: '3-2',
-        name: 'Crepe Caprese',
-        description: 'Tomate fresco, mozzarella, albahaca y reducción de balsámico.',
-        price: 36000,
-        image: 'https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=80',
-        category: '3'
-      }
-    ]
-  }
-]
+export const sampleMenuData: MenuCategory[] = buildMenuData(rawProducts as RawProduct[])
+
+function buildMenuData(products: RawProduct[]): MenuCategory[] {
+  const categories = new Map<string, MenuCategory>()
+
+  products.forEach((product, index) => {
+    const categoryName = getCategoryName(product, index)
+    const categoryId = slugify(categoryName)
+
+    if (!categories.has(categoryId)) {
+      categories.set(categoryId, { id: categoryId, name: categoryName, items: [] })
+    }
+
+    const category = categories.get(categoryId)!
+    const name = product.nombre?.trim() || `Producto ${index + 1}`
+    const price = typeof product.precio === 'number' ? product.precio : 0
+
+    category.items.push({
+      id: `product-${index + 1}`,
+      name,
+      description: product.descripcion?.trim() || 'Producto disponible en el menú.',
+      price,
+      image: product.imagen_fuente || '/placeholder.jpg',
+      category: categoryId
+    })
+  })
+
+  return Array.from(categories.values())
+}
+
+function getCategoryName(product: RawProduct, index: number) {
+  if (product.categoria_busqueda) return toTitleCase(product.categoria_busqueda)
+
+  if (index <= 53) return 'Bebidas'
+  if (index <= 204) return 'Crepes y Platos Salados'
+  if (index <= 250) return 'Ensaladas'
+  if (index <= 353) return 'Postres, Waffles y Helados'
+  if (index <= 566) return 'Desayunos y Brunch'
+  return 'Menú Infantil y Adiciones'
+}
+
+function toTitleCase(value: string) {
+  return value
+    .replace(/[-_]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+}
+
+function slugify(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}

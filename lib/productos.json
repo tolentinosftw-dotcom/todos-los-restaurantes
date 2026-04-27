@@ -1,0 +1,4330 @@
+[{
+        "nombre": "Mora",
+        "precio": 7900,
+        "descripcion": "",
+        "categoria_busqueda": "jugos",
+        "busqueda_imagen": "jugo de Mora",
+        "imagen": "imagenes_productos/mora.webp",
+        "imagen_fuente": "https://cabrerarestobar.com/wp-content/uploads/2024/10/jugo-mora-scaled.webp",
+        "imagen_ancho": 2560,
+        "imagen_alto": 2560
+    },
+    {
+        "nombre": "Mango",
+        "precio": 7900,
+        "descripcion": "",
+        "categoria_busqueda": "jugos",
+        "busqueda_imagen": "jugo de Mango",
+        "imagen": "imagenes_productos/mango.png",
+        "imagen_fuente": "https://png.pngtree.com/png-clipart/20240204/original/pngtree-mango-juice-vector-png-image_14235221.png",
+        "imagen_ancho": 2500,
+        "imagen_alto": 2500
+    },
+    {
+        "nombre": "Mandarina",
+        "precio": 9900,
+        "descripcion": "",
+        "categoria_busqueda": "jugos",
+        "busqueda_imagen": "jugo de Mandarina",
+        "imagen": "imagenes_productos/mandarina.webp",
+        "imagen_fuente": "https://cabrerarestobar.com/wp-content/uploads/2024/10/jugo-mandarina-scaled.webp",
+        "imagen_ancho": 2560,
+        "imagen_alto": 2560
+    },
+    {
+        "nombre": "Fresa",
+        "precio": 8100,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 8200,
+        "descripcion": "Jugo natural en leche."
+    },
+    {
+        "nombre": "Feijoa",
+        "precio": 7400,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Durazno",
+        "precio": 8900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Frambuesa",
+        "precio": 9900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Exótico",
+        "precio": 9600,
+        "descripcion": "Uchuva y gulupa."
+    },
+    {
+        "nombre": "Natural",
+        "precio": 6500,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Limón Mandarino",
+        "precio": 7600,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Hierbabuena",
+        "precio": 7900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Mango Biche",
+        "precio": 9600,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Coco",
+        "precio": 11300,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Piña, Jengibre y Hierbabuena",
+        "precio": 9900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Alegría",
+        "precio": 10800,
+        "descripcion": "Mezcla de frutas del campo: mango, maracuyá y piña."
+    },
+    {
+        "nombre": "Bienestar",
+        "precio": 10800,
+        "descripcion": "Mezcla de frutas del campo: manzana, pera, feijoa y hierbabuena."
+    },
+    {
+        "nombre": "Elixir",
+        "precio": 13200,
+        "descripcion": "Guanábana y Lychee."
+    },
+    {
+        "nombre": "Malteada",
+        "precio": 15500,
+        "descripcion": "Elige el sabor del helado de tu preferencia."
+    },
+    {
+        "nombre": "Soy Otoño",
+        "precio": 10900,
+        "descripcion": "Explosión de vegetales, tomate, zucchini y zanahoria, con frijolitos rojos cuarentanos. Frijol de temporada, origen Montes de María.",
+        "tags": [
+            "vegano"
+        ]
+    },
+    {
+        "nombre": "Vida en Verdes",
+        "precio": 13200,
+        "descripcion": "Crema suave de verdes y maicitos tiernos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Espinaca",
+        "precio": 13900,
+        "descripcion": "Sopa de espinaca del huerto a tu casa. Naturalmente deliciosa.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Lentejas",
+        "precio": 14800,
+        "descripcion": "Con champiñones y Portobellos, lentejas beluga y un ligero toque de especias de la India.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Cebolla Gratinada",
+        "precio": 14800,
+        "descripcion": "Sopa de cebolla, con pan y queso gratinado.",
+        "tags": []
+    },
+    {
+        "nombre": "Covarachía",
+        "precio": 15900,
+        "descripcion": "Sopa donde el tomate, el maíz y el plátano entran a jugar para resaltar el valor de los sabores de nuestra tierra, con aguacate, crema agria y cilantro. Pide nuestra opción vegana.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Sopa del Sol",
+        "precio": 14600,
+        "descripcion": "Sopa de zapallo con un toque de queso de cabra y pesto, pan pita y cilantro.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Mexicana con Pollo",
+        "precio": 19900,
+        "descripcion": "Sabores de México: chile chipotle, crema agria, queso, aguacate, pollo, pico de gallo y tortilla mexicana.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "ArracaChips",
+        "precio": 13300,
+        "descripcion": "Crujientes chips de arracacha con dip de queso feta y ají de maní.",
+        "tags": [
+            "vegetariano",
+            "contiene maní",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Ensalada de la Barra",
+        "precio": 18400,
+        "descripcion": "Porque nadie conoce la mezcla mejor que tú.",
+        "tags": []
+    },
+    {
+        "nombre": "Tomatina",
+        "precio": 19500,
+        "descripcion": "Mozzarellina tibia al horno, tomates frescos y confitados con un toque de pesto, acompañados de rúgula con toque de vinagre balsámico.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Ensalada Cesar",
+        "precio": 17600,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Ensalada Crepes & Waffles",
+        "precio": 21800,
+        "descripcion": "Variedad de lechugas, queso de cabra, tomates frescos, albahaca, pan centeno y deliciosa vinagreta a base de mostaza Dijon.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Darina",
+        "precio": 22200,
+        "descripcion": "Champiñón Portobello asado con queso de cabra, tomate fresco, rúgula, balsámico, pesto, albahaca fresca, tomate seco, acompañado de pan pita.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Ensalada Kale",
+        "precio": 16900,
+        "descripcion": "Kale con vinagreta, tomates cherry, queso Grana Padano y walnuts.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Vino Caliente",
+        "presentacion": "Copa",
+        "precio": 20800,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Tinto de Verano",
+        "presentacion": "Copa",
+        "precio": 20800,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Blanco de Verano",
+        "presentacion": "Copa",
+        "precio": 23800,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Vino AMORETINTO - Tinto",
+        "cepa": "Merlot",
+        "origen": "Chile",
+        "presentaciones": [{
+                "tipo": "Copa",
+                "precio": 28500
+            },
+            {
+                "tipo": "Media Botella",
+                "precio": 65500
+            },
+            {
+                "tipo": "Botella",
+                "precio": 102500
+            }
+        ]
+    },
+    {
+        "nombre": "Vino AMORETINTO - Blanco",
+        "cepa": "Gewurstraminier",
+        "origen": "Chile",
+        "presentaciones": [{
+                "tipo": "Copa",
+                "precio": 28500
+            },
+            {
+                "tipo": "Media Botella",
+                "precio": 65500
+            },
+            {
+                "tipo": "Botella",
+                "precio": 102500
+            }
+        ]
+    },
+    {
+        "nombre": "Vino Prosecco",
+        "cepa": "Glera",
+        "origen": "Italia",
+        "presentaciones": [{
+                "tipo": "Copa",
+                "precio": 29800
+            },
+            {
+                "tipo": "Media Botella",
+                "precio": 80000
+            },
+            {
+                "tipo": "Botella",
+                "precio": 110500
+            }
+        ]
+    },
+    {
+        "nombre": "Mandarina y Limón Mandarino",
+        "precio": 8000,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Jengibre y Miel",
+        "precio": 8500,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Frambuesa y Hierbabuena",
+        "precio": 8600,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Agua Siembra",
+        "precio": 7400,
+        "descripcion": "Con o sin gas."
+    },
+    {
+        "nombre": "Agua Manantial",
+        "precio": 7200,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Agua Manantial con Gas",
+        "precio": 6900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Gaseosas",
+        "precio": 6200,
+        "descripcion": "Coca-Cola original, Coca-Cola Zero, Sprite o Kola Roman."
+    },
+    {
+        "nombre": "Schweppes Ginger o Soda",
+        "precio": 6700,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Coronita",
+        "precio": 9300,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Club Colombia",
+        "precio": 10400,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Stella Artois",
+        "precio": 12900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Heineken",
+        "precio": 12600,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Cajicá Miel",
+        "precio": 14200,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Trece Pesos IPA",
+        "precio": 16200,
+        "descripcion": "Cerveza tipo IPA (India Pale Ale). País de origen: Colombia."
+    },
+    {
+        "nombre": "Salmon Roll",
+        "precio": 41500,
+        "descripcion": "Rollitos de salmón ahumado con rúgula, queso crema, mostaza, cebolla, aguacate y crujientes vegetales frescos. Acompañados de ensalada verde.",
+        "tags": []
+    },
+    {
+        "nombre": "Zeus",
+        "precio": 41500,
+        "descripcion": "Flores de salmón ahumado sobre un crepe con aguacate rústico, chucrut de cebollas, crema agria, aceitunas moradas y germinados.",
+        "tags": []
+    },
+    {
+        "nombre": "Salmón Ahumado",
+        "precio": 40900,
+        "descripcion": "Con crema agria, queso crema y cebollina, acompañado de lechugas y vinagreta de finas hierbas.",
+        "tags": []
+    },
+    {
+        "nombre": "Salmón Rossé",
+        "precio": 39500,
+        "descripcion": "Rollitos de salmón ahumado, rellenos de espinaca con ricotta sobre un fondo de salsa rossé. (Sin crepe).",
+        "tags": []
+    },
+    {
+        "nombre": "Volcán del Caribe",
+        "precio": 38400,
+        "descripcion": "Un volcán de enyucado con camarones en su lava, germinados y especias caribeñas. (Sin crepe).",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Encanto Tropical",
+        "precio": 38900,
+        "descripcion": "Chontaduro con crema agria, aguacate, langostinos y calamares, crepe de enyucado y salsa de maní. Toda una mezcla de nuestro encanto tropical.",
+        "tags": [
+            "contiene maní",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Camarones al Ají Panka",
+        "precio": 40500,
+        "descripcion": "Con todos los sabores del Perú. Con puré de frijol al cilantro, aguacate, rúgula, filamentos de pimentón y cebolla roja.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Waffle Madame",
+        "precio": 28500,
+        "descripcion": "Sánduche de waffle con mezcla de quesos, lomo ahumado de cerdo y huevo, bañado en nuestra salsa de queso parmesano.",
+        "tags": []
+    },
+    {
+        "nombre": "Waffle Sándwich",
+        "precio": 31900,
+        "descripcion": "Con pechuga de pollo, tocineta, queso, tomate, rúgula y dijonnaise, acompañado con chips de arracacha de Cajamarca.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Waffle D'Choclo",
+        "precio": 15900,
+        "descripcion": "Waffle de maíz relleno de queso, con queso 7 cueros y suero costeño.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Mini Waffle Dalí",
+        "precio": 15300,
+        "descripcion": "Finas tajadas de queso, lomo ahumado de cerdo y un toque de ricotta.",
+        "tags": []
+    },
+    {
+        "nombre": "Mini Waffle D'Yuca",
+        "precio": 8900,
+        "descripcion": "Un mini waffle con masa de yuca, mantequilla derretida y jalea de guayaba.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Pollo Trufa Mexicano",
+        "precio": 32500,
+        "descripcion": "Mezcla de sabores mexicanos con huitlacoche, aguacate y salsa de queso parmesano.",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo al Pastor",
+        "precio": 30600,
+        "descripcion": "Crepe de pollo en su salsa característica, acompañado de piña asada y picadillo mexicano.",
+        "tags": [
+            "picante",
+            "nuevo"
+        ]
+    },
+    {
+        "nombre": "Pollo Peruano",
+        "precio": 30900,
+        "descripcion": "Típica preparación de ají de gallina limeño, salsa de aceitunas moradas, rúgula y huevo.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Pollo al Ají Panka",
+        "precio": 31900,
+        "descripcion": "Pollo con todos los sabores del Perú. Puré de frijol al cilantro, aguacate, rúgula, filamentos de pimentón y cebolla roja.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Pollo Mexicano",
+        "precio": 31300,
+        "descripcion": "Pollo en salsa mexicana y chipotle, queso rallado, lechuga, crema agria, ají y pico de gallo.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Pollo Thai",
+        "precio": 32400,
+        "descripcion": "Pechuga de pollo y champiñones Portobello, con una mezcla de sabores orientales a base de curry y maracuyá.",
+        "tags": []
+    },
+    {
+        "nombre": "Palmitos",
+        "precio": 31300,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Calamares",
+        "precio": 34500,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Camarones",
+        "precio": 39900,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Camarones con Espinaca",
+        "precio": 40900,
+        "descripcion": "Versión con espinaca.",
+        "tags": []
+    },
+    {
+        "nombre": "Atún en Salsa de la Casa",
+        "precio": 31500,
+        "descripcion": "Preparado en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Mar Encocado",
+        "precio": 40900,
+        "descripcion": "Pulpo, camarones, calamares y langostinos sobre quinua negra, bañados en salsa de coco y toques de coco crujiente.",
+        "tags": []
+    },
+    {
+        "nombre": "Camarones Rosarito",
+        "precio": 40800,
+        "descripcion": "En salsa mexicana con chipotle, arcos de aguacate y frijol rojo cuarentano.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Ternera",
+        "precio": 30900,
+        "descripcion": "Puedes pedirlo también con espinaca y queso o champiñones.",
+        "variantes": [{
+                "nombre": "Espinaca y Queso",
+                "precio": 30900
+            },
+            {
+                "nombre": "Champiñones",
+                "precio": 30800
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Espinaca y Queso",
+        "precio": 30900
+    },
+    {
+        "nombre": "Champiñones",
+        "precio": 30800
+    },
+    {
+        "nombre": "Stroganoff",
+        "precio": 35900,
+        "descripcion": "Julianas de lomo y champiñones en su salsa.",
+        "tags": []
+    },
+    {
+        "nombre": "Mexicano",
+        "precio": 27900,
+        "descripcion": "Boloñesa en salsa mexicana, queso rallado, lechuga, crema agria, ají y pico de gallo.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Lomito Pimienta",
+        "precio": 36900,
+        "descripcion": "Julianas de lomo y pimienta del Putumayo en su salsa.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Roastbeef",
+        "precio": 34600,
+        "descripcion": "Tajadas de roastbeef y queso, cebollas asadas, rúgula, mayonesa chipotle y chucrut de cebollas.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Lomo Árabe",
+        "precio": 40600,
+        "descripcion": "Con especias del Medio Oriente y ensalada a su mejor estilo.",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo y Queso",
+        "precio": 26900,
+        "descripcion": "Base con opción de agregar ingredientes.",
+        "variantes": [{
+                "nombre": "Champiñones",
+                "precio": 29900
+            },
+            {
+                "nombre": "Espinaca",
+                "precio": 29900
+            },
+            {
+                "nombre": "Espárragos",
+                "precio": 29900
+            },
+            {
+                "nombre": "Brócoli y Salsa de Queso Parmesano",
+                "precio": 32600
+            },
+            {
+                "nombre": "Alcachofa y Salsa de Queso Parmesano",
+                "precio": 33500
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Champiñones",
+        "precio": 29900
+    },
+    {
+        "nombre": "Espinaca",
+        "precio": 29900
+    },
+    {
+        "nombre": "Espárragos",
+        "precio": 29900
+    },
+    {
+        "nombre": "Brócoli y Salsa de Queso Parmesano",
+        "precio": 32600
+    },
+    {
+        "nombre": "Alcachofa y Salsa de Queso Parmesano",
+        "precio": 33500
+    },
+    {
+        "nombre": "Pollo al Curry",
+        "precio": 29900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo Chipotle",
+        "precio": 30800,
+        "descripcion": "Pollo con salsa chipotle, aguacate, pico de gallo, queso, maíz y crema agria, acompañado de rúgula.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Pollo en Salsa Verde Mexicana",
+        "precio": 31600,
+        "descripcion": "Salsa de tomatillo verde con pollo, queso, crema agria, pimentón asado y cilantro.",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo Rosarito",
+        "precio": 30800,
+        "descripcion": "Pollo en salsa mexicana con chipotle, arcos de aguacate y frijol rojo cuarentano.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Pollo al Curry al estilo Hindú",
+        "precio": 30600,
+        "descripcion": "Con maní, uvas pasas y chutney de mango.",
+        "tags": [
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Napolitana",
+        "precio": 23900,
+        "descripcion": "Espinaca, queso ricotta y parmesano, salsa napolitana o salsa rossé.",
+        "tags": []
+    },
+    {
+        "nombre": "Natura",
+        "precio": 23900,
+        "descripcion": "Espinaca, queso, albahaca, tomates frescos, tomates secos y salsa napolitana.",
+        "tags": []
+    },
+    {
+        "nombre": "Poblana",
+        "precio": 24900,
+        "descripcion": "Aguacate, queso, pico de gallo, salsa agria, lechuga y un toque mexicano de ají.",
+        "tags": []
+    },
+    {
+        "nombre": "Toscana",
+        "precio": 24900,
+        "descripcion": "Queso, tomate, albahaca, champiñones frescos, salsa de champiñones y napolitana.",
+        "tags": []
+    },
+    {
+        "nombre": "Vegan Boloñesa",
+        "precio": 21800,
+        "descripcion": "Tofu, espinaca, berenjenas y champiñones, con un toque especial de tahini.",
+        "tags": [
+            "vegano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Sombrero Vueltao Vegano",
+        "precio": 28500,
+        "descripcion": "Versión vegana con orellanas, puré de plátano maduro, aguacate, pico de gallo y crema agria de tofu.",
+        "tags": [
+            "vegano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Champiñón Fondue",
+        "precio": 31800,
+        "descripcion": "Champiñones bañados en una clásica salsa de quesos.",
+        "tags": []
+    },
+    {
+        "nombre": "Normanda",
+        "precio": 25900,
+        "descripcion": "Champiñones frescos, variedad de quesos y salsa de champiñones.",
+        "tags": []
+    },
+    {
+        "nombre": "Caprino",
+        "precio": 28900,
+        "descripcion": "Champiñones salteados, tomates secos, tomates frescos, pesto, reducción de balsámico y mozzarellina.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Boloñesa y Queso",
+        "precio": 22300,
+        "descripcion": "Puedes pedirlo también con lomo ahumado de cerdo o champiñones.",
+        "variantes": [{
+                "nombre": "Lomo Ahumado de Cerdo",
+                "precio": 25900
+            },
+            {
+                "nombre": "Champiñones",
+                "precio": 24900
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Lomo Ahumado de Cerdo",
+        "precio": 25900
+    },
+    {
+        "nombre": "Champiñones",
+        "precio": 24900
+    },
+    {
+        "nombre": "Sombrero Vueltao",
+        "precio": 29900,
+        "descripcion": "Carne desmechada preparada con hogao sobre puré de plátano maduro, acompañada de crema agria, aguacate y pico de gallo.",
+        "tags": []
+    },
+    {
+        "nombre": "Cochinita Pibil",
+        "precio": 28500,
+        "descripcion": "Cerdo desmechado con tonos cítricos, acompañado de aguacate, lechuga, pico de gallo, cebolla encurtida y crema agria.",
+        "tags": []
+    },
+    {
+        "nombre": "Ternera",
+        "precio": 30200,
+        "descripcion": "Puedes pedirlo también con espinaca y queso o champiñones.",
+        "variantes": [{
+                "nombre": "Espinaca y Queso",
+                "precio": 30900
+            },
+            {
+                "nombre": "Champiñones",
+                "precio": 30800
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Jamón y Queso",
+        "precio": 19600,
+        "descripcion": "Puedes pedirlo también con champiñones o espárragos.",
+        "variantes": [{
+                "nombre": "Champiñones",
+                "precio": 23600
+            },
+            {
+                "nombre": "Espárragos",
+                "precio": 23800
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Champiñones",
+        "precio": 23600
+    },
+    {
+        "nombre": "Espárragos",
+        "precio": 23800
+    },
+    {
+        "nombre": "Pavo, Queso tipo Holandés y Salsa Dijonnaise",
+        "precio": 30900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Sensación",
+        "precio": 24900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo. Pídelo también con cebolla y tomate.",
+        "tags": []
+    },
+    {
+        "nombre": "Sensación Colombia",
+        "precio": 27900,
+        "descripcion": "Carne desmechada, queso, huevo, crema agria y hogao.",
+        "tags": []
+    },
+    {
+        "nombre": "Bretonne",
+        "precio": 23900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo al estilo francés.",
+        "tags": []
+    },
+    {
+        "nombre": "Bretonne Serrano",
+        "precio": 31900,
+        "descripcion": "Jamón serrano, queso y huevo.",
+        "tags": []
+    },
+    {
+        "nombre": "Serrano",
+        "precio": 38500,
+        "descripcion": "Mozzarellina, jamón serrano, cebollas caramelizadas, tomate seco y rúgula.",
+        "tags": []
+    },
+    {
+        "nombre": "French Connection",
+        "precio": 21400,
+        "descripcion": "Lomo ahumado de cerdo, queso ricotta y syrup.",
+        "tags": []
+    },
+    {
+        "nombre": "Champiñones al Ajillo",
+        "precio": 21900,
+        "descripcion": "Crepe de champiñones en salsa al ajillo con queso.",
+        "tags": []
+    },
+    {
+        "nombre": "Romana",
+        "precio": 21900,
+        "descripcion": "Mozzarellina, salsa napolitana con albahaca y queso parmesano.",
+        "tags": []
+    },
+    {
+        "nombre": "Sicilia",
+        "precio": 24300,
+        "descripcion": "Mozzarellina, tomates secos, tomates frescos y albahaca.",
+        "tags": []
+    },
+    {
+        "nombre": "Espinaca, Queso Feta y Champiñones Glaseados",
+        "precio": 32900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Champiñones, Alcachofa y Queso",
+        "precio": 26900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Napolitano",
+        "precio": 20900,
+        "descripcion": "Espinaca, queso ricotta y parmesano, salsa napolitana o salsa rossé.",
+        "tags": []
+    },
+    {
+        "id": "crepe-natura",
+        "nombre": "Natura",
+        "categoria": "crepes",
+        "subcategoria": "vegetarianos",
+        "precio": 23900,
+        "tags": [
+            "vegetariano"
+        ],
+        "descripcion": "...",
+        "variantes": []
+    },
+    {
+        "nombre": "Pollo Árabe",
+        "precio": 27900,
+        "descripcion": "Pechuga de pollo al horno, lechuga, tahini, trocitos de aceitunas y cebollas encurtidas.",
+        "tags": []
+    },
+    {
+        "nombre": "Pavo",
+        "precio": 30800,
+        "descripcion": "Pan árabe relleno de pechuga de pavo, variedad de quesos y salsa dijonnaise.",
+        "tags": []
+    },
+    {
+        "nombre": "Doble Pocket",
+        "precio": 24200,
+        "descripcion": "Pan árabe relleno de lomo ahumado de cerdo, salsa dijonnaise y variedad de quesos.",
+        "tags": []
+    },
+    {
+        "nombre": "Popeye Pocket",
+        "precio": 22900,
+        "descripcion": "Pan árabe relleno de espinaca, lomo ahumado de cerdo, cebolla, huevo, champiñones y tomate, gratinado con queso, acompañado con salsa amarilla y vinagreta verde.",
+        "tags": []
+    },
+    {
+        "nombre": "Tuna Pocket",
+        "precio": 28900,
+        "descripcion": "Pan árabe relleno de atún con champiñones, lechuga, gratinado con queso, acompañado con cascos de tomate fresco y rúgula.",
+        "tags": []
+    },
+    {
+        "nombre": "Mozzarella Pocket",
+        "precio": 15900,
+        "descripcion": "Queso, salsa napolitana y albahaca.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Champiñón Pocket",
+        "precio": 28400,
+        "descripcion": "Portobello y champiñones salteados con albahaca, tomates secos y rúgula, gratinados con queso.",
+        "variantes": [{
+                "nombre": "Huevo",
+                "precio": 28400
+            },
+            {
+                "nombre": "Aceite de Trufa",
+                "precio": 29400
+            }
+        ],
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Huevo",
+        "precio": 28400
+    },
+    {
+        "nombre": "Aceite de Trufa",
+        "precio": 29400
+    },
+    {
+        "nombre": "Pita en el Bosque",
+        "precio": 29800,
+        "descripcion": "Pita crujiente con champiñones, shiitake, espinaca, cebollas asadas, queso crema de almendras, peperoncino y aceite de trufa blanca.",
+        "tags": [
+            "vegano",
+            "contiene nueces",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Capresa",
+        "precio": 26900,
+        "descripcion": "Pan árabe relleno de mozzarellina, tomates frescos y secos, rúgula y pesto.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Ópera",
+        "precio": 28300,
+        "descripcion": "Mozzarellina, champiñón Portobello, tomates cherry, rúgula y queso parmesano.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Siciliana",
+        "precio": 26900,
+        "descripcion": "Queso, salsa napolitana, albahaca y tomates secos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Siciliana",
+        "precio": 26900,
+        "descripcion": "Queso, salsa napolitana, tomates frescos, tomates secos, albahaca y aceite de oliva.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Vegetariana",
+        "precio": 24800,
+        "descripcion": "Queso, salsa napolitana, champiñones, cebolla, tomate, pimentón y apio.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Griega",
+        "precio": 26900,
+        "descripcion": "Queso, salsa napolitana, alcachofas, aceitunas moradas, cebolla, tomate y especias.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Salsa de Pollo",
+        "precio": 12200
+    },
+    {
+        "nombre": "Salsa de Ternera",
+        "precio": 11800
+    },
+    {
+        "nombre": "Salsa de Champiñones",
+        "precio": 7200
+    },
+    {
+        "nombre": "Pechuga de Pollo Miel con pimienta del Putumayo",
+        "precio": 9500
+    },
+    {
+        "nombre": "Pechuga de Pavo",
+        "precio": 14500
+    },
+    {
+        "nombre": "Roastbeef",
+        "precio": 10200
+    },
+    {
+        "nombre": "Salmón Ahumado",
+        "precio": 22800
+    },
+    {
+        "nombre": "Trucha Ahumada",
+        "precio": 18900
+    },
+    {
+        "nombre": "Boloñesa y Queso",
+        "precio": 27800,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Champiñón al Ajillo y Queso",
+        "precio": 26900,
+        "descripcion": "",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Ternera",
+        "precio": 34200,
+        "descripcion": "Puedes pedirlo también con champiñones.",
+        "variantes": [{
+            "nombre": "Champiñones",
+            "precio": 34600
+        }],
+        "tags": []
+    },
+    {
+        "nombre": "Champiñones",
+        "precio": 34600
+    },
+    {
+        "nombre": "Champiñón Fondue",
+        "precio": 36500,
+        "descripcion": "Champiñones bañados en una clásica salsa de quesos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Pollo y Champiñones",
+        "precio": 33900,
+        "descripcion": "Puedes pedirlo también con espárragos o queso.",
+        "variantes": [{
+                "nombre": "Espárragos",
+                "precio": 34900
+            },
+            {
+                "nombre": "Queso",
+                "precio": 34900
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Espárragos",
+        "precio": 34900
+    },
+    {
+        "nombre": "Queso",
+        "precio": 34900
+    },
+    {
+        "nombre": "Pollo, Alcachofa, Queso y Salsa de Queso Parmesano",
+        "precio": 37200,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo, Brócoli, Queso y Salsa de Queso Parmesano",
+        "precio": 36900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo al Curry",
+        "precio": 34900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Stroganoff",
+        "precio": 43900,
+        "descripcion": "Julianas de lomo y champiñones en su salsa.",
+        "tags": []
+    },
+    {
+        "nombre": "Lomito Pimienta",
+        "precio": 43900,
+        "descripcion": "Julianas de lomo y pimienta del Putumayo en su salsa.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "id": "uuid",
+        "nombre": "...",
+        "categoria": "pitas",
+        "subcategoria": "vegetariano",
+        "precio": 26900,
+        "tags": [
+            "vegetariano"
+        ],
+        "descripcion": "...",
+        "variantes": [],
+        "upsells": []
+    },
+    {
+        "nombre": "Ternera",
+        "precio": 34200,
+        "descripcion": "Puedes pedirlo también con champiñones.",
+        "variantes": [{
+            "nombre": "Champiñones",
+            "precio": 34600
+        }]
+    },
+    {
+        "nombre": "Pollo y Champiñones",
+        "precio": 33900,
+        "descripcion": "Puedes pedirlo también con espárragos o queso.",
+        "variantes": [{
+                "nombre": "Espárragos",
+                "precio": 34900
+            },
+            {
+                "nombre": "Queso",
+                "precio": 34900
+            }
+        ]
+    },
+    {
+        "nombre": "Pollo, Alcachofa, Queso y Salsa de Queso Parmesano",
+        "precio": 37200,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Pollo, Brócoli, Queso y Salsa de Queso Parmesano",
+        "precio": 36900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Pollo al Curry",
+        "precio": 34900,
+        "descripcion": ""
+    },
+    {
+        "nombre": "Stroganoff",
+        "precio": 43900,
+        "descripcion": "Julianas de lomo y champiñones en su salsa."
+    },
+    {
+        "nombre": "Palmitos",
+        "precio": 34900,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Calamares",
+        "precio": 39700,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Camarones",
+        "precio": 44900,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo y Champiñones",
+        "precio": 28900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo, Champiñones y Espárragos",
+        "precio": 31800,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Pollo al Curry",
+        "precio": 30900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Boloñesa y Queso",
+        "precio": 24900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Stroganoff",
+        "precio": 37900,
+        "descripcion": "Julianas de lomo y champiñones en su salsa.",
+        "tags": []
+    },
+    {
+        "nombre": "Lomito Pimienta",
+        "precio": 37900,
+        "descripcion": "Julianas de lomo y pimienta del Putumayo en su salsa.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Ternera",
+        "precio": 30600,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Champiñones al Ajillo y Queso",
+        "precio": 25400,
+        "descripcion": "",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Camarones",
+        "precio": 40900,
+        "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+        "tags": []
+    },
+    {
+        "nombre": "Ensalada verde con vinagre balsámico y aceite de oliva",
+        "precio": 6400,
+        "descripcion": "Adicional opcional",
+        "tags": []
+    },
+    {
+        "nombre": "Americano",
+        "precio": 5800,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Espresso",
+        "precio": 5000,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Macchiato",
+        "precio": 5000,
+        "descripcion": "Espresso con una ligera capa de leche espumosa.",
+        "tags": []
+    },
+    {
+        "nombre": "Latte",
+        "precio": 7900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Cappuccino",
+        "precio": 6500,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Appassionato",
+        "precio": 10200,
+        "descripcion": "Cappuccino doble con stick de chocolate.",
+        "tags": []
+    },
+    {
+        "nombre": "Leche de Almendras",
+        "precio": 3200,
+        "descripcion": "Adicional para cualquier café",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Aromática Frutos Rojos",
+        "precio": 4900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Aromática Hierbabuena",
+        "precio": 3200,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Té Premium Colombiano",
+        "precio": 5900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Té Chai",
+        "precio": 7200,
+        "descripcion": "Bebida de la India con aromáticos sabores que proporcionan bienestar.",
+        "tags": []
+    },
+    {
+        "nombre": "Matcha Latte",
+        "precio": 13200,
+        "descripcion": "Bebida de té verde japonés rica en antioxidantes. Disponible también frío.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Leche de Almendras",
+        "precio": 3200
+    },
+    {
+        "nombre": "Hot Chocolate Marshmallow",
+        "precio": 10900,
+        "descripcion": "",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "French Chocolate",
+        "precio": 10400,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Milo",
+        "precio": 8500,
+        "descripcion": "Bebida fría o caliente.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Chocolatada",
+        "precio": 9800,
+        "descripcion": "Con chocolate origen Colombia 70%.",
+        "tags": []
+    },
+    {
+        "nombre": "Tuna Salad",
+        "precio": 40900,
+        "descripcion": "Atún ventresca, variedad de lechugas frescas, rúgula, espinaca, albahaca, champiñones, apio, aguacate, tomate cherry, aceitunas negras y vinagreta de finas hierbas. Acompañado con pan árabe.",
+        "tags": []
+    },
+    {
+        "nombre": "Valparaíso",
+        "precio": 42800,
+        "descripcion": "Filete de salmón ahumado con merkén, acompañado de quinua negra, kale con queso parmesano y Grana Padano, picadillo de tomate, aguacate y vinagreta árabe.",
+        "tags": []
+    },
+    {
+        "nombre": "Torina",
+        "precio": 38500,
+        "descripcion": "Mozzarellina envuelta en jamón serrano con cebollas caramelizadas y pimienta, variedad de lechugas, rúgula, tomate cherry y vinagreta a base de mostaza Dijon.",
+        "tags": []
+    },
+    {
+        "nombre": "Portofino",
+        "precio": 39900,
+        "descripcion": "Queso feta, tomates secos, variedad de lechugas frescas, rúgula, albahaca, aceitunas negras, tomate fresco y cherry, champiñones, cebolla roja, pesto y vinagreta de finas hierbas. Acompañado con pan árabe.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Envoltini de Quesos",
+        "precio": 29900,
+        "descripcion": "Suave mezcla de quesos, jamón serrano, reducción de balsámico, tomate seco, tapenade de aceitunas, pesto, walnuts y lechugas frescas con su vinagreta.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Míkonos",
+        "precio": 41900,
+        "descripcion": "Salmón ahumado, variedad de lechugas frescas, rúgula, queso feta, aceitunas negras, champiñones, cebolla roja, albahaca, tomate cherry, pepino y vinagreta de finas hierbas. Acompañado con pan árabe.",
+        "tags": []
+    },
+    {
+        "nombre": "Thai Beef Salad",
+        "precio": 39700,
+        "descripcion": "Tajaditas de lomo y el sabor de Tailandia con mezcla de verdes, edamame y mango.",
+        "tags": [
+            "contiene maní",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Cesar",
+        "descripcion": "La clásica ensalada con crutones, tomates cherry y queso parmesano. Acompañada con pan centeno.",
+        "variantes": [{
+                "nombre": "Con Pollo",
+                "precio": 29500
+            },
+            {
+                "nombre": "Con Salmón Ahumado",
+                "precio": 41700
+            }
+        ],
+        "tags": []
+    },
+    {
+        "nombre": "Con Pollo",
+        "precio": 29500
+    },
+    {
+        "nombre": "Con Salmón Ahumado",
+        "precio": 41700
+    },
+    {
+        "nombre": "Florentina",
+        "precio": 35500,
+        "descripcion": "Mozzarellina, variedad de lechugas frescas, albahaca fresca, tomates secos y cherry, champiñones, pesto, aguacate, aceitunas negras y vinagre balsámico.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Thai",
+        "precio": 36200,
+        "descripcion": "Pechuga de pavo con ajonjolí y albahaca, variedad de lechugas frescas, rúgula, apio, champiñones, pimentón, tomate cherry, cebollas crocantes y vinagreta oriental.",
+        "tags": []
+    },
+    {
+        "nombre": "Mediterránea",
+        "precio": 41800,
+        "descripcion": "Camarones, calamares, pesto, variedad de lechugas frescas, apio, champiñones, cebolla roja, aceitunas negras, vinagreta balsámica y cebollas crocantes.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Montes de María",
+        "precio": 29600,
+        "descripcion": "Frijol rojo cuarentano, tofu asado, tahini, guacamole rústico, tomate cherry, rúgula, mix de lechugas y lentejas tostadas.",
+        "tags": [
+            "vegano",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Marroquí",
+        "descripcion": "Couscous preparado con especias, aguacate, chutney de mango, quinua tostada y ensalada verde con vinagreta marroquí.",
+        "variantes": [{
+                "nombre": "Con Camarón",
+                "precio": 41900
+            },
+            {
+                "nombre": "Con Pollo",
+                "precio": 29200
+            },
+            {
+                "nombre": "Con Tofu",
+                "precio": 25600,
+                "tags": [
+                    "vegano"
+                ]
+            }
+        ],
+        "tags": [
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Con Camarón",
+        "precio": 41900
+    },
+    {
+        "nombre": "Con Pollo",
+        "precio": 29200
+    },
+    {
+        "nombre": "Con Tofu",
+        "precio": 25600,
+        "tags": [
+            "vegano"
+        ]
+    },
+    {
+        "nombre": "Tuna Salad",
+        "precio": 40900,
+        "descripcion": "Atún ventresca, variedad de lechugas frescas, rúgula, pepino, albahaca, champiñones, apio, aguacate, tomate cherry, aceitunas negras y vinagreta de finas hierbas. Acompañado con pan árabe.",
+        "tags": []
+    },
+    {
+        "nombre": "Dulcinea",
+        "precio": 13900,
+        "descripcion": "Crepe con helado de vainilla, trocitos de piña, salsa inglesa y arequipe.",
+        "tags": []
+    },
+    {
+        "nombre": "Mantequilla y Azúcar",
+        "precio": 9200,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Chocolate",
+        "precio": 11400,
+        "descripcion": "Crepe con helado de vainilla y chocolate y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Arequipe",
+        "precio": 11400,
+        "descripcion": "Crepe con helado de vainilla y arequipe y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Melocotón",
+        "precio": 12500,
+        "descripcion": "Crepe con helado Old Style, salsa inglesa y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Nutella",
+        "precio": 16900,
+        "descripcion": "Crepe de Nutella con crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "variantes": [{
+                "nombre": "Fresas",
+                "precio": 17400
+            },
+            {
+                "nombre": "Banano",
+                "precio": 17400
+            },
+            {
+                "nombre": "Fresa y Banano",
+                "precio": 17400
+            }
+        ]
+    },
+    {
+        "nombre": "Fresas",
+        "precio": 17400
+    },
+    {
+        "nombre": "Banano",
+        "precio": 17400
+    },
+    {
+        "nombre": "Fresa y Banano",
+        "precio": 17400
+    },
+    {
+        "nombre": "Arequipe y Queso",
+        "precio": 13200,
+        "descripcion": "Crepe de arequipe con queso y salsa inglesa.",
+        "tags": []
+    },
+    {
+        "nombre": "Guayaba y Queso",
+        "precio": 13200,
+        "descripcion": "Crepe de guayaba con queso y salsa inglesa.",
+        "tags": []
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 14500,
+        "descripcion": "Frutos del bosque con helado Old Style y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Suzette",
+        "precio": 12200,
+        "descripcion": "Crepe con extracto y mermelada de naranja, Grand Marnier y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Cocada",
+        "precio": 12900,
+        "descripcion": "Crepe con arequipe flambé, coco tostado, salsa de arequipe e inglesa y helado de cocada.",
+        "tags": []
+    },
+    {
+        "nombre": "Arequipe Flambé",
+        "precio": 14900,
+        "descripcion": "Crepe de arequipe con caramelo crocante flambeado con brandy, acompañado de helado Old Style.",
+        "tags": []
+    },
+    {
+        "nombre": "Chocolate Fondue",
+        "precio": 14500,
+        "descripcion": "Crepe con fresas y banano, helado de vainilla, crema chantilly y chocolate.",
+        "tags": []
+    },
+    {
+        "nombre": "Baby Doll",
+        "precio": 15400,
+        "descripcion": "Banano fresco, helado de vainilla, nueces, chocolate caliente y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Mont Blanc",
+        "precio": 17400,
+        "descripcion": "Crepe con chocolate y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Chocolatada",
+        "precio": 9800,
+        "descripcion": "Con chocolate origen Colombia 70%.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Moka Moka",
+        "precio": 15900,
+        "descripcion": "Mezcla de café granizado con chocolate y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Frozen Caramelo",
+        "precio": 15500,
+        "descripcion": "Mezcla de café granizado con caramelo y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Frozen Cappuccino",
+        "precio": 15200,
+        "descripcion": "Mezcla de café granizado y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Iced Latte",
+        "precio": 8900,
+        "descripcion": "Café latte frío con sabor a vainilla y cubos de hielo con leche espumosa.",
+        "tags": []
+    },
+    {
+        "nombre": "Mont Blanc",
+        "precio": 17400,
+        "descripcion": "Crepe con chocolate blanco, fresas y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Cleopatra",
+        "precio": 14300,
+        "descripcion": "Crepe con tajadas de banano y fresa, helado de mora, crema chantilly y salsa de uva e inglesa.",
+        "tags": []
+    },
+    {
+        "nombre": "Lemonberry",
+        "precio": 14300,
+        "descripcion": "Crepe con salsa de limón, ralladura de naranja, fresas y arándanos.",
+        "tags": []
+    },
+    {
+        "nombre": "Mantequilla y Syrup o Miel",
+        "precio": 10200,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Sencillo con Crema Chantilly",
+        "precio": 13900,
+        "descripcion": "Elige salsa: arequipe, chocolate, melocotón, inglesa, piña, caramelo, agrás o crema de limón.",
+        "tags": []
+    },
+    {
+        "nombre": "Sencillo con Helado",
+        "precio": 15300,
+        "descripcion": "Elige salsa: arequipe, chocolate, melocotón, inglesa, piña, caramelo, agrás o crema de limón.",
+        "tags": []
+    },
+    {
+        "nombre": "Especial",
+        "precio": 17900,
+        "descripcion": "Con helado y crema chantilly. Escoge 3 o 4 salsas: arequipe, chocolate, melocotón, inglesa, piña, frutos del bosque, caramelo, agrás o crema de limón.",
+        "tags": []
+    },
+    {
+        "nombre": "Arequipe",
+        "precio": 14300,
+        "descripcion": "Con salsa de arequipe, helado de vainilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Arequipe y Banano",
+        "precio": 14900,
+        "descripcion": "Banano fresco con arequipe y chocolate, helado de vainilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Nutella",
+        "precio": 17600,
+        "descripcion": "Con helado de vainilla y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Nutella y Banano",
+        "precio": 17900,
+        "descripcion": "Banano fresco, helado Old Style y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 15300,
+        "descripcion": "Con helado de vainilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Jardín de Berries",
+        "precio": 17600,
+        "descripcion": "Triángulos de waffle con salsa de limón, mezcla de fresas y arándanos, almendras y helado Old Style.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Chocorochelle",
+        "precio": 22500,
+        "descripcion": "Waffle de chocolate con crema crunchy.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Chocorochelle",
+        "precio": 22500,
+        "descripcion": "Waffle de chocolate con crema crunchy de chocolate con avellanas, helado Choco Rochelle y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Arequipe",
+        "precio": 14300,
+        "descripcion": "Con helado de vainilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Chocolate",
+        "precio": 14300,
+        "descripcion": "Con helado de chocolate o vainilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Agrás",
+        "precio": 15300,
+        "descripcion": "Salsa de agrás con helado de vainilla y crema chantilly.",
+        "tags": [
+            "nuevo"
+        ]
+    },
+    {
+        "nombre": "Bomba de Chocolate",
+        "precio": 15300,
+        "descripcion": "Mini waffle de chocolate con salsa de arequipe, bananos caramelizados y helado de chocolate Tumaco.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 15300,
+        "descripcion": "Frutos del bosque con helado de vainilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Primavera",
+        "precio": 14500,
+        "descripcion": "Con trozos de melocotón y fresa, helado de mora y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Coffee Caramel",
+        "precio": 14800,
+        "descripcion": "Con salsa de caramelo, chocolate, nueces, helado de Coffee Toffee y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Nataly",
+        "precio": 14500,
+        "descripcion": "Banano con salsa de arequipe, chocolate y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Aperol Spritz",
+        "precio": 29900,
+        "descripcion": "Aperol, Prosecco y soda. Inconfundiblemente italiano.",
+        "tags": []
+    },
+    {
+        "nombre": "Copa de Vino Prosecco",
+        "precio": 29800,
+        "descripcion": "Vino espumante de Italia.",
+        "tags": []
+    },
+    {
+        "nombre": "Mimosa",
+        "precio": 25900,
+        "descripcion": "Copa de Prosecco y jugo de naranja.",
+        "tags": []
+    },
+    {
+        "nombre": "Café Filtrado",
+        "precio": 6900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Leche de Almendras",
+        "precio": 3200,
+        "descripcion": "Adicional para bebidas",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Mora",
+        "precio": 7900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Mango",
+        "precio": 7900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Mandarina",
+        "precio": 9900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Fresa",
+        "precio": 8100,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 8200,
+        "descripcion": "Jugo natural en leche.",
+        "tags": []
+    },
+    {
+        "nombre": "Naranja",
+        "precio": 9600,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Naranja - Zanahoria",
+        "precio": 8900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Piña, Jengibre y Hierbabuena",
+        "precio": 9900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Alegría",
+        "precio": 10800,
+        "descripcion": "Mezcla de frutas del campo: mango, maracuyá y piña.",
+        "tags": []
+    },
+    {
+        "nombre": "Bienestar",
+        "precio": 10800,
+        "descripcion": "Mezcla de frutas del campo: manzana, pera, feijoa y hierbabuena.",
+        "tags": []
+    },
+    {
+        "nombre": "Elixir",
+        "precio": 13200,
+        "descripcion": "Guanábana y Lychee.",
+        "tags": []
+    },
+    {
+        "nombre": "Agrás",
+        "precio": 15300,
+        "descripcion": "Nuestra original salsa de agrás con helado de vainilla y crema chantilly.",
+        "tags": [
+            "nuevo"
+        ]
+    },
+    {
+        "nombre": "Nataly",
+        "precio": 14500,
+        "descripcion": "Tajadas de banano con salsa de arequipe, chocolate y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Sensación",
+        "precio": 24900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "extras": [{
+            "nombre": "Adición Salsa de Queso",
+            "precio": 5500
+        }],
+        "opciones": [
+            "Con cebolla",
+            "Con tomate"
+        ]
+    },
+    {
+        "nombre": "Adición Salsa de Queso",
+        "precio": 5500
+    },
+    {
+        "nombre": "Sensación Colombia",
+        "precio": 27900,
+        "descripcion": "Carne desmechada, queso, huevo, crema agria y hogao tradicional.",
+        "tags": []
+    },
+    {
+        "nombre": "Jamón y Queso",
+        "precio": 19600,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Queso",
+        "precio": 13900,
+        "descripcion": "",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Fromage",
+        "precio": 18900,
+        "descripcion": "Crepe con huevo y variedad de quesos con toque de crema de perejil.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Parisien",
+        "precio": 23900,
+        "descripcion": "Crepe con huevo, tocineta, queso y salsa de queso.",
+        "tags": []
+    },
+    {
+        "nombre": "French Connection",
+        "precio": 21400,
+        "descripcion": "Crepe con lomo ahumado de cerdo, queso mozzarella, ricotta y syrup.",
+        "tags": []
+    },
+    {
+        "nombre": "Bretonne",
+        "precio": 23900,
+        "descripcion": "Crepe francesa con lomo ahumado de cerdo, queso y huevo.",
+        "tags": []
+    },
+    {
+        "nombre": "Crespolinis",
+        "precio": 21900,
+        "descripcion": "Crepe con huevos revueltos, lomo ahumado de cerdo, queso y salsa primavera.",
+        "tags": []
+    },
+    {
+        "nombre": "Coffee Caramel",
+        "precio": 14800,
+        "descripcion": "Con salsa de caramelo, salsa de chocolate, nueces, helado de Coffee Toffee y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Sencillo con Crema Chantilly",
+        "precio": 13900,
+        "descripcion": "Pídelo con una de nuestras salsas de dulce: arequipe, chocolate, melocotón, inglesa, piña, caramelo, agrás o crema de limón.",
+        "tags": []
+    },
+    {
+        "nombre": "Sencillo con Helado",
+        "precio": 15300,
+        "descripcion": "Pídelo con una de nuestras salsas de dulce: arequipe, chocolate, melocotón, inglesa, piña, caramelo, agrás o crema de limón.",
+        "tags": []
+    },
+    {
+        "nombre": "Especial",
+        "precio": 17900,
+        "descripcion": "Con helado y crema chantilly. Escoge tres o cuatro salsas diferentes: arequipe, chocolate, melocotón, inglesa, piña, frutos del bosque, caramelo, agrás o crema de limón.",
+        "tags": []
+    },
+    {
+        "nombre": "Arequipe",
+        "precio": 14300,
+        "descripcion": "Con salsa de arequipe, helado de vainilla y arequipe con crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Arequipe y Banano",
+        "precio": 14900,
+        "descripcion": "Tajadas de banano fresco con salsa de arequipe y chocolate, helado de vainilla y arequipe con crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Nutella y Banano",
+        "precio": 17900,
+        "descripcion": "Tajadas de banano fresco, helado Old Style y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Jardín de Berries",
+        "precio": 17600,
+        "descripcion": "Triángulos de waffle con exquisita salsa de limón, una mezcla de fresas y arándanos, almendras y helado Old Style.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Nutella",
+        "precio": 16900,
+        "descripcion": "Crepe de Nutella con crema chantilly. Opciones: fresas, banano o fresa y banano.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "variantes": [{
+                "nombre": "Fresas",
+                "precio": 17400
+            },
+            {
+                "nombre": "Banano",
+                "precio": 17400
+            },
+            {
+                "nombre": "Fresa y Banano",
+                "precio": 17400
+            }
+        ]
+    },
+    {
+        "nombre": "Copa Limeña",
+        "precio": 16400,
+        "descripcion": "Helado de vainilla con salsa de arequipe, frutos del bosque, merengue, copos de guanábana y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Copa Rochelle",
+        "precio": 14300,
+        "descripcion": "Helado de Choco Rochelle, con crujientes pedazos de avellana, crema chantilly y barquillo.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Copa Lychees",
+        "precio": 17500,
+        "descripcion": "Helado de limón con mermelada de naranja y hierbabuena fresca. Pídela con o sin licor.",
+        "tags": [
+            "vegano"
+        ]
+    },
+    {
+        "nombre": "Tartín de Limón",
+        "precio": 19300,
+        "descripcion": "Helado de cheesecake con toques cítricos de limón, naranja y fresas, salsa de limón, crujientes de galleta y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Banana Split",
+        "precio": 17500,
+        "descripcion": "Helado de vainilla, fresa y chocolate con crema chantilly, nueces, banano, salsa de chocolate y arequipe.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Beverly Hills",
+        "precio": 11200,
+        "descripcion": "Helado de vainilla y mora sobre galleta de mantequilla con salsas inglesa y uva, con crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Hawai",
+        "precio": 10800,
+        "descripcion": "Helados de limón, mora y maracuyá con crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Fondue Crepes & Waffles",
+        "precio": 29900,
+        "descripcion": "Cinco sabores de helado: chocolate, vainilla, arequipe, fresa y ron con pasas. Acompañado con brownie, banano, melocotón, fresas, galletas y salsa de chocolate caliente.",
+        "tags": []
+    },
+    {
+        "nombre": "Tarta de Chocolate",
+        "precio": 15400,
+        "descripcion": "",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Tarta de Chocolate y Fudge",
+        "precio": 15400,
+        "descripcion": "Fusión de helado de chocolate y coffee toffee con fudge de chocolate, en una base de almendras tostadas y crocante italiano.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Crocantino de Chocolate",
+        "precio": 15400,
+        "descripcion": "Helado de chocolate cubierto de crocantino italiano, salsa de chocolate y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Vainilla Hot Chocolate",
+        "precio": 14900,
+        "descripcion": "Helado Old Style con almendras tostadas, crema chantilly y chocolate caliente.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Almond Chocolate",
+        "precio": 11900,
+        "descripcion": "Helado de chocolate con almendras tostadas, salsa de chocolate y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Tiramisú",
+        "precio": 14800,
+        "descripcion": "Helado Old Style con bizcochuelo bañado con coñac, salsas inglesa, chocolate y café.",
+        "tags": []
+    },
+    {
+        "nombre": "Fontana de Trevi",
+        "precio": 14200,
+        "descripcion": "Helados de crocante, chocolate, coffee toffee y avellana con almendras, mini cono crujiente y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Saint Honoré",
+        "precio": 17500,
+        "descripcion": "Profiteroles con helado de vainilla, salsa de chocolate caliente, salsa inglesa, nueces y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Vesubio",
+        "precio": 11900,
+        "descripcion": "Helados de fresa, vainilla y limón con salsa de uva y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Veneciana",
+        "precio": 12800,
+        "descripcion": "Helado Old Style con licor de sabajón y chocolate, almendras tostadas y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Capri",
+        "precio": 12100,
+        "descripcion": "Helado con galleta mantequilla, salsas de arequipe, chocolate y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Vesubio",
+        "precio": 11900,
+        "descripcion": "Clásica combinación italiana de helado de fresa, vainilla y limón, bañado con salsa de uva y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Veneciana",
+        "precio": 12800,
+        "descripcion": "Helado Old Style con licor de sabajón y chocolate, con almendras tostadas y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Capri",
+        "precio": 12100,
+        "descripcion": "Helado de vainilla sobre galleta de mantequilla con salsas de arequipe, uva y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Tartufino de Avellana",
+        "precio": 15300,
+        "descripcion": "Canastilla de chocolate italiano con helado de avellana o sabor a elección, con salsa de chocolate, salsa inglesa y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Capricho de Maracuyá",
+        "precio": 15300,
+        "descripcion": "Helado de yogurt de maracuyá con coulis de maracuyá, fresas, melocotones, galleta de mantequilla y crujiente de galleta de encaje.",
+        "tags": []
+    },
+    {
+        "nombre": "Tentación",
+        "precio": 16900,
+        "descripcion": "Bizcochuelo con licor, helado de vainilla, coffee toffee y chocolate, con salsa de chocolate, nueces y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Festival",
+        "precio": 22300,
+        "descripcion": "Bizcochuelo con helados de mora, fresa, maracuyá, limón y vainilla, con banano, fresas, salsa de uva y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Banana Caramel",
+        "precio": 11900,
+        "descripcion": "Helado Old Style con salsa de caramelo, inglesa y chocolate, con banano, galleta de mantequilla, barquillos y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Coffee Toffee",
+        "precio": 11500,
+        "descripcion": "Helado de coffee toffee con galleta de mantequilla, crema chantilly y salsa de café y chocolate.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Filosofía Acaramelada",
+        "precio": 11900,
+        "descripcion": "Helado de vainilla con crocante de macadamias y almendras, banano y salsa de caramelo.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Merengue Glazé",
+        "precio": 16200,
+        "descripcion": "Merengue con helado de vainilla, salsa de chocolate caliente, nueces y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Copa Melocotón",
+        "precio": 15300,
+        "descripcion": "Helado de vainilla y yogurt de maracuyá con melocotón, coulis de maracuyá, crema chantilly y galleta de encaje.",
+        "tags": []
+    },
+    {
+        "nombre": "Banana Royal",
+        "precio": 14200,
+        "descripcion": "Helado de vainilla y chocolate con fresa, banano, salsa de chocolate caliente, galleta de encaje y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Suprema",
+        "precio": 15300,
+        "descripcion": "Helado de vainilla con banano, crema chantilly, salsa de chocolate y arequipe, mini cono de galleta y nueces.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Dama Blanca",
+        "precio": 11900,
+        "descripcion": "Helado de vainilla y chocolate con salsa de chocolate, nueces y crema chantilly.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Arequipe",
+        "precio": 14500,
+        "descripcion": "Helado de arequipe con banano, salsa de arequipe, galleta de mantequilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Alaska",
+        "precio": 15400,
+        "descripcion": "Profiterol con salsa inglesa, helado de vainilla y mora, con salsa de uva y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Brownie",
+        "precio": 12900,
+        "descripcion": "Helado de vainilla con trozos de brownie, salsa de caramelo y chocolate.",
+        "tags": []
+    },
+    {
+        "nombre": "Ron con Pasas",
+        "precio": 11500,
+        "descripcion": "Helado de ron con pasas con banano, salsa de chocolate, galleta de mantequilla y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Dulce Encanto",
+        "precio": 15400,
+        "descripcion": "Bizcochuelo con salsa inglesa y arequipe, helado de cocada, tartufino de chocolate y galleta de encaje.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Brasilia",
+        "precio": 10300,
+        "descripcion": "Helado de crocante con macadamias, barquillo crujiente y crema chantilly.",
+        "tags": [
+            "contiene nueces",
+            "contiene maní"
+        ]
+    },
+    {
+        "nombre": "Caramel",
+        "precio": 11900,
+        "descripcion": "Helado de vainilla con banano, salsa de caramelo y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Samy",
+        "precio": 9800,
+        "descripcion": "Pingüino con helado de vainilla.",
+        "tags": []
+    },
+    {
+        "nombre": "Piggy",
+        "precio": 9800,
+        "descripcion": "Cerdito con helado de chicle.",
+        "tags": []
+    },
+    {
+        "nombre": "Rodolfo",
+        "precio": 9800,
+        "descripcion": "Reno con helado de arequipe.",
+        "tags": []
+    },
+    {
+        "nombre": "Gummy",
+        "precio": 10200,
+        "descripcion": "Helado de chicle con crema chantilly y miniaturas.",
+        "tags": []
+    },
+    {
+        "nombre": "Snowman",
+        "precio": 10800,
+        "descripcion": "Helado de arequipe con salsa de arequipe y crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Payaso",
+        "precio": 10200,
+        "descripcion": "Helado de chocolate con miniaturas sobre crema chantilly.",
+        "tags": []
+    },
+    {
+        "nombre": "Leche de Almendras",
+        "precio": 3200,
+        "descripcion": "Adición opcional para cualquier café.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Chocolatada",
+        "precio": 9800,
+        "descripcion": "Chocolate origen Colombia 70% con sabor intenso.",
+        "tags": [],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200,
+            "tags": [
+                "contiene nueces"
+            ]
+        }]
+    },
+    {
+        "nombre": "Leche de Almendras",
+        "precio": 3200,
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Milo",
+        "precio": 8500,
+        "descripcion": "Bebida fría o caliente.",
+        "tags": [],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200,
+            "tags": [
+                "contiene nueces"
+            ]
+        }]
+    },
+    {
+        "nombre": "Hot Chocolate Marshmallow",
+        "precio": 10900,
+        "descripcion": "",
+        "tags": []
+    },
+    {
+        "nombre": "Té Chai",
+        "precio": 7200,
+        "descripcion": "Bebida de la India con sabores aromáticos.",
+        "tags": []
+    },
+    {
+        "nombre": "Matcha Latte",
+        "precio": 13200,
+        "descripcion": "Té verde japonés rico en antioxidantes. Disponible frío.",
+        "tags": [],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200,
+            "tags": [
+                "contiene nueces"
+            ]
+        }]
+    },
+    {
+        "nombre": "Golden Latte",
+        "precio": 7900,
+        "descripcion": "",
+        "tags": [
+            "nuevo"
+        ],
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200,
+            "tags": [
+                "contiene nueces"
+            ]
+        }]
+    },
+    {
+        "nombre": "Canastilla de Panes",
+        "precio": 16900,
+        "descripcion": "Cuatro panes artesanales con Nutella, mantequilla y mermelada.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Scones",
+        "precio": 9300,
+        "descripcion": "Receta inglesa con crema fresca y mermelada de fresa.",
+        "tags": []
+    },
+    {
+        "nombre": "Queso Momposino",
+        "precio": 16900,
+        "descripcion": "Queso tradicional en capas de Mompox.",
+        "tags": []
+    },
+    {
+        "nombre": "Italia Ti Amo",
+        "precio": 33900,
+        "descripcion": "Pesto, tomates secos, prosciutto, queso crema y sabores italianos.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Sabana",
+        "precio": 29800,
+        "descripcion": "Huevos revueltos, tocineta crujiente, queso y un toque picante.",
+        "tags": [
+            "ligeramente picante"
+        ],
+        "extras": [{
+            "nombre": "Salsa de Queso",
+            "precio": 5500
+        }]
+    },
+    {
+        "nombre": "Salsa de Queso",
+        "precio": 5500
+    },
+    {
+        "nombre": "Roastbeef",
+        "precio": 29500,
+        "descripcion": "Roastbeef, dijonnaise y cebollas asadas.",
+        "tags": []
+    },
+    {
+        "nombre": "D’Alaska",
+        "precio": 39800,
+        "descripcion": "Salmón ahumado, queso crema, alcaparras y cebolla.",
+        "tags": []
+    },
+    {
+        "nombre": "Sensación",
+        "precio": 24900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo. Puede pedirse con cebolla y tomate.",
+        "tags": [
+            "contiene nueces"
+        ],
+        "extras": [{
+            "nombre": "Salsa de Queso",
+            "precio": 5500
+        }]
+    },
+    {
+        "nombre": "French Connection",
+        "precio": 21400,
+        "descripcion": "Lomo ahumado de cerdo, queso mozzarella, ricotta y syrup.",
+        "tags": []
+    },
+    {
+        "nombre": "Bretonne",
+        "precio": 23900,
+        "descripcion": "Crepe francesa de lomo ahumado de cerdo, queso y huevo.",
+        "tags": []
+    },
+    {
+        "nombre": "Barra de Frutas y Cereales",
+        "precio": 19800,
+        "descripcion": "Frutas y cereales al gusto.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Tostadas Francesas",
+        "precio": 16900,
+        "descripcion": "Pan brioche de banano con crema, fresas y arándanos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Tostada de Aguacate",
+        "precio": 16900,
+        "descripcion": "Aguacate rústico con tomates cherry y huevos.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Tostada de Aguacate",
+        "precio": 16900,
+        "descripcion": "Aguacate rústico con pesto, tomates cherry y huevos poché.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Açaí Bowl",
+        "precio": 20800,
+        "descripcion": "Açaí con arándanos, fresa, banano y granola.",
+        "tags": [
+            "vegano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Pancakes de Ahuyama",
+        "precio": 17900,
+        "descripcion": "Con yogurt griego, granola y miel.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 18900,
+        "descripcion": "Granola, yogurt de vainilla, fresa, arándanos y salsa de arándanos.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 18900,
+        "descripcion": "Yogurt griego natural con granola y copos de guanábana. Endulza con miel.",
+        "tags": [
+            "vegetariano",
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Porción de Salchichas (5 unidades)",
+        "precio": 7200
+    },
+    {
+        "nombre": "Porción de Tocineta",
+        "precio": 7200
+    },
+    {
+        "nombre": "Porción de Jamón Ahumado",
+        "precio": 7200
+    },
+    {
+        "nombre": "Porción de Salsa de Queso",
+        "precio": 5500
+    },
+    {
+        "nombre": "Continental",
+        "precio": 30300,
+        "descripcion": "Café o té, jugo de naranja o mandarina y canastilla de pan con mantequilla y mermelada."
+    },
+    {
+        "nombre": "Francés",
+        "precio": 25600,
+        "descripcion": "Café o té y crepe de jamón, queso y huevo."
+    },
+    {
+        "nombre": "Inglés",
+        "precio": 34900,
+        "descripcion": "Huevos poché, scones con crema fresca y mermelada de fresa, jugo de naranja o mandarina y café o té."
+    },
+    {
+        "nombre": "Petit Desayuno",
+        "precio": 17900,
+        "descripcion": "Jugo de naranja o mandarina, café o té y pan de su elección."
+    },
+    {
+        "nombre": "Fritos",
+        "precio": 8700,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Revueltos",
+        "precio": 8700,
+        "tags": [
+            "vegetariano"
+        ],
+        "opciones": [{
+                "nombre": "Con cebolla y tomate",
+                "precio": 9500,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Con maíz desgranado y hogao",
+                "precio": 12900,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Con mini salchichas",
+                "precio": 13900
+            },
+            {
+                "nombre": "Con pavo",
+                "precio": 16900
+            }
+        ]
+    },
+    {
+        "nombre": "Con cebolla y tomate",
+        "precio": 9500,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Con maíz desgranado y hogao",
+        "precio": 12900,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Con mini salchichas",
+        "precio": 13900
+    },
+    {
+        "nombre": "Con pavo",
+        "precio": 16900
+    },
+    {
+        "nombre": "Poché",
+        "precio": 12900,
+        "descripcion": "Gratinados con el toque especial de Crepes & Waffles.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Revueltos con Chorizo Español",
+        "precio": 25400,
+        "descripcion": "Huevos revueltos con chorizo de Rioja, acompañados de pan tumaca con aceite de oliva y puré de tomate."
+    },
+    {
+        "nombre": "Con Tocineta",
+        "precio": 20700,
+        "descripcion": "Huevos revueltos con trozos de tocineta."
+    },
+    {
+        "nombre": "Campesinos",
+        "precio": 17800,
+        "descripcion": "Huevos con mazorca, acompañados de pan tumaca con aceite de oliva y puré de tomate.",
+        "tags": [
+            "vegetariano"
+        ],
+        "extra": {
+            "nombre": "Jamón Serrano",
+            "precio": 27900
+        }
+    },
+    {
+        "nombre": "Jamón Serrano",
+        "precio": 27900
+    },
+    {
+        "nombre": "Benedictine",
+        "precio": 24900,
+        "descripcion": "Sobre muffin inglés con lomo ahumado de cerdo."
+    },
+    {
+        "nombre": "Benedictine",
+        "precio": 24900,
+        "descripcion": "Sobre un muffin inglés con lomo ahumado de cerdo y salsa Crepes & Waffles."
+    },
+    {
+        "nombre": "Revoltillo Holandés",
+        "precio": 16900,
+        "descripcion": "Huevos con champiñones, ligero toque de cebollas doraditas y queso.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Árabes",
+        "precio": 19500,
+        "descripcion": "Huevos con tomate, acompañados de yogurt natural, pan árabe y especias tradicionales.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Sol Naciente",
+        "precio": 16900,
+        "descripcion": "Francesito al horno con huevos poché en salsa benedictina y queso parmesano.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Rancheros",
+        "precio": 20500,
+        "descripcion": "Huevos con cebolla, lomo ahumado de cerdo, salsa de tomate y queso parmesano."
+    },
+    {
+        "nombre": "Manchego",
+        "precio": 18900,
+        "descripcion": "Sobre muffin inglés con tajadas de queso manchego, aceite de oliva y pimentón de La Vera.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Australianos",
+        "precio": 28900,
+        "descripcion": "Huevos poché con tocineta, aguacate y tomate asado, salsa poché sobre tostada artesanal."
+    },
+    {
+        "nombre": "Sartén Marroquí",
+        "precio": 19500,
+        "descripcion": "Huevos en salsa de tomate, couscous, tahini y especias aromáticas.",
+        "tags": [
+            "vegetariano",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Tulum",
+        "precio": 19600,
+        "descripcion": "Cacerola de huevos con salsa de tomatillo verde y rojo, aguacate, maíz, salsa agria, pico de gallo y tortilla.",
+        "tags": [
+            "vegetariano",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Crepes & Waffles",
+        "precio": 17600,
+        "descripcion": "Crepe con huevos revueltos y cebollina en crema sobre salsa de queso.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Sensación",
+        "precio": 24900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo. Opcional con cebolla y tomate.",
+        "extras": [{
+            "nombre": "Salsa de Queso",
+            "precio": 5500
+        }]
+    },
+    {
+        "nombre": "Sensación Colombia",
+        "precio": 27900,
+        "descripcion": "Carne desmechada, queso, huevo, crema agria y hogao."
+    },
+    {
+        "nombre": "Jamón y Queso",
+        "precio": 19600
+    },
+    {
+        "nombre": "Queso",
+        "precio": 13900,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Fromage",
+        "precio": 18900,
+        "descripcion": "Crepe con huevo, variedad de quesos y toque de crema de perejil.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Parisien",
+        "precio": 23900,
+        "descripcion": "Huevo, tocineta, queso y salsa de queso."
+    },
+    {
+        "nombre": "French Connection",
+        "precio": 21400,
+        "descripcion": "Lomo ahumado de cerdo, queso mozzarella, ricotta y syrup."
+    },
+    {
+        "nombre": "Bretonne",
+        "precio": 23900,
+        "descripcion": "Crepe francesa con lomo ahumado de cerdo, queso y huevo."
+    },
+    {
+        "nombre": "Crespolinis",
+        "precio": 21900,
+        "descripcion": "Huevos revueltos, lomo ahumado de cerdo, queso y salsa primavera."
+    },
+    {
+        "nombre": "Barra de Frutas y Cereales",
+        "precio": 19800,
+        "descripcion": "Donde la libertad le dará gusto a tu gusto.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Tostada de Aguacate",
+        "precio": 16900,
+        "descripcion": "Aguacate rústico con pesto, tomates cherry y huevos poché.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Açaí Bowl",
+        "precio": 20800,
+        "descripcion": "Açaí con arándanos, fresa, banano y granola.",
+        "tags": [
+            "vegano"
+        ]
+    },
+    {
+        "nombre": "Pancakes de Ahuyama",
+        "precio": 17900,
+        "descripcion": "Con yogurt griego, granola y miel.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 18900,
+        "descripcion": "Granola, yogurt de vainilla, fresa, arándanos y salsa de arándanos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 18900,
+        "descripcion": "Yogurt griego natural sin azúcar con granola y copos de guanábana. Puedes endulzar con miel.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Mora",
+        "precio": 7900
+    },
+    {
+        "nombre": "Mango",
+        "precio": 7900
+    },
+    {
+        "nombre": "Mandarina",
+        "precio": 9900
+    },
+    {
+        "nombre": "Fresa",
+        "precio": 8100
+    },
+    {
+        "nombre": "Naranja",
+        "precio": 9600
+    },
+    {
+        "nombre": "Naranja - Zanahoria",
+        "precio": 8900
+    },
+    {
+        "nombre": "Frambuesa",
+        "precio": 9900
+    },
+    {
+        "nombre": "Natural",
+        "precio": 6500
+    },
+    {
+        "nombre": "Limón Mandarino",
+        "precio": 7600
+    },
+    {
+        "nombre": "Hierbabuena",
+        "precio": 7900
+    },
+    {
+        "nombre": "Mango Biche",
+        "precio": 9600
+    },
+    {
+        "nombre": "Coco",
+        "precio": 11300
+    },
+    {
+        "nombre": "Piña, Jengibre y Hierbabuena",
+        "precio": 9900
+    },
+    {
+        "nombre": "Alegría",
+        "precio": 10800,
+        "descripcion": "Mango, maracuyá y piña."
+    },
+    {
+        "nombre": "Bienestar",
+        "precio": 10800,
+        "descripcion": "Manzana, pera, feijoa y hierbabuena."
+    },
+    {
+        "nombre": "Aperol Spritz",
+        "precio": 29900,
+        "descripcion": "Aperol, Prosecco y soda."
+    },
+    {
+        "nombre": "Copa de Vino Prosecco",
+        "precio": 29800,
+        "descripcion": "Vino espumante de Italia."
+    },
+    {
+        "nombre": "Mimosa",
+        "precio": 25900,
+        "descripcion": "Prosecco y jugo de naranja."
+    },
+    {
+        "nombre": "Café Filtrado",
+        "precio": 6900
+    },
+    {
+        "nombre": "Espresso",
+        "precio": 5000
+    },
+    {
+        "nombre": "Macchiato",
+        "precio": 5000,
+        "descripcion": "Espresso con ligera capa de leche espumosa."
+    },
+    {
+        "nombre": "Americano",
+        "precio": 5800
+    },
+    {
+        "nombre": "Latte",
+        "precio": 7900
+    },
+    {
+        "nombre": "Cappuccino",
+        "precio": 6500
+    },
+    {
+        "nombre": "Appassionato",
+        "precio": 10200,
+        "descripcion": "Cappuccino doble con stick de chocolate."
+    },
+    {
+        "nombre": "Leche de Almendras",
+        "precio": 3200,
+        "nota": "Disponible para cualquier café"
+    },
+    {
+        "nombre": "Hot Chocolate Marshmallow",
+        "precio": 10900
+    },
+    {
+        "nombre": "French Chocolate",
+        "precio": 10400
+    },
+    {
+        "nombre": "Milo",
+        "precio": 8500,
+        "descripcion": "Bebida fría o caliente.",
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Chocolatada",
+        "precio": 9800,
+        "descripcion": "Chocolate colombiano 70% con sabor intenso.",
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Aromática",
+        "opciones": [{
+                "nombre": "Frutos Rojos",
+                "precio": 4900
+            },
+            {
+                "nombre": "Hierbabuena",
+                "precio": 3200
+            }
+        ]
+    },
+    {
+        "nombre": "Frutos Rojos",
+        "precio": 4900
+    },
+    {
+        "nombre": "Hierbabuena",
+        "precio": 3200
+    },
+    {
+        "nombre": "Té Premium Colombiano",
+        "precio": 5900
+    },
+    {
+        "nombre": "Té Chai",
+        "precio": 7200,
+        "descripcion": "Bebida de la India con especias aromáticas."
+    },
+    {
+        "nombre": "Matcha Latte",
+        "precio": 13200,
+        "descripcion": "Té verde japonés rico en antioxidantes.",
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Golden Latte",
+        "precio": 7900,
+        "extras": [{
+            "nombre": "Leche de Almendras",
+            "precio": 3200
+        }]
+    },
+    {
+        "nombre": "Moka Moka",
+        "precio": 15900,
+        "descripcion": "Café granizado con chocolate y crema chantilly."
+    },
+    {
+        "nombre": "Frozen Caramelo",
+        "precio": 15500,
+        "descripcion": "Café granizado con caramelo y crema chantilly."
+    },
+    {
+        "nombre": "Frozen Cappuccino",
+        "precio": 15200,
+        "descripcion": "Café granizado.",
+        "tags": [
+            "contiene nueces o maní"
+        ]
+    },
+    {
+        "nombre": "Iced Latte",
+        "precio": 8900
+    },
+    {
+        "nombre": "Frozen Cappuccino",
+        "precio": 15200,
+        "descripcion": "Mezcla de café granizado y crema chantilly.",
+        "tags": [
+            "contiene nueces o maní"
+        ]
+    },
+    {
+        "nombre": "Iced Latte",
+        "precio": 8900,
+        "descripcion": "Café latte frío con sabor a vainilla, hielo y leche espumosa."
+    },
+    {
+        "nombre": "Canastilla de Panes",
+        "precio": 16900,
+        "descripcion": "Cuatro panes artesanales acompañados con Nutella, mantequilla y mermelada.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Scones",
+        "precio": 9300,
+        "descripcion": "Receta inglesa servida con crema fresca y mermelada de fresa."
+    },
+    {
+        "nombre": "Queso Momposino",
+        "precio": 16900,
+        "descripcion": "Queso tradicional en capas de Mompox para disfrutar al gusto."
+    },
+    {
+        "nombre": "Italia Ti Amo",
+        "precio": 33900,
+        "descripcion": "Pesto, tomates secos, prosciutto, queso crema.",
+        "tags": [
+            "contiene nueces"
+        ]
+    },
+    {
+        "nombre": "Sabana",
+        "precio": 29800,
+        "descripcion": "Huevos revueltos, tocineta, queso y toque picante.",
+        "tags": [
+            "ligeramente picante"
+        ],
+        "extras": [{
+            "nombre": "Salsa de Queso",
+            "precio": 5500
+        }]
+    },
+    {
+        "nombre": "Roastbeef",
+        "precio": 29500,
+        "descripcion": "Roastbeef, dijonnaise y cebollas asadas."
+    },
+    {
+        "nombre": "D’Alaska",
+        "precio": 39800,
+        "descripcion": "Salmón ahumado, queso crema, alcaparras y cebolla."
+    },
+    {
+        "nombre": "Poché",
+        "precio": 12900,
+        "descripcion": "Gratinados con toque especial de Crepes & Waffles.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Revueltos con Chorizo Español",
+        "precio": 25400,
+        "descripcion": "Con chorizo de Rioja, pan tumaca, aceite de oliva y puré de tomate."
+    },
+    {
+        "nombre": "Con Tocineta",
+        "precio": 20700,
+        "descripcion": "Huevos revueltos con tocineta."
+    },
+    {
+        "nombre": "Campesinos",
+        "precio": 17800,
+        "descripcion": "Huevos con mazorca, pan tumaca y puré de tomate.",
+        "tags": [
+            "vegetariano"
+        ],
+        "extras": [{
+            "nombre": "Jamón Serrano",
+            "precio": 27900
+        }]
+    },
+    {
+        "nombre": "Benedictine",
+        "precio": 24900,
+        "descripcion": "Muffin inglés con lomo ahumado de cerdo y salsa Crepes & Waffles."
+    },
+    {
+        "nombre": "Benedictine",
+        "precio": 24900,
+        "descripcion": "Sobre muffin inglés con lomo ahumado de cerdo y salsa Crepes & Waffles."
+    },
+    {
+        "nombre": "Benedictine con Espinaca",
+        "precio": 25900,
+        "descripcion": "Muffin inglés con lomo ahumado de cerdo, espinaca y salsa poché."
+    },
+    {
+        "nombre": "Revoltillo Holandés",
+        "precio": 16900,
+        "descripcion": "Huevos con champiñones, cebolla dorada y queso.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Árabes",
+        "precio": 19500,
+        "descripcion": "Huevos con tomate, yogurt natural, pan árabe y especias.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Rancheros",
+        "precio": 20500,
+        "descripcion": "Huevos con cebolla, lomo ahumado de cerdo, salsa de tomate y parmesano."
+    },
+    {
+        "nombre": "Manchego",
+        "precio": 18900,
+        "descripcion": "Muffin inglés con queso manchego, aceite de oliva y pimentón.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Sartén Marroquí",
+        "precio": 19500,
+        "descripcion": "Huevos en salsa de tomate con couscous, tahini y especias.",
+        "tags": [
+            "vegetariano",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Australianos",
+        "precio": 28900,
+        "descripcion": "Huevos poché con tocineta, aguacate, tomate asado y salsa poché sobre tostada."
+    },
+    {
+        "nombre": "Tulum",
+        "precio": 19600,
+        "descripcion": "Cacerola de huevos con salsa de tomatillo, aguacate, maíz, salsa agria y tortilla.",
+        "tags": [
+            "vegetariano",
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Crepes & Waffles",
+        "precio": 17600,
+        "descripcion": "Crepe con huevos revueltos y cebolla a la crema sobre salsa de queso.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Harissa",
+        "precio": 19600,
+        "descripcion": "Huevos poché con zucchini, acelga, queso y especias marroquíes.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Rosarito",
+        "precio": 27900,
+        "descripcion": "Tostada con huevos poché, tocineta, aguacate y salsa chipotle.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Mantequilla y Syrup o Miel",
+        "precio": 10200,
+        "tags": [
+            "vegetariano"
+        ],
+        "adiciones": [{
+                "nombre": "Lomo Ahumado de Cerdo",
+                "precio": 18900
+            },
+            {
+                "nombre": "Huevo Frito",
+                "precio": 16400,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Huevo Frito y Tocineta",
+                "precio": 18400
+            },
+            {
+                "nombre": "Huevo Frito y Salchichas",
+                "precio": 18400
+            }
+        ]
+    },
+    {
+        "nombre": "Lomo Ahumado de Cerdo",
+        "precio": 18900
+    },
+    {
+        "nombre": "Huevo Frito",
+        "precio": 16400,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Huevo Frito y Tocineta",
+        "precio": 18400
+    },
+    {
+        "nombre": "Huevo Frito y Salchichas",
+        "precio": 18400
+    },
+    {
+        "nombre": "Waffle D’Choclo",
+        "precio": 15900,
+        "descripcion": "Waffle de maíz relleno de queso, con queso 7 cueros y suero costeño.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Waffle Madame",
+        "precio": 28500,
+        "descripcion": "Sánduche de waffle con mezcla de quesos, lomo ahumado de cerdo y huevo, bañado en salsa parmesana."
+    },
+    {
+        "nombre": "Waffle Sándwich",
+        "precio": 31900,
+        "descripcion": "Con pechuga de pollo, tocineta, queso, tomate, rúgula y dijonnaise, acompañado con chips de arracacha.",
+        "tags": [
+            "ligeramente picante"
+        ]
+    },
+    {
+        "nombre": "Mini Waffle D’Yuca",
+        "precio": 8900,
+        "descripcion": "Mini waffle con mantequilla, panela orgánica molida y jalea de guayaba.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Doble Mini Waffles",
+        "precio": 15600
+    },
+    {
+        "nombre": "Sensación",
+        "precio": 24900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo. Opcional con cebolla y tomate.",
+        "extra": {
+            "Salsa de Queso": 5500
+        }
+    },
+    {
+        "nombre": "Sensación Brunch",
+        "precio": 25300,
+        "descripcion": "Lomo ahumado de cerdo, queso, huevo frito y salsa de queso."
+    },
+    {
+        "nombre": "Fromage",
+        "precio": 18900,
+        "descripcion": "Con huevo, variedad de quesos y toque de crema de perejil.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Parisien",
+        "precio": 23900,
+        "descripcion": "Con huevo, tocineta, queso y salsa de queso."
+    },
+    {
+        "nombre": "French Connection",
+        "precio": 21400,
+        "descripcion": "Con lomo ahumado de cerdo, mozzarella, ricotta y syrup."
+    },
+    {
+        "nombre": "Tostada de Aguacate",
+        "precio": 16900,
+        "descripcion": "Aguacate rústico con pesto, tomates cherry y huevos poché.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Timbal de Frutas Frescas",
+        "precio": 9900,
+        "descripcion": "Combinación de mango, sandía y naranja.",
+        "tags": [
+            "vegano"
+        ]
+    },
+    {
+        "nombre": "Açaí Bowl",
+        "precio": 20800,
+        "descripcion": "Açaí con arándanos, fresa, banano y granola.",
+        "tags": [
+            "vegano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Pancakes de Ahuyama",
+        "precio": 17900,
+        "descripcion": "Con yogurt griego, granola y miel.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 18900,
+        "descripcion": "Granola, yogurt de vainilla, fresa, arándanos y salsa de arándanos.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 18900,
+        "descripcion": "Yogurt griego natural sin azúcar con granola y copos de guanábana.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Waffle Mickey Popeye",
+        "precio": 13900,
+        "descripcion": "Relleno de espinaca, queso y champiñones.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Waffle Mickey Mazorca",
+        "precio": 13900,
+        "descripcion": "Relleno de mazorca y queso.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Waffle Mickey",
+        "opciones": [{
+                "nombre": "Mantequilla y Syrup o Miel",
+                "precio": 11500,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Syrup, Salchichitas y Huevo Frito",
+                "precio": 14900
+            },
+            {
+                "nombre": "Syrup, Tocineta y Huevo Frito",
+                "precio": 14900
+            }
+        ]
+    },
+    {
+        "nombre": "Mantequilla y Syrup o Miel",
+        "precio": 11500,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Syrup, Salchichitas y Huevo Frito",
+        "precio": 14900
+    },
+    {
+        "nombre": "Syrup, Tocineta y Huevo Frito",
+        "precio": 14900
+    },
+    {
+        "nombre": "Huevos Revueltos",
+        "opciones": [{
+                "nombre": "Jamón y Queso",
+                "precio": 13300
+            },
+            {
+                "nombre": "Queso y Mazorquita",
+                "precio": 12900,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Tocineta o Salchichitas",
+                "precio": 14900
+            }
+        ]
+    },
+    {
+        "nombre": "Jamón y Queso",
+        "precio": 13300
+    },
+    {
+        "nombre": "Queso y Mazorquita",
+        "precio": 12900,
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Tocineta o Salchichitas",
+        "precio": 14900
+    },
+    {
+        "nombre": "Mini Parfait de Guanábana",
+        "precio": 14900,
+        "descripcion": "Mini copa de yogurt griego natural sin azúcar con granola y guanábana.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Tostadas Francesas",
+        "precio": 16900,
+        "descripcion": "Pan brioche de banano con suave crema, fresas y arándanos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Tostada de Aguacate",
+        "precio": 16900,
+        "descripcion": "Aguacate rústico con toque de pesto, tomates cherry y huevos poché.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 18900,
+        "descripcion": "Copa con granola, yogurt de vainilla, fresa, arándanos y salsa de arándanos.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 18900,
+        "descripcion": "Yogurt griego natural sin azúcar con granola y copos de guanábana. Endulza a tu gusto con miel.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Waffle Mickey",
+        "variantes": [{
+                "nombre": "Mantequilla y Syrup o Miel",
+                "precio": 11500,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Syrup, Salchichitas y Huevo Frito",
+                "precio": 14900
+            },
+            {
+                "nombre": "Syrup, Tocineta y Huevo Frito",
+                "precio": 14900
+            }
+        ]
+    },
+    {
+        "nombre": "Huevos Revueltos",
+        "variantes": [{
+                "nombre": "Jamón y Queso",
+                "precio": 13300
+            },
+            {
+                "nombre": "Queso y Mazorquita",
+                "precio": 12900,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Tocineta o Salchichitas",
+                "precio": 14900
+            }
+        ]
+    },
+    {
+        "nombre": "Mini Parfait de Guanábana",
+        "precio": 14900,
+        "descripcion": "Mini copa de yogurt griego natural sin azúcar con granola y guanábana. Endulza a tu gusto.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Mini Parfait de Guanábana",
+        "precio": 14900,
+        "descripcion": "Mini copa de yogurt griego natural sin azúcar, con granola y copos de guanábana. Endulza a tu gusto con miel.",
+        "tags": [
+            "vegetariano"
+        ],
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Mini Timbal de Frutas",
+        "precio": 9200,
+        "descripcion": "Combinación de frutas frescas.",
+        "tags": [
+            "vegano"
+        ]
+    },
+    {
+        "nombre": "Porción de Lomo Ahumado de Cerdo",
+        "precio": 7200
+    },
+    {
+        "nombre": "Canastilla de Panes",
+        "precio": 16900,
+        "descripcion": "Cuatro panes artesanales a tu elección, acompañados con Nutella, mantequilla y mermelada.",
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Queso Momposino",
+        "precio": 16900,
+        "descripcion": "Tradicional y delicioso queso en capas de Mompox para que estires a tu antojo."
+    },
+    {
+        "nombre": "Italia Ti Amo",
+        "precio": 33900,
+        "descripcion": "Pesto, tomates secos, prosciutto, queso crema y sabores italianos.",
+        "contiene": [
+            "nueces"
+        ]
+    },
+    {
+        "nombre": "Sabana",
+        "precio": 29800,
+        "descripcion": "Huevos revueltos, tocineta crujiente, queso y toque picante.",
+        "tags": [
+            "ligeramente_picante"
+        ],
+        "adiciones": [{
+            "nombre": "Salsa de Queso",
+            "precio": 5500
+        }]
+    },
+    {
+        "nombre": "Revueltos",
+        "precio": 8700,
+        "tags": [
+            "vegetariano"
+        ],
+        "variantes": [{
+                "nombre": "Con cebolla y tomate",
+                "precio": 9500,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Con maíz desgranado y hogao",
+                "precio": 12900,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Con mini salchichas",
+                "precio": 13900
+            },
+            {
+                "nombre": "Con pavo",
+                "precio": 16900
+            }
+        ]
+    },
+    {
+        "nombre": "Con Tocineta",
+        "precio": 20700,
+        "descripcion": "Huevos revueltos con pedazos de tocineta."
+    },
+    {
+        "nombre": "Campesinos",
+        "precio": 17800,
+        "descripcion": "Huevos con mazorca, acompañados de pan tumaca con aceite de oliva y puré de tomates frescos.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Campesinos",
+        "precio": 17800,
+        "descripcion": "Huevos con mazorca, acompañados de pan tumaca español aderezado con aceite de oliva y puré de tomates frescos.",
+        "tags": [
+            "vegetariano"
+        ],
+        "adicion": {
+            "nombre": "Jamón Serrano",
+            "precio": 27900
+        }
+    },
+    {
+        "nombre": "Benedictine",
+        "precio": 24900,
+        "descripcion": "Sobre un muffin inglés con lomo ahumado de cerdo y salsa Crepes & Waffles®."
+    },
+    {
+        "nombre": "Australianos",
+        "precio": 28900,
+        "descripcion": "Huevos poché, corte especial de tocineta, aguacate y tomate asado, salsa poché, sobre tostada de pan artesanal."
+    },
+    {
+        "nombre": "Crepes & Waffles",
+        "precio": 17900,
+        "descripcion": "Crepe con huevos revueltos y cebollina a la crema sobre un fondo de salsa de queso.",
+        "tags": [
+            "vegetariano"
+        ]
+    },
+    {
+        "nombre": "Mantequilla y Syrup o Miel",
+        "precio": 10200,
+        "tags": [
+            "vegetariano"
+        ],
+        "adiciones": [{
+                "nombre": "Huevo Frito",
+                "precio": 16400,
+                "tags": [
+                    "vegetariano"
+                ]
+            },
+            {
+                "nombre": "Huevo Frito y Tocineta",
+                "precio": 18400
+            },
+            {
+                "nombre": "Huevo Frito y Salchichas",
+                "precio": 18400
+            }
+        ]
+    },
+    {
+        "nombre": "Sensación",
+        "precio": 24900,
+        "descripcion": "Lomo ahumado de cerdo, queso y huevo. (Puede pedirse con cebolla y tomate)",
+        "adiciones": [{
+            "nombre": "Salsa de Queso",
+            "precio": 5500
+        }]
+    },
+    {
+        "nombre": "Sensación Colombia",
+        "precio": 27900,
+        "descripcion": "Carne desmechada, queso, huevo, crema agria y hogao tradicional."
+    },
+    {
+        "nombre": "Parisien",
+        "precio": 23900,
+        "descripcion": "Crepe con huevo, tocineta, queso y salsa de queso."
+    },
+    {
+        "nombre": "Crespolinis",
+        "precio": 21900,
+        "descripcion": "Crepe con huevos revueltos, lomo ahumado de cerdo, queso holandés y salsa primavera."
+    },
+    {
+        "nombre": "Açaí Bowl",
+        "precio": 20800,
+        "descripcion": "Açaí con arándanos, fresa, banano y granola.",
+        "tags": [
+            "vegano",
+            "contiene_nueces"
+        ]
+    },
+    {
+        "nombre": "Pancake de Ahuyama",
+        "precio": 17900,
+        "descripcion": "Con yogurt griego, granola y miel.",
+        "tags": [
+            "vegetariano",
+            "contiene_nueces"
+        ]
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio": 18900,
+        "descripcion": "Copa con granola, yogurt de vainilla, fresa, arándanos y salsa de arándanos.",
+        "tags": [
+            "vegetariano",
+            "contiene_nueces"
+        ]
+    },
+    {
+        "nombre": "Guanábana",
+        "precio": 18900,
+        "descripcion": "Copa de yogurt griego natural sin azúcar, con granola y copos de guanábana. Endulza a tu gusto con miel.",
+        "tags": [
+            "vegetariano",
+            "contiene_nueces"
+        ]
+    },
+    {
+        "nombre": "Macchiato",
+        "precio": 5000,
+        "descripcion": "Espresso con una ligera capa de leche espumosa."
+    },
+    {
+        "nombre": "Chocolatada",
+        "precio": 9800,
+        "descripcion": "Chocolate origen Colombia 70%, sabor intenso.",
+        "opcion_leche_almendras": 3200,
+        "tags": [
+            "contiene_nueces"
+        ]
+    },
+    {
+        "nombre": "Milo",
+        "precio": 8500,
+        "descripcion": "Bebida fría o caliente.",
+        "opcion_leche_almendras": 3200,
+        "tags": [
+            "contiene_nueces"
+        ]
+    },
+    {
+        "nombre": "Té Chai",
+        "precio": 7200,
+        "descripcion": "Bebida de la India con aromáticos sabores que proporcionan bienestar."
+    },
+    {
+        "nombre": "Aromática Frutos Rojos",
+        "precio": 4900
+    },
+    {
+        "nombre": "Aromática Hierbabuena",
+        "precio": 3200
+    },
+    {
+        "nombre": "Agua Siembra (con o sin gas)",
+        "precio": 7400
+    },
+    {
+        "nombre": "Agua Manantial",
+        "precio": 7200
+    },
+    {
+        "nombre": "Agua Manantial con Gas",
+        "precio": 6900
+    },
+    {
+        "nombre": "Coca Cola (Original o Zero)",
+        "precio": 6200
+    },
+    {
+        "nombre": "Schweppes Ginger o Soda",
+        "precio": 6700
+    },
+    {
+        "nombre": "Mimosa",
+        "precio": 25900,
+        "descripcion": "Prosecco con jugo de naranja."
+    },
+    {
+        "nombre": "Menú 1",
+        "precio": 16900,
+        "incluye": {
+            "bebida": [
+                "Jugo",
+                "Batido",
+                "Limonada",
+                "Agua"
+            ],
+            "plato_de_sal": [
+                "Mini Crepe de Sal",
+                "Mini Waffle de Sal",
+                "Mini Pita",
+                "Mini Sopa"
+            ],
+            "postre": [
+                "Mini Cono (1 o 2 sabores)"
+            ]
+        }
+    },
+    {
+        "nombre": "Menú 2",
+        "precio": 18900,
+        "incluye": {
+            "bebida": [
+                "Jugo",
+                "Batido",
+                "Limonada",
+                "Agua"
+            ],
+            "plato_de_sal": [
+                "Mini Crepe de Sal",
+                "Mini Waffle de Sal",
+                "Mini Pita",
+                "Mini Sopa"
+            ],
+            "postre": [
+                "Helado Infantil",
+                "Mini Waffle de Dulce",
+                "Malteada"
+            ]
+        }
+    },
+    {
+        "nombre": "Crema de Tomate con Pollo",
+        "descripcion": "Crema de tomates frescos con pollo desmechado y aguacate"
+    },
+    {
+        "nombre": "Pollo Vida en Verdes",
+        "descripcion": "Pollo desmechado con salsa cremosa de vegetales y maíz dulce y queso"
+    },
+    {
+        "nombre": "Sombrerito Vueltiao",
+        "descripcion": "Puré de plátano con carne desmechada, hogao y aguacate"
+    },
+    {
+        "nombre": "Waffle Sándwich Jamón y Queso",
+        "descripcion": "Acompañado con miel de abejas"
+    },
+    {
+        "nombre": "Waffle Sándwich Pollo",
+        "descripcion": "Pechuga de pollo, tocineta, queso y tomate fresco"
+    },
+    {
+        "nombre": "Mozzarella Pocket",
+        "descripcion": "Queso, salsa napolitana y albahaca",
+        "tipo": "vegetariano"
+    },
+    {
+        "nombre": "Copa Payaso",
+        "descripcion": "Helado de chocolate con miniaturas sobre crema chantilly"
+    },
+    {
+        "nombre": "Copa Snowman",
+        "descripcion": "Helado de arequipe con salsa de arequipe y crema chantilly"
+    },
+    {
+        "nombre": "Copa Gummy",
+        "descripcion": "Helado de chicle con crema chantilly y miniaturas"
+    },
+    {
+        "nombre": "Samy",
+        "descripcion": "Pingüino con helado de vainilla (cono o vaso)"
+    },
+    {
+        "nombre": "Piggy",
+        "descripcion": "Helado de chicle (cono o vaso)"
+    },
+    {
+        "nombre": "Rodolfo",
+        "descripcion": "Helado de arequipe (cono o vaso)"
+    },
+    {
+        "nombre": "Mini Cono Sencillo",
+        "descripcion": "Escoge el sabor que más te guste"
+    },
+    {
+        "nombre": "Mini Cono Doble",
+        "descripcion": "Escoge el sabor que más te guste"
+    },
+    {
+        "nombre": "Malteada",
+        "sabores": [
+            "Chocolate",
+            "Vainilla",
+            "Fresa",
+            "Mora",
+            "Arequipe"
+        ]
+    },
+    {
+        "nombre": "Mantequilla y Syrup"
+    },
+    {
+        "nombre": "Arequipe",
+        "descripcion": "Con salsa de arequipe, helado de vainilla y crema chantilly"
+    },
+    {
+        "nombre": "Chocolate",
+        "descripcion": "Con helado de chocolate o vainilla y crema chantilly"
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "descripcion": "Con salsa de frutos del bosque, helado de vainilla y crema chantilly"
+    },
+    {
+        "nombre": "Nutella",
+        "descripcion": "Con helado de vainilla y crema chantilly"
+    },
+    {
+        "nombre": "Vinagreta Balsámico",
+        "precio": 23300
+    },
+    {
+        "nombre": "Vinagreta Oriental",
+        "precio": 23300
+    },
+    {
+        "nombre": "Vinagreta Mostaza",
+        "precio": 23300
+    },
+    {
+        "nombre": "Covarachía",
+        "precio_500ml": 14900,
+        "precio_1lt": 20500
+    },
+    {
+        "nombre": "Cebolla",
+        "precio_500ml": 16200,
+        "precio_1lt": 25000
+    },
+    {
+        "nombre": "Espinaca",
+        "precio_500ml": 14900,
+        "precio_1lt": 20500
+    },
+    {
+        "nombre": "Ahuyama",
+        "precio_500ml": 15900,
+        "precio_1lt": 18900
+    },
+    {
+        "nombre": "Lentejas",
+        "precio_500ml": 19300,
+        "precio_1lt": 32800
+    },
+    {
+        "nombre": "Vida en Verdes",
+        "precio_500ml": 18000,
+        "precio_1lt": 30000
+    },
+    {
+        "nombre": "Soy Otoño",
+        "precio_500ml": 15900,
+        "precio_1lt": 26200
+    },
+    {
+        "nombre": "Hogao",
+        "precios": {
+            "250": 10900,
+            "500": 16900
+        }
+    },
+    {
+        "nombre": "Pesto",
+        "precios": {
+            "250": 22800
+        }
+    },
+    {
+        "nombre": "Curry",
+        "precios": {
+            "500": 24900,
+            "1000": 40000
+        }
+    },
+    {
+        "nombre": "Napolitana",
+        "precios": {
+            "500": 17900,
+            "1000": 30000
+        }
+    },
+    {
+        "nombre": "Salsa de la Casa",
+        "precios": {
+            "500": 30800,
+            "1000": 48000
+        }
+    },
+    {
+        "nombre": "Salsa Champiñones",
+        "precios": {
+            "500": 25000,
+            "1000": 40000
+        }
+    },
+    {
+        "nombre": "Mexicana",
+        "precios": {
+            "500": 17900,
+            "1000": 30000
+        }
+    },
+    {
+        "nombre": "Parmesana",
+        "precios": {
+            "500": 30800,
+            "1000": 52500
+        }
+    },
+    {
+        "nombre": "Stroganoff",
+        "precio_500": 49900
+    },
+    {
+        "nombre": "Lomito Pimienta",
+        "precio_500": 56000
+    },
+    {
+        "nombre": "Pollo",
+        "precio_500": 38500
+    },
+    {
+        "nombre": "Pollo Thai",
+        "precio_500": 38900
+    },
+    {
+        "nombre": "Cochinita Pibil",
+        "precio_500": 37900
+    },
+    {
+        "nombre": "Carne Desmechada",
+        "precio_500": 40000
+    },
+    {
+        "nombre": "Boloñesa",
+        "precio_500": 25700,
+        "precio_1000": 40000
+    },
+    {
+        "nombre": "Arequipe",
+        "precio_250": 11800,
+        "precio_500": 20000
+    },
+    {
+        "nombre": "Frutos del Bosque",
+        "precio_250": 15800,
+        "precio_500": 24700
+    },
+    {
+        "nombre": "Coulis de Maracuyá",
+        "precio_250": 18000,
+        "precio_500": 24000
+    },
+    {
+        "nombre": "Jalea de Guayaba",
+        "precio_250": 15900,
+        "precio_500": 25900
+    },
+    {
+        "nombre": "Masa Waffle",
+        "precio": 13400
+    },
+    {
+        "nombre": "Masa de Yuca",
+        "precio": 26800
+    },
+    {
+        "nombre": "Masa de Choclo",
+        "precio": 24800
+    },
+    {
+        "nombre": "Masa Waffle de Chocolate",
+        "precio": 18900
+    },
+    {
+        "nombre": "Doble Pocket",
+        "descripcion": "Pan árabe con jamón ahumado y variedad de quesos"
+    }
+]

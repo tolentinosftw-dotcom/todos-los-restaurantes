@@ -22,6 +22,7 @@ interface MenuContextType {
 }
 
 const MenuContext = createContext<MenuContextType | undefined>(undefined)
+const PRODUCT_DATA_COUNT = sampleMenuData.reduce((total, category) => total + category.items.length, 0)
 
 export function MenuProvider({ children }: { children: ReactNode }) {
   const [categories, setCategories] = useState<MenuCategory[]>(sampleMenuData)
@@ -35,7 +36,10 @@ export function MenuProvider({ children }: { children: ReactNode }) {
 
     try {
       const parsed = JSON.parse(saved) as { categories?: MenuCategory[]; style?: MenuStyle }
-      if (parsed.categories) setCategories(parsed.categories)
+      if (parsed.categories) {
+        const savedCount = parsed.categories.reduce((total, category) => total + category.items.length, 0)
+        setCategories(savedCount >= PRODUCT_DATA_COUNT ? parsed.categories : sampleMenuData)
+      }
       if (parsed.style) {
         const nextStyle = { ...defaultMenuStyle, ...parsed.style }
         const subtitle = nextStyle.headerSubtitle?.toLowerCase() ?? ''
