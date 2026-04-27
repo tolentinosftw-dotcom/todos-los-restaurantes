@@ -8,7 +8,7 @@ import { Search, X } from 'lucide-react'
 type LanguageCode = 'es' | 'en' | 'fr' | 'it' | 'zh' | 'ja' | 'hi'
 
 const languages: { code: LanguageCode; flag: string; label: string }[] = [
-  { code: 'es', flag: 'es', label: 'Español' },
+  { code: 'es', flag: 'co', label: 'Español' },
   { code: 'en', flag: 'gb', label: 'English' },
   { code: 'fr', flag: 'fr', label: 'Français' },
   { code: 'it', flag: 'it', label: 'Italiano' },
