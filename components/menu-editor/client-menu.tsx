@@ -477,7 +477,9 @@ function ProductCard({
             <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: textColor }}>{translate(item.name, language)}</h3>
             <p className="text-sm font-bold sm:text-base" style={{ color: priceColor }}>{formatPrice(item.price)}</p>
           </div>
-          <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>
+          {item.description && (
+            <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>
+          )}
         </div>
       </button>
       <div className="border-t border-[#eadfce] px-2 py-2">
@@ -555,7 +557,7 @@ function ProductModal({
             <h3 className="text-2xl font-bold leading-tight" style={{ color: textColor }}>{translate(item.name, language)}</h3>
             <p className="shrink-0 text-xl font-bold" style={{ color: priceColor }}>{formatPrice(item.price)}</p>
           </div>
-          <p className="mt-3 leading-7" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>
+          {item.description && <p className="mt-3 leading-7" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>}
         </div>
       </article>
     </div>
@@ -611,6 +613,8 @@ function getRatingStats(itemId: string, ratings: Record<string, number>) {
 }
 
 function formatPrice(price: number) {
+  if (price <= 0) return 'Precio pendiente'
+
   return new Intl.NumberFormat('es-CO', {
     style: 'currency',
     currency: 'COP',

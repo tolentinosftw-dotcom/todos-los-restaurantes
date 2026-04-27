@@ -7,16 +7,18 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { Check, Edit2, ImagePlus, Plus, Trash2, X } from 'lucide-react'
+import { Check, Edit2, FolderTree, ImagePlus, Plus, Trash2, X } from 'lucide-react'
 
 const emptyItem = { name: '', description: '', price: 0, image: '' }
 
 export function ProductEditor() {
   const {
     categories,
+    setCategories,
     addCategory,
     removeCategory,
     updateCategory,
+    organizeCategories,
     addItem,
     removeItem,
     updateItem,
@@ -30,6 +32,8 @@ export function ProductEditor() {
   const [showItemForm, setShowItemForm] = useState<string | null>(null)
   const [editingItem, setEditingItem] = useState<string | null>(null)
   const [newItem, setNewItem] = useState(emptyItem)
+  const [bulkUploading, setBulkUploading] = useState(false)
+  const [bulkUploadCount, setBulkUploadCount] = useState(0)
 
   const handleAddCategory = () => {
     if (!newCategoryName.trim()) return
@@ -58,8 +62,106 @@ export function ProductEditor() {
     reader.readAsDataURL(file)
   }
 
+  const handleBulkImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files ?? []).filter((file) => file.type.startsWith('image/'))
+    event.target.value = ''
+    if (files.length === 0) return
+
+    setBulkUploading(true)
+
+    try {
+      const uploadedItems = await Promise.all(
+        files.map(async (file, index) => ({
+          id: `bulk-${Date.now()}-${index}`,
+          name: cleanFileName(file.name),
+          description: 'Producto pendiente por editar.',
+          price: 0,
+          image: await readFileAsDataUrl(file),
+          category: 'pendientes'
+        }))
+      )
+
+      setCategories((current) => {
+        const pendingCategory = current.find((category) => category.id === 'pendientes')
+        if (pendingCategory) {
+          return current.map((category) =>
+            category.id === 'pendientes'
+              ? { ...category, items: [...uploadedItems, ...category.items] }
+              : category
+          )
+        }
+
+        return [
+          {
+            id: 'pendientes',
+            name: 'Pendientes de categorizar',
+            items: uploadedItems
+          },
+          ...current
+        ]
+      })
+      setSelectedCategory('pendientes')
+      setBulkUploadCount(files.length)
+    } finally {
+      setBulkUploading(false)
+    }
+  }
+
+  const moveItemToCategory = (fromCategoryId: string, itemId: string, toCategoryId: string, updates: Partial<MenuItem>) => {
+    if (fromCategoryId === toCategoryId) {
+      updateItem(fromCategoryId, itemId, updates)
+      return
+    }
+
+    setCategories((current) => {
+      const sourceCategory = current.find((category) => category.id === fromCategoryId)
+      const item = sourceCategory?.items.find((entry) => entry.id === itemId)
+      if (!item) return current
+
+      const movedItem = { ...item, ...updates, category: toCategoryId }
+
+      return current.map((category) => {
+        if (category.id === fromCategoryId) {
+          return { ...category, items: category.items.filter((entry) => entry.id !== itemId) }
+        }
+
+        if (category.id === toCategoryId) {
+          return { ...category, items: [movedItem, ...category.items] }
+        }
+
+        return category
+      })
+    })
+  }
+
   return (
     <div className="space-y-5">
+      <Card className="border-2 border-dashed border-[#7f271c]/30 bg-white">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg text-[#2f211b]">Subir imágenes al catálogo</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          <p className="text-sm text-[#6c4a37]">
+            Selecciona cualquier cantidad de imágenes. Se crearán como productos pendientes para que después les pongas categoría, nombre y precio.
+          </p>
+          <label className="flex cursor-pointer items-center justify-center rounded-lg border border-dashed border-[#d8b56d] bg-[#fff8ef] px-4 py-4 text-sm font-semibold text-[#7f271c] hover:bg-[#f8eee2]">
+            <ImagePlus className="mr-2 h-5 w-5" />
+            {bulkUploading ? 'Subiendo imágenes...' : 'Seleccionar imágenes'}
+            <input type="file" accept="image/*" multiple className="hidden" onChange={handleBulkImageUpload} />
+          </label>
+          {bulkUploadCount > 0 && (
+            <p className="text-xs font-medium text-[#8a5b3e]">
+              {bulkUploadCount} imagen{bulkUploadCount === 1 ? '' : 'es'} agregada{bulkUploadCount === 1 ? '' : 's'} a Pendientes de categorizar.
+            </p>
+          )}
+        </CardContent>
+      </Card>
+
+      <Button onClick={organizeCategories} className="w-full bg-[#7f271c] hover:bg-[#682016]">
+        <FolderTree className="mr-2 h-4 w-4" />
+        Organizar por categorías
+      </Button>
+
       <Card className="border-2 border-dashed border-[#d8b56d] bg-[#fff8ef]">
         <CardContent className="pt-4">
           <div className="flex gap-2">
@@ -141,8 +243,11 @@ export function ProductEditor() {
                   {editingItem === item.id ? (
                     <EditItemForm
                       item={item}
+                      categoryId={category.id}
+                      categories={categories}
                       onSave={(updates) => {
-                        updateItem(category.id, item.id, updates)
+                        const { category: nextCategoryId, ...itemUpdates } = updates
+                        moveItemToCategory(category.id, item.id, nextCategoryId || category.id, itemUpdates)
                         setEditingItem(null)
                       }}
                       onCancel={() => setEditingItem(null)}
@@ -261,17 +366,59 @@ function ImagePicker({
   )
 }
 
-function EditItemForm({ item, onSave, onCancel }: { item: MenuItem; onSave: (updates: Partial<MenuItem>) => void; onCancel: () => void }) {
+function readFileAsDataUrl(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onloadend = () => resolve(reader.result as string)
+    reader.onerror = () => reject(reader.error)
+    reader.readAsDataURL(file)
+  })
+}
+
+function cleanFileName(fileName: string) {
+  return fileName
+    .replace(/\.[^/.]+$/, '')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase()) || 'Producto sin nombre'
+}
+
+function EditItemForm({
+  item,
+  categoryId,
+  categories,
+  onSave,
+  onCancel
+}: {
+  item: MenuItem
+  categoryId: string
+  categories: Array<{ id: string; name: string }>
+  onSave: (updates: Partial<MenuItem>) => void
+  onCancel: () => void
+}) {
   const [editData, setEditData] = useState({
     name: item.name,
     description: item.description,
-    price: item.price
+    price: item.price,
+    category: categoryId
   })
 
   return (
     <div className="space-y-2">
       <Input value={editData.name} onChange={(event) => setEditData((prev) => ({ ...prev, name: event.target.value }))} />
       <Textarea value={editData.description} onChange={(event) => setEditData((prev) => ({ ...prev, description: event.target.value }))} className="min-h-16" />
+      <select
+        value={editData.category}
+        onChange={(event) => setEditData((prev) => ({ ...prev, category: event.target.value }))}
+        className="h-9 w-full rounded-md border border-[#eadfce] bg-white px-3 text-sm"
+      >
+        {categories.map((category) => (
+          <option key={category.id} value={category.id}>
+            {category.name}
+          </option>
+        ))}
+      </select>
       <div className="flex items-center gap-2">
         <Input
           type="number"
@@ -293,6 +440,8 @@ function EditItemForm({ item, onSave, onCancel }: { item: MenuItem; onSave: (upd
 }
 
 function formatPrice(price: number) {
+  if (price <= 0) return 'Sin precio'
+
   return new Intl.NumberFormat('es-CO', {
     style: 'currency',
     currency: 'COP',

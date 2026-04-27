@@ -87,7 +87,7 @@ function MenuItemCard({ item, style }: { item: MenuItem; style: MenuStyle }) {
         <div className="absolute inset-0" style={{ background: `linear-gradient(to top, ${style.primaryColor}f2, ${style.primaryColor}33)` }} />
         <div className="relative flex min-h-64 flex-col justify-end p-4" style={{ textAlign: style.textAlign }}>
           <h3 className="font-bold text-white" style={{ fontSize: `${style.titleFontSize}px` }}>{item.name}</h3>
-          <p className="mt-1 line-clamp-3 text-white/85" style={{ fontSize: `${style.descriptionFontSize}px` }}>{item.description}</p>
+          {item.description && <p className="mt-1 line-clamp-3 text-white/85" style={{ fontSize: `${style.descriptionFontSize}px` }}>{item.description}</p>}
           <p className="mt-3 font-bold text-white" style={{ fontSize: `${style.priceFontSize}px` }}>{price}</p>
         </div>
       </article>
@@ -124,7 +124,7 @@ function MenuText({ item, price, style, compact = false }: { item: MenuItem; pri
         <h3 className="font-bold leading-tight" style={{ color: style.textColor, fontSize: `${style.titleFontSize}px` }}>{item.name}</h3>
         <span className="shrink-0 font-bold" style={{ color: style.priceColor, fontSize: `${style.priceFontSize}px` }}>{price}</span>
       </div>
-      <p className="mt-2 line-clamp-3 leading-5" style={{ color: style.secondaryColor, fontSize: `${style.descriptionFontSize}px` }}>{item.description}</p>
+      {item.description && <p className="mt-2 line-clamp-3 leading-5" style={{ color: style.secondaryColor, fontSize: `${style.descriptionFontSize}px` }}>{item.description}</p>}
     </div>
   )
 }
@@ -153,6 +153,8 @@ function tint(color: string, amount: number) {
 }
 
 function formatPrice(price: number) {
+  if (price <= 0) return 'Sin precio'
+
   return new Intl.NumberFormat('es-CO', {
     style: 'currency',
     currency: 'COP',

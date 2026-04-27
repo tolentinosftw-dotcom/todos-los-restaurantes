@@ -103,7 +103,7 @@ function buildMenuData(products: RawProduct[]): MenuCategory[] {
     category.items.push({
       id: `product-${index + 1}`,
       name,
-      description: product.descripcion?.trim() || 'Producto disponible en el menú.',
+      description: product.descripcion?.trim() || '',
       price,
       image: product.imagen_fuente || '/placeholder.jpg',
       category: categoryId

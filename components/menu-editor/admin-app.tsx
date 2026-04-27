@@ -20,7 +20,7 @@ import {
 } from 'lucide-react'
 
 export function AdminApp() {
-  const { activeTab, setActiveTab, categories, style } = useMenu()
+  const { activeTab, setActiveTab, categories, style, organizeCategories } = useMenu()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [previewDevice, setPreviewDevice] = useState<'mobile' | 'tablet' | 'desktop'>('desktop')
   const [status, setStatus] = useState('')
@@ -50,9 +50,10 @@ export function AdminApp() {
   }
 
   const publishDemo = async () => {
+    organizeCategories()
     const demoUrl = `${window.location.origin}/cliente`
     await navigator.clipboard?.writeText(demoUrl)
-    setStatus('Link del cliente copiado')
+    setStatus('Menú organizado y link del cliente copiado')
     setActiveTab('preview')
   }
 

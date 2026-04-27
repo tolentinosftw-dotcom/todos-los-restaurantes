@@ -1,17 +1,18 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import { createContext, useContext, useEffect, useState, ReactNode, Dispatch, SetStateAction } from 'react'
 import { MenuCategory, MenuStyle, MenuItem, defaultMenuStyle, sampleMenuData } from './types'
 
 interface MenuContextType {
   categories: MenuCategory[]
-  setCategories: (categories: MenuCategory[]) => void
+  setCategories: Dispatch<SetStateAction<MenuCategory[]>>
   style: MenuStyle
   setStyle: (style: MenuStyle) => void
   updateStyle: (updates: Partial<MenuStyle>) => void
   addCategory: (name: string) => void
   removeCategory: (id: string) => void
   updateCategory: (id: string, name: string) => void
+  organizeCategories: () => void
   addItem: (categoryId: string, item: Omit<MenuItem, 'id' | 'category'>) => void
   removeItem: (categoryId: string, itemId: string) => void
   updateItem: (categoryId: string, itemId: string, updates: Partial<MenuItem>) => void
@@ -23,22 +24,38 @@ interface MenuContextType {
 
 const MenuContext = createContext<MenuContextType | undefined>(undefined)
 const PRODUCT_DATA_COUNT = sampleMenuData.reduce((total, category) => total + category.items.length, 0)
+const lastCategory = sampleMenuData[sampleMenuData.length - 1]
+const lastItem = lastCategory?.items[lastCategory.items.length - 1]
+const PRODUCT_DATA_SIGNATURE = `${PRODUCT_DATA_COUNT}:${sampleMenuData[0]?.items[0]?.image ?? ''}:${lastItem?.image ?? ''}`
+const CATEGORY_RULES = [
+  { id: 'jugos-bebidas', name: 'Jugos y Bebidas', words: ['jugo', 'jugos', 'jugi', 'limonada', 'batido', 'malteada', 'agua', 'gaseosa', 'soda', 'coca', 'schweppes', 'cerveza', 'vino', 'mimosa', 'cafe', 'café', 'capuccino', 'espresso', 'macchiato', 'chocolate', 'milo', 'chai', 'aromatica', 'aromática'] },
+  { id: 'sopas-cremas', name: 'Sopas y Cremas', words: ['sopa', 'sopas', 'crema', 'cremas', 'lentejas', 'cebolla', 'ahuyama', 'covarachia', 'covarachía'] },
+  { id: 'crepes-salados', name: 'Crepes Salados', words: ['crepe', 'crepes', 'pollo', 'ternera', 'lomo', 'lomito', 'stroganoff', 'mexicano', 'pita', 'pocket', 'salmon', 'salmón', 'camarones', 'calamares', 'atun', 'atún', 'palmitos'] },
+  { id: 'waffles', name: 'Waffles', words: ['waffle', 'waffles'] },
+  { id: 'ensaladas', name: 'Ensaladas', words: ['ensalada', 'ensaladas', 'kale', 'cesar', 'césar', 'tomatina'] },
+  { id: 'postres-helados', name: 'Postres y Helados', words: ['postre', 'postres', 'helado', 'helados', 'cono', 'copa', 'arequipe', 'nutella', 'chocolate', 'frutos', 'parfait', 'tostada francesa', 'panqueque', 'pancake'] },
+  { id: 'desayunos', name: 'Desayunos', words: ['desayuno', 'huevo', 'huevos', 'omelette', 'benedictine', 'açai', 'acai', 'tostada', 'parisien', 'campesino'] },
+  { id: 'infantil', name: 'Menu Infantil', words: ['infantil', 'niño', 'niños', 'mickey', 'payaso', 'snowman', 'gummy', 'samy', 'piggy', 'rodolfo'] }
+]
 
 export function MenuProvider({ children }: { children: ReactNode }) {
   const [categories, setCategories] = useState<MenuCategory[]>(sampleMenuData)
   const [style, setStyle] = useState<MenuStyle>(defaultMenuStyle)
   const [activeTab, setActiveTab] = useState<'products' | 'design' | 'preview'>('products')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const saved = window.localStorage.getItem('crepes-menu-builder')
-    if (!saved) return
+    if (!saved) {
+      setLoaded(true)
+      return
+    }
 
     try {
-      const parsed = JSON.parse(saved) as { categories?: MenuCategory[]; style?: MenuStyle }
+      const parsed = JSON.parse(saved) as { categories?: MenuCategory[]; style?: MenuStyle; dataSignature?: string }
       if (parsed.categories) {
-        const savedCount = parsed.categories.reduce((total, category) => total + category.items.length, 0)
-        setCategories(savedCount >= PRODUCT_DATA_COUNT ? parsed.categories : sampleMenuData)
+        setCategories(parsed.dataSignature === PRODUCT_DATA_SIGNATURE ? categorizeMenu(parsed.categories) : sampleMenuData)
       }
       if (parsed.style) {
         const nextStyle = { ...defaultMenuStyle, ...parsed.style }
@@ -50,12 +67,15 @@ export function MenuProvider({ children }: { children: ReactNode }) {
       }
     } catch {
       window.localStorage.removeItem('crepes-menu-builder')
+    } finally {
+      setLoaded(true)
     }
   }, [])
 
   useEffect(() => {
-    window.localStorage.setItem('crepes-menu-builder', JSON.stringify({ categories, style }))
-  }, [categories, style])
+    if (!loaded) return
+    window.localStorage.setItem('crepes-menu-builder', JSON.stringify({ categories, style, dataSignature: PRODUCT_DATA_SIGNATURE }))
+  }, [categories, loaded, style])
 
   const updateStyle = (updates: Partial<MenuStyle>) => {
     setStyle(prev => ({ ...prev, ...updates }))
@@ -78,6 +98,11 @@ export function MenuProvider({ children }: { children: ReactNode }) {
     setCategories(prev => prev.map(cat => 
       cat.id === id ? { ...cat, name } : cat
     ))
+  }
+
+  const organizeCategories = () => {
+    setCategories(prev => categorizeMenu(prev))
+    setSelectedCategory(null)
   }
 
   const addItem = (categoryId: string, item: Omit<MenuItem, 'id' | 'category'>) => {
@@ -124,6 +149,7 @@ export function MenuProvider({ children }: { children: ReactNode }) {
       addCategory,
       removeCategory,
       updateCategory,
+      organizeCategories,
       addItem,
       removeItem,
       updateItem,
@@ -135,6 +161,34 @@ export function MenuProvider({ children }: { children: ReactNode }) {
       {children}
     </MenuContext.Provider>
   )
+}
+
+function categorizeMenu(categories: MenuCategory[]) {
+  const buckets = new Map<string, MenuCategory>()
+
+  for (const rule of CATEGORY_RULES) {
+    buckets.set(rule.id, { id: rule.id, name: rule.name, items: [] })
+  }
+  buckets.set('otros', { id: 'otros', name: 'Otros', items: [] })
+
+  for (const item of categories.flatMap(category => category.items)) {
+    const category = getItemCategory(item)
+    buckets.get(category.id)!.items.push({ ...item, category: category.id })
+  }
+
+  return Array.from(buckets.values()).filter(category => category.items.length > 0)
+}
+
+function getItemCategory(item: MenuItem) {
+  const text = normalizeText(`${item.name} ${item.description}`)
+  return CATEGORY_RULES.find(rule => rule.words.some(word => text.includes(normalizeText(word)))) ?? { id: 'otros', name: 'Otros' }
+}
+
+function normalizeText(value: string) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
 }
 
 export function useMenu() {
