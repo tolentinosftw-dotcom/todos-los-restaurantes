@@ -1,9 +1,9 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { MenuItem } from '@/lib/types'
 import { useMenu } from '@/lib/menu-context'
-import { Search, X } from 'lucide-react'
+import { Search, Star, X } from 'lucide-react'
 
 type LanguageCode = 'es' | 'en' | 'fr' | 'it' | 'zh' | 'ja' | 'hi'
 
@@ -25,7 +25,11 @@ const ui = {
     emptyTitle: 'No encontramos productos',
     emptyText: 'Prueba con otra búsqueda o categoría.',
     close: 'Cerrar',
-    viewImage: 'Ver imagen grande'
+    viewImage: 'Ver imagen grande',
+    favoritesTitle: 'Favoritos mejor valorados',
+    favoritesText: 'Los productos que tus clientes marcaron con más estrellas.',
+    favoritesTab: 'Favoritos',
+    ratingLabel: 'Calificar producto'
   },
   en: {
     digitalMenu: 'Digital menu',
@@ -34,7 +38,11 @@ const ui = {
     emptyTitle: 'No products found',
     emptyText: 'Try another search or category.',
     close: 'Close',
-    viewImage: 'View large image'
+    viewImage: 'View large image',
+    favoritesTitle: 'Top-rated favorites',
+    favoritesText: 'Products your customers marked with the most stars.',
+    favoritesTab: 'Favorites',
+    ratingLabel: 'Rate product'
   },
   fr: {
     digitalMenu: 'Menu numérique',
@@ -43,7 +51,11 @@ const ui = {
     emptyTitle: 'Aucun produit trouvé',
     emptyText: 'Essayez une autre recherche ou catégorie.',
     close: 'Fermer',
-    viewImage: 'Voir la grande image'
+    viewImage: 'Voir la grande image',
+    favoritesTitle: 'Favoris les mieux notés',
+    favoritesText: 'Les produits que vos clients ont le mieux notés.',
+    favoritesTab: 'Favoris',
+    ratingLabel: 'Noter le produit'
   },
   it: {
     digitalMenu: 'Menu digitale',
@@ -52,7 +64,11 @@ const ui = {
     emptyTitle: 'Nessun prodotto trovato',
     emptyText: 'Prova un’altra ricerca o categoria.',
     close: 'Chiudi',
-    viewImage: 'Vedi immagine grande'
+    viewImage: 'Vedi immagine grande',
+    favoritesTitle: 'Preferiti più votati',
+    favoritesText: 'I prodotti che i clienti hanno valutato meglio.',
+    favoritesTab: 'Preferiti',
+    ratingLabel: 'Valuta prodotto'
   },
   zh: {
     digitalMenu: '电子菜单',
@@ -61,7 +77,11 @@ const ui = {
     emptyTitle: '未找到产品',
     emptyText: '请尝试其他搜索或分类。',
     close: '关闭',
-    viewImage: '查看大图'
+    viewImage: '查看大图',
+    favoritesTitle: '评分最高的收藏',
+    favoritesText: '客户给出最多星级的产品。',
+    favoritesTab: '收藏',
+    ratingLabel: '评价产品'
   },
   ja: {
     digitalMenu: 'デジタルメニュー',
@@ -70,7 +90,11 @@ const ui = {
     emptyTitle: '商品が見つかりません',
     emptyText: '別の検索語またはカテゴリを試してください。',
     close: '閉じる',
-    viewImage: '画像を大きく表示'
+    viewImage: '画像を大きく表示',
+    favoritesTitle: '高評価のお気に入り',
+    favoritesText: 'お客様が最も高く評価した商品。',
+    favoritesTab: 'お気に入り',
+    ratingLabel: '商品を評価'
   },
   hi: {
     digitalMenu: 'डिजिटल मेनू',
@@ -79,7 +103,11 @@ const ui = {
     emptyTitle: 'कोई उत्पाद नहीं मिला',
     emptyText: 'दूसरी खोज या श्रेणी आज़माएं।',
     close: 'बंद करें',
-    viewImage: 'बड़ी तस्वीर देखें'
+    viewImage: 'बड़ी तस्वीर देखें',
+    favoritesTitle: 'सबसे पसंदीदा',
+    favoritesText: 'जिन उत्पादों को ग्राहकों ने सबसे ज्यादा सितारे दिए।',
+    favoritesTab: 'पसंदीदा',
+    ratingLabel: 'उत्पाद को रेट करें'
   }
 }
 
@@ -244,11 +272,30 @@ export function ClientMenu() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [language, setLanguage] = useState<LanguageCode>('es')
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
+  const [ratings, setRatings] = useState<Record<string, number>>({})
   const text = ui[language]
   const logoUrl = style.logoUrl || '/logo.webp'
+  const showingFavorites = activeCategory === 'favorites'
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem('crepes-product-ratings')
+    if (!saved) return
+
+    try {
+      setRatings(JSON.parse(saved) as Record<string, number>)
+    } catch {
+      window.localStorage.removeItem('crepes-product-ratings')
+    }
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem('crepes-product-ratings', JSON.stringify(ratings))
+  }, [ratings])
 
   const visibleCategories = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase()
+
+    if (showingFavorites) return []
 
     return categories
       .filter((category) => activeCategory === 'all' || category.id === activeCategory)
@@ -260,7 +307,22 @@ export function ClientMenu() {
         })
       }))
       .filter((category) => category.items.length > 0)
-  }, [activeCategory, categories, language, query])
+  }, [activeCategory, categories, language, query, showingFavorites])
+
+  const favoriteItems = useMemo(() => {
+    return categories
+      .flatMap((category) => category.items)
+      .filter((item) => getRatingStats(item.id, ratings).count > 0)
+      .sort((first, second) => {
+        const firstStats = getRatingStats(first.id, ratings)
+        const secondStats = getRatingStats(second.id, ratings)
+        return secondStats.average - firstStats.average || secondStats.count - firstStats.count
+      })
+  }, [categories, ratings])
+
+  const rateItem = (itemId: string, rating: number) => {
+    setRatings((current) => ({ ...current, [itemId]: rating }))
+  }
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: style.backgroundColor, color: style.textColor, fontFamily: style.fontFamily }}>
@@ -290,6 +352,7 @@ export function ClientMenu() {
           </label>
           <div className="flex gap-2 overflow-x-auto pb-1">
             <CategoryButton active={activeCategory === 'all'} label={text.all} onClick={() => setActiveCategory('all')} />
+            <CategoryButton active={showingFavorites} label={text.favoritesTab} onClick={() => setActiveCategory('favorites')} />
             {categories.map((category) => (
               <CategoryButton key={category.id} active={activeCategory === category.id} label={translate(category.name, language)} onClick={() => setActiveCategory(category.id)} />
             ))}
@@ -298,34 +361,58 @@ export function ClientMenu() {
       </section>
 
       <section className="mx-auto max-w-5xl px-3 py-5 sm:px-4 sm:py-6">
+        {showingFavorites && favoriteItems.length > 0 && (
+          <div className="mb-9 rounded-lg border border-[#eadfce] bg-white/55 p-3 shadow-sm sm:p-4">
+            <div className="mb-4">
+              <h2 className="text-xl font-bold sm:text-2xl" style={{ color: style.primaryColor }}>{text.favoritesTitle}</h2>
+              <p className="mt-1 text-sm" style={{ color: style.secondaryColor }}>{text.favoritesText}</p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {favoriteItems.map((item) => (
+                <ProductCard
+                  key={item.id}
+                  item={item}
+                  language={language}
+                  rating={ratings[item.id] ?? 0}
+                  ratingStats={getRatingStats(item.id, ratings)}
+                  ratingLabel={text.ratingLabel}
+                  viewImageLabel={text.viewImage}
+                  textColor={style.textColor}
+                  priceColor={style.priceColor}
+                  secondaryColor={style.secondaryColor}
+                  onOpen={() => setSelectedItem(item)}
+                  onRate={(rating) => rateItem(item.id, rating)}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
         {visibleCategories.map((category) => (
           <div key={category.id} className="mb-8">
             <h2 className="mb-4 text-xl font-bold sm:text-2xl" style={{ color: style.primaryColor }}>{translate(category.name, language)}</h2>
             <div className="grid grid-cols-2 gap-3">
               {category.items.map((item) => (
-                <button
+                <ProductCard
                   key={item.id}
-                  onClick={() => setSelectedItem(item)}
-                  className="flex h-full min-h-[260px] w-full flex-col overflow-hidden rounded-lg border border-[#eadfce] bg-white text-left shadow-sm transition-transform active:scale-[0.99] sm:min-h-[310px]"
-                  aria-label={`${text.viewImage}: ${translate(item.name, language)}`}
-                >
-                  <div className="aspect-square w-full shrink-0 overflow-hidden bg-[#faf7f1]">
-                    <img src={item.image || '/placeholder.jpg'} alt={translate(item.name, language)} className="h-full w-full object-cover object-center" />
-                  </div>
-                  <div className="flex min-w-0 flex-1 flex-col p-3">
-                    <div className="flex flex-col gap-1">
-                      <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: style.textColor }}>{translate(item.name, language)}</h3>
-                      <p className="text-sm font-bold sm:text-base" style={{ color: style.priceColor }}>{formatPrice(item.price)}</p>
-                    </div>
-                    <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: style.secondaryColor }}>{translate(item.description, language)}</p>
-                  </div>
-                </button>
+                  item={item}
+                  language={language}
+                  rating={ratings[item.id] ?? 0}
+                  ratingStats={getRatingStats(item.id, ratings)}
+                  ratingLabel={text.ratingLabel}
+                  viewImageLabel={text.viewImage}
+                  textColor={style.textColor}
+                  priceColor={style.priceColor}
+                  secondaryColor={style.secondaryColor}
+                  onOpen={() => setSelectedItem(item)}
+                  onRate={(rating) => rateItem(item.id, rating)}
+                />
               ))}
             </div>
           </div>
         ))}
 
-        {visibleCategories.length === 0 && (
+        {((showingFavorites && favoriteItems.length === 0) || (!showingFavorites && visibleCategories.length === 0)) && (
           <div className="rounded-lg border border-[#eadfce] bg-white px-4 py-12 text-center">
             <p className="font-semibold">{text.emptyTitle}</p>
             <p className="mt-1 text-sm opacity-70">{text.emptyText}</p>
@@ -341,6 +428,89 @@ export function ClientMenu() {
         desarrollado por tolentinosw · tolentinosftw@gmail.com
       </footer>
     </main>
+  )
+}
+
+function ProductCard({
+  item,
+  language,
+  rating,
+  ratingStats,
+  ratingLabel,
+  viewImageLabel,
+  textColor,
+  priceColor,
+  secondaryColor,
+  onOpen,
+  onRate
+}: {
+  item: MenuItem
+  language: LanguageCode
+  rating: number
+  ratingStats: { average: number; count: number }
+  ratingLabel: string
+  viewImageLabel: string
+  textColor: string
+  priceColor: string
+  secondaryColor: string
+  onOpen: () => void
+  onRate: (rating: number) => void
+}) {
+  return (
+    <article className="flex h-full min-h-[292px] w-full flex-col overflow-hidden rounded-lg border border-[#eadfce] bg-white text-left shadow-sm sm:min-h-[340px]">
+      <button
+        onClick={onOpen}
+        className="flex flex-1 flex-col text-left transition-transform active:scale-[0.99]"
+        aria-label={`${viewImageLabel}: ${translate(item.name, language)}`}
+      >
+        <div className="aspect-square w-full shrink-0 overflow-hidden bg-[#faf7f1]">
+          <img src={item.image || '/placeholder.jpg'} alt={translate(item.name, language)} className="h-full w-full object-cover object-center" />
+        </div>
+        <div className="flex min-w-0 flex-1 flex-col p-3 pb-2">
+          <div className="flex flex-col gap-1">
+            <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: textColor }}>{translate(item.name, language)}</h3>
+            <p className="text-sm font-bold sm:text-base" style={{ color: priceColor }}>{formatPrice(item.price)}</p>
+          </div>
+          <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>
+        </div>
+      </button>
+      <div className="border-t border-[#eadfce] px-2 py-2">
+        <RatingStars rating={rating} stats={ratingStats} label={`${ratingLabel}: ${translate(item.name, language)}`} onRate={onRate} />
+      </div>
+    </article>
+  )
+}
+
+function RatingStars({
+  rating,
+  stats,
+  label,
+  onRate
+}: {
+  rating: number
+  stats: { average: number; count: number }
+  label: string
+  onRate: (rating: number) => void
+}) {
+  return (
+    <div className="space-y-1" aria-label={label}>
+      <div className="text-center text-xs font-semibold text-[#8a5b3e]">
+        {stats.count > 0 ? `${stats.average.toFixed(1)} (${stats.count})` : '0.0 (0)'}
+      </div>
+      <div className="flex items-center justify-center gap-0.5">
+        {[1, 2, 3, 4, 5].map((value) => (
+          <button
+            key={value}
+            type="button"
+            onClick={() => onRate(value)}
+            className="rounded-full p-1 text-[#d8b56d] transition-colors hover:bg-[#f4eadf]"
+            aria-label={`${label} ${value}`}
+          >
+            <Star className={`h-4 w-4 ${value <= (rating || Math.round(stats.average)) ? 'fill-[#d8b56d]' : 'fill-transparent'}`} />
+          </button>
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -425,6 +595,13 @@ function CategoryButton({ active, label, onClick }: { active: boolean; label: st
 function translate(value: string, language: LanguageCode) {
   if (language === 'es') return value
   return translations[value]?.[language] ?? value
+}
+
+function getRatingStats(itemId: string, ratings: Record<string, number>) {
+  const userRating = ratings[itemId] ?? 0
+
+  if (!userRating) return { average: 0, count: 0 }
+  return { average: userRating, count: 1 }
 }
 
 function formatPrice(price: number) {
