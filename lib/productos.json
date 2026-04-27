@@ -1,1101 +1,1101 @@
 [
-    {
-        "nombre":  "Producto 001",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-55-41.jpg"
-    },
-    {
-        "nombre":  "Producto 002",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-55-49.jpg"
-    },
-    {
-        "nombre":  "Producto 003",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-55-55.jpg"
-    },
-    {
-        "nombre":  "Producto 004",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-56-13.jpg"
-    },
-    {
-        "nombre":  "Producto 005",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-56-26.jpg"
-    },
-    {
-        "nombre":  "Producto 006",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-56-33.jpg"
-    },
-    {
-        "nombre":  "Producto 007",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-20-58-49.jpg"
-    },
-    {
-        "nombre":  "Producto 008",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-01-53.jpg"
-    },
-    {
-        "nombre":  "Producto 009",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-04-13.jpg"
-    },
-    {
-        "nombre":  "Producto 010",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-04-54.jpg"
-    },
-    {
-        "nombre":  "Producto 011",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-05-39.jpg"
-    },
-    {
-        "nombre":  "Producto 012",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-06-26.jpg"
-    },
-    {
-        "nombre":  "Producto 013",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-07-24.jpg"
-    },
-    {
-        "nombre":  "Producto 014",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-08-09.jpg"
-    },
-    {
-        "nombre":  "Producto 015",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-09-46.jpg"
-    },
-    {
-        "nombre":  "Producto 016",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-10-28.jpg"
-    },
-    {
-        "nombre":  "Producto 017",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-12-22.jpg"
-    },
-    {
-        "nombre":  "Producto 018",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-14-39.jpg"
-    },
-    {
-        "nombre":  "Producto 019",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-15-15.jpg"
-    },
-    {
-        "nombre":  "Producto 020",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-15-55.jpg"
-    },
-    {
-        "nombre":  "Producto 021",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-16-41.jpg"
-    },
-    {
-        "nombre":  "Producto 022",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-17-42.jpg"
-    },
-    {
-        "nombre":  "Producto 023",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-19-07.jpg"
-    },
-    {
-        "nombre":  "Producto 024",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-19-42.jpg"
-    },
-    {
-        "nombre":  "Producto 025",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-21-21.jpg"
-    },
-    {
-        "nombre":  "Producto 026",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-25-00.jpg"
-    },
-    {
-        "nombre":  "Producto 027",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-25-51.jpg"
-    },
-    {
-        "nombre":  "Producto 028",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-27-28.jpg"
-    },
-    {
-        "nombre":  "Producto 029",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-31-08.jpg"
-    },
-    {
-        "nombre":  "Producto 030",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-36-04.jpg"
-    },
-    {
-        "nombre":  "Producto 031",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-36-53.jpg"
-    },
-    {
-        "nombre":  "Producto 032",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-37-30.jpg"
-    },
-    {
-        "nombre":  "Producto 033",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-41-05.jpg"
-    },
-    {
-        "nombre":  "Producto 034",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-41-49.jpg"
-    },
-    {
-        "nombre":  "Producto 035",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-42-49.jpg"
-    },
-    {
-        "nombre":  "Producto 036",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-21-43-19.jpg"
-    },
-    {
-        "nombre":  "Producto 037",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-15-02.jpg"
-    },
-    {
-        "nombre":  "Producto 038",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-15-48.jpg"
-    },
-    {
-        "nombre":  "Producto 039",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-16-54.jpg"
-    },
-    {
-        "nombre":  "Producto 040",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-17-48.jpg"
-    },
-    {
-        "nombre":  "Producto 041",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-18-28.jpg"
-    },
-    {
-        "nombre":  "Producto 042",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-19-44.jpg"
-    },
-    {
-        "nombre":  "Producto 043",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-21-32.jpg"
-    },
-    {
-        "nombre":  "Producto 044",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-22-19.jpg"
-    },
-    {
-        "nombre":  "Producto 045",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-22-52.jpg"
-    },
-    {
-        "nombre":  "Producto 046",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-23-30.jpg"
-    },
-    {
-        "nombre":  "Producto 047",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-24-03.jpg"
-    },
-    {
-        "nombre":  "Producto 048",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-25-25.jpg"
-    },
-    {
-        "nombre":  "Producto 049",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-26-14.jpg"
-    },
-    {
-        "nombre":  "Producto 050",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-27-44.jpg"
-    },
-    {
-        "nombre":  "Producto 051",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-29-08.jpg"
-    },
-    {
-        "nombre":  "Producto 052",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-30-39.jpg"
-    },
-    {
-        "nombre":  "Producto 053",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-31-31.jpg"
-    },
-    {
-        "nombre":  "Producto 054",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-32-14.jpg"
-    },
-    {
-        "nombre":  "Producto 055",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-33-03.jpg"
-    },
-    {
-        "nombre":  "Producto 056",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-33-45.jpg"
-    },
-    {
-        "nombre":  "Producto 057",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-34-26.jpg"
-    },
-    {
-        "nombre":  "Producto 058",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-34-49.jpg"
-    },
-    {
-        "nombre":  "Producto 059",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-35-49.jpg"
-    },
-    {
-        "nombre":  "Producto 060",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-36-37.jpg"
-    },
-    {
-        "nombre":  "Producto 061",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-37-17.jpg"
-    },
-    {
-        "nombre":  "Producto 062",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-38-00.jpg"
-    },
-    {
-        "nombre":  "Producto 063",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-38-40.jpg"
-    },
-    {
-        "nombre":  "Producto 064",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-39-36.jpg"
-    },
-    {
-        "nombre":  "Producto 065",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-40-07.jpg"
-    },
-    {
-        "nombre":  "Producto 066",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-40-49.jpg"
-    },
-    {
-        "nombre":  "Producto 067",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-41-42.jpg"
-    },
-    {
-        "nombre":  "Producto 068",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-44-46.jpg"
-    },
-    {
-        "nombre":  "Producto 069",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-45-24.jpg"
-    },
-    {
-        "nombre":  "Producto 070",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-45-56.jpg"
-    },
-    {
-        "nombre":  "Producto 071",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-47-42.jpg"
-    },
-    {
-        "nombre":  "Producto 072",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-48-21.jpg"
-    },
-    {
-        "nombre":  "Producto 073",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-48-55.jpg"
-    },
-    {
-        "nombre":  "Producto 074",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-49-39.jpg"
-    },
-    {
-        "nombre":  "Producto 075",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-50-22.jpg"
-    },
-    {
-        "nombre":  "Producto 076",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-50-57.jpg"
-    },
-    {
-        "nombre":  "Producto 077",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-51-28.jpg"
-    },
-    {
-        "nombre":  "Producto 078",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-55-03.jpg"
-    },
-    {
-        "nombre":  "Producto 079",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-55-47.jpg"
-    },
-    {
-        "nombre":  "Producto 080",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-26-23-59-50.jpg"
-    },
-    {
-        "nombre":  "Producto 081",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-00-39.jpg"
-    },
-    {
-        "nombre":  "Producto 082",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-04-23.jpg"
-    },
-    {
-        "nombre":  "Producto 083",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-07-40.jpg"
-    },
-    {
-        "nombre":  "Producto 084",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-08-23.jpg"
-    },
-    {
-        "nombre":  "Producto 085",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-09-00.jpg"
-    },
-    {
-        "nombre":  "Producto 086",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-10-13.jpg"
-    },
-    {
-        "nombre":  "Producto 087",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-11-36.jpg"
-    },
-    {
-        "nombre":  "Producto 088",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-12-11.jpg"
-    },
-    {
-        "nombre":  "Producto 089",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-13-04.jpg"
-    },
-    {
-        "nombre":  "Producto 090",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-13-45.jpg"
-    },
-    {
-        "nombre":  "Producto 091",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-15-16.jpg"
-    },
-    {
-        "nombre":  "Producto 092",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-16-05.jpg"
-    },
-    {
-        "nombre":  "Producto 093",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-16-42.jpg"
-    },
-    {
-        "nombre":  "Producto 094",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-17-27.jpg"
-    },
-    {
-        "nombre":  "Producto 095",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-18-04.jpg"
-    },
-    {
-        "nombre":  "Producto 096",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-18-41.jpg"
-    },
-    {
-        "nombre":  "Producto 097",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-21-54.jpg"
-    },
-    {
-        "nombre":  "Producto 098",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-23-29.jpg"
-    },
-    {
-        "nombre":  "Producto 099",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-24-03.jpg"
-    },
-    {
-        "nombre":  "Producto 100",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-25-32.jpg"
-    },
-    {
-        "nombre":  "Producto 101",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-26-23.jpg"
-    },
-    {
-        "nombre":  "Producto 102",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-27-34.jpg"
-    },
-    {
-        "nombre":  "Producto 103",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-28-09.jpg"
-    },
-    {
-        "nombre":  "Producto 104",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-28-46.jpg"
-    },
-    {
-        "nombre":  "Producto 105",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-29-24.jpg"
-    },
-    {
-        "nombre":  "Producto 106",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-29-47.jpg"
-    },
-    {
-        "nombre":  "Producto 107",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-30-21.jpg"
-    },
-    {
-        "nombre":  "Producto 108",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-30-46.jpg"
-    },
-    {
-        "nombre":  "Producto 109",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-31-10.jpg"
-    },
-    {
-        "nombre":  "Producto 110",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-31-31.jpg"
-    },
-    {
-        "nombre":  "Producto 111",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-31-37.jpg"
-    },
-    {
-        "nombre":  "Producto 112",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-32-12.jpg"
-    },
-    {
-        "nombre":  "Producto 113",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-33-10.jpg"
-    },
-    {
-        "nombre":  "Producto 114",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-33-50.jpg"
-    },
-    {
-        "nombre":  "Producto 115",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-34-28.jpg"
-    },
-    {
-        "nombre":  "Producto 116",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-37-29.jpg"
-    },
-    {
-        "nombre":  "Producto 117",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-37-59.jpg"
-    },
-    {
-        "nombre":  "Producto 118",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-38-11.jpg"
-    },
-    {
-        "nombre":  "Producto 119",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-39-48.jpg"
-    },
-    {
-        "nombre":  "Producto 120",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-40-32.jpg"
-    },
-    {
-        "nombre":  "Producto 121",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-40-58.jpg"
-    },
-    {
-        "nombre":  "Producto 122",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-41-37.jpg"
-    },
-    {
-        "nombre":  "Producto 123",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-44-01.jpg"
-    },
-    {
-        "nombre":  "Producto 124",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-44-45.jpg"
-    },
-    {
-        "nombre":  "Producto 125",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-46-21.jpg"
-    },
-    {
-        "nombre":  "Producto 126",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-46-37.jpg"
-    },
-    {
-        "nombre":  "Producto 127",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-48-24.jpg"
-    },
-    {
-        "nombre":  "Producto 128",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-00-50-09.jpg"
-    },
-    {
-        "nombre":  "Producto 129",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-12-12.jpg"
-    },
-    {
-        "nombre":  "Producto 130",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-12-51.jpg"
-    },
-    {
-        "nombre":  "Producto 131",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-13-25.jpg"
-    },
-    {
-        "nombre":  "Producto 132",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-14-12.jpg"
-    },
-    {
-        "nombre":  "Producto 133",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-14-45.jpg"
-    },
-    {
-        "nombre":  "Producto 134",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-16-04.jpg"
-    },
-    {
-        "nombre":  "Producto 135",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-16-33.jpg"
-    },
-    {
-        "nombre":  "Producto 136",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-17-21.jpg"
-    },
-    {
-        "nombre":  "Producto 137",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-17-47.jpg"
-    },
-    {
-        "nombre":  "Producto 138",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-19-31.jpg"
-    },
-    {
-        "nombre":  "Producto 139",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-27-33.jpg"
-    },
-    {
-        "nombre":  "Producto 140",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-28-17.jpg"
-    },
-    {
-        "nombre":  "Producto 141",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-30-02.jpg"
-    },
-    {
-        "nombre":  "Producto 142",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-32-21.jpg"
-    },
-    {
-        "nombre":  "Producto 143",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-33-11.jpg"
-    },
-    {
-        "nombre":  "Producto 144",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-35-13.jpg"
-    },
-    {
-        "nombre":  "Producto 145",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-36-19.jpg"
-    },
-    {
-        "nombre":  "Producto 146",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-39-36.jpg"
-    },
-    {
-        "nombre":  "Producto 147",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-58-39.jpg"
-    },
-    {
-        "nombre":  "Producto 148",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-59-16.jpg"
-    },
-    {
-        "nombre":  "Producto 149",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-10-59-59.jpg"
-    },
-    {
-        "nombre":  "Producto 150",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-00-28.jpg"
-    },
-    {
-        "nombre":  "Producto 151",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-01-04.jpg"
-    },
-    {
-        "nombre":  "Producto 152",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-04-33.jpg"
-    },
-    {
-        "nombre":  "Producto 153",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-05-33.jpg"
-    },
-    {
-        "nombre":  "Producto 154",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-06-21.jpg"
-    },
-    {
-        "nombre":  "Producto 155",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-08-59.jpg"
-    },
-    {
-        "nombre":  "Producto 156",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-09-57.jpg"
-    },
-    {
-        "nombre":  "Producto 157",
-        "precio":  0,
-        "descripcion":  "",
-        "categoria_busqueda":  "Productos",
-        "imagen_fuente":  "/imagenesmenucrepes/PHOTO-2026-04-27-11-11-10.jpg"
-    }
+  {
+    "nombre": "Mora",
+    "precio": 7900,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-55-41.jpg"
+  },
+  {
+    "nombre": "Mango",
+    "precio": 7900,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-55-49.jpg"
+  },
+  {
+    "nombre": "Mandarina",
+    "precio": 9900,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-55-55.jpg"
+  },
+  {
+    "nombre": "Fresa",
+    "precio": 8100,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-56-13.jpg"
+  },
+  {
+    "nombre": "Guanábana",
+    "precio": 8200,
+    "descripcion": "Jugo natural en leche.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-56-26.jpg"
+  },
+  {
+    "nombre": "Feijoa",
+    "precio": 7400,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-56-33.jpg"
+  },
+  {
+    "nombre": "Durazno",
+    "precio": 8900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-20-58-49.jpg"
+  },
+  {
+    "nombre": "Frambuesa",
+    "precio": 9900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-01-53.jpg"
+  },
+  {
+    "nombre": "Exótico",
+    "precio": 9600,
+    "descripcion": "Uchuva y gulupa.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-04-13.jpg"
+  },
+  {
+    "nombre": "Natural",
+    "precio": 6500,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-04-54.jpg"
+  },
+  {
+    "nombre": "Limón Mandarino",
+    "precio": 7600,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-05-39.jpg"
+  },
+  {
+    "nombre": "Hierbabuena",
+    "precio": 7900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-06-26.jpg"
+  },
+  {
+    "nombre": "Mango Biche",
+    "precio": 9600,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-07-24.jpg"
+  },
+  {
+    "nombre": "Coco",
+    "precio": 11300,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-08-09.jpg"
+  },
+  {
+    "nombre": "Piña, Jengibre y Hierbabuena",
+    "precio": 9900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-09-46.jpg"
+  },
+  {
+    "nombre": "Alegría",
+    "precio": 10800,
+    "descripcion": "Mezcla de frutas del campo: mango, maracuyá y piña.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-10-28.jpg"
+  },
+  {
+    "nombre": "Bienestar",
+    "precio": 10800,
+    "descripcion": "Mezcla de frutas del campo: manzana, pera, feijoa y hierbabuena.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-12-22.jpg"
+  },
+  {
+    "nombre": "Elixir",
+    "precio": 13200,
+    "descripcion": "Guanábana y Lychee.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-14-39.jpg"
+  },
+  {
+    "nombre": "Malteada",
+    "precio": 15500,
+    "descripcion": "Elige el sabor del helado de tu preferencia.",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-15-15.jpg"
+  },
+  {
+    "nombre": "Soy Otoño",
+    "precio": 10900,
+    "descripcion": "Explosión de vegetales, tomate, zucchini y zanahoria, con frijolitos rojos cuarentanos. Frijol de temporada, origen Montes de María.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-15-55.jpg"
+  },
+  {
+    "nombre": "Vida en Verdes",
+    "precio": 13200,
+    "descripcion": "Crema suave de verdes y maicitos tiernos.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-16-41.jpg"
+  },
+  {
+    "nombre": "Espinaca",
+    "precio": 13900,
+    "descripcion": "Sopa de espinaca del huerto a tu casa. Naturalmente deliciosa.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-17-42.jpg"
+  },
+  {
+    "nombre": "Lentejas",
+    "precio": 14800,
+    "descripcion": "Con champiñones y Portobellos, lentejas beluga y un ligero toque de especias de la India.",
+    "categoria_busqueda": "Sopas y Cremas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-19-07.jpg"
+  },
+  {
+    "nombre": "Cebolla Gratinada",
+    "precio": 14800,
+    "descripcion": "Sopa de cebolla, con pan y queso gratinado.",
+    "categoria_busqueda": "Sopas y Cremas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-19-42.jpg"
+  },
+  {
+    "nombre": "Covarachía",
+    "precio": 15900,
+    "descripcion": "Sopa donde el tomate, el maíz y el plátano entran a jugar para resaltar el valor de los sabores de nuestra tierra, con aguacate, crema agria y cilantro. Pide nuestra opción vegana.",
+    "categoria_busqueda": "Sopas y Cremas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-21-21.jpg"
+  },
+  {
+    "nombre": "Sopa del Sol",
+    "precio": 14600,
+    "descripcion": "Sopa de zapallo con un toque de queso de cabra y pesto, pan pita y cilantro.",
+    "categoria_busqueda": "Sopas y Cremas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-25-00.jpg"
+  },
+  {
+    "nombre": "Mexicana con Pollo",
+    "precio": 19900,
+    "descripcion": "Sabores de México: chile chipotle, crema agria, queso, aguacate, pollo, pico de gallo y tortilla mexicana.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-25-51.jpg"
+  },
+  {
+    "nombre": "ArracaChips",
+    "precio": 13300,
+    "descripcion": "Crujientes chips de arracacha con dip de queso feta y ají de maní.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-27-28.jpg"
+  },
+  {
+    "nombre": "Ensalada de la Barra",
+    "precio": 18400,
+    "descripcion": "Porque nadie conoce la mezcla mejor que tú.",
+    "categoria_busqueda": "Ensaladas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-31-08.jpg"
+  },
+  {
+    "nombre": "Tomatina",
+    "precio": 19500,
+    "descripcion": "Mozzarellina tibia al horno, tomates frescos y confitados con un toque de pesto, acompañados de rúgula con toque de vinagre balsámico.",
+    "categoria_busqueda": "Ensaladas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-36-04.jpg"
+  },
+  {
+    "nombre": "Ensalada Cesar",
+    "precio": 17600,
+    "descripcion": "",
+    "categoria_busqueda": "Ensaladas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-36-53.jpg"
+  },
+  {
+    "nombre": "Ensalada Crepes & Waffles",
+    "precio": 21800,
+    "descripcion": "Variedad de lechugas, queso de cabra, tomates frescos, albahaca, pan centeno y deliciosa vinagreta a base de mostaza Dijon.",
+    "categoria_busqueda": "Waffles",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-37-30.jpg"
+  },
+  {
+    "nombre": "Darina",
+    "precio": 22200,
+    "descripcion": "Champiñón Portobello asado con queso de cabra, tomate fresco, rúgula, balsámico, pesto, albahaca fresca, tomate seco, acompañado de pan pita.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-41-05.jpg"
+  },
+  {
+    "nombre": "Ensalada Kale",
+    "precio": 16900,
+    "descripcion": "Kale con vinagreta, tomates cherry, queso Grana Padano y walnuts.",
+    "categoria_busqueda": "Ensaladas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-41-49.jpg"
+  },
+  {
+    "nombre": "Vino Caliente",
+    "precio": 20800,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-42-49.jpg"
+  },
+  {
+    "nombre": "Tinto de Verano",
+    "precio": 20800,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-21-43-19.jpg"
+  },
+  {
+    "nombre": "Blanco de Verano",
+    "precio": 23800,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-15-02.jpg"
+  },
+  {
+    "nombre": "Vino AMORETINTO - Tinto",
+    "precio": 28500,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-15-48.jpg"
+  },
+  {
+    "nombre": "Vino AMORETINTO - Blanco",
+    "precio": 28500,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-16-54.jpg"
+  },
+  {
+    "nombre": "Vino Prosecco",
+    "precio": 29800,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-17-48.jpg"
+  },
+  {
+    "nombre": "Mandarina y Limón Mandarino",
+    "precio": 8000,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-18-28.jpg"
+  },
+  {
+    "nombre": "Jengibre y Miel",
+    "precio": 8500,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-19-44.jpg"
+  },
+  {
+    "nombre": "Frambuesa y Hierbabuena",
+    "precio": 8600,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-21-32.jpg"
+  },
+  {
+    "nombre": "Agua Siembra",
+    "precio": 7400,
+    "descripcion": "Con o sin gas.",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-22-19.jpg"
+  },
+  {
+    "nombre": "Agua Manantial",
+    "precio": 7200,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-22-52.jpg"
+  },
+  {
+    "nombre": "Agua Manantial con Gas",
+    "precio": 6900,
+    "descripcion": "",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-23-30.jpg"
+  },
+  {
+    "nombre": "Gaseosas",
+    "precio": 6200,
+    "descripcion": "Coca-Cola original, Coca-Cola Zero, Sprite o Kola Roman.",
+    "categoria_busqueda": "Jugos y Bebidas",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-24-03.jpg"
+  },
+  {
+    "nombre": "Schweppes Ginger o Soda",
+    "precio": 6700,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-25-25.jpg"
+  },
+  {
+    "nombre": "Coronita",
+    "precio": 9300,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-26-14.jpg"
+  },
+  {
+    "nombre": "Club Colombia",
+    "precio": 10400,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-27-44.jpg"
+  },
+  {
+    "nombre": "Stella Artois",
+    "precio": 12900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-29-08.jpg"
+  },
+  {
+    "nombre": "Heineken",
+    "precio": 12600,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-30-39.jpg"
+  },
+  {
+    "nombre": "Cajicá Miel",
+    "precio": 14200,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-31-31.jpg"
+  },
+  {
+    "nombre": "Trece Pesos IPA",
+    "precio": 16200,
+    "descripcion": "Cerveza tipo IPA (India Pale Ale). País de origen: Colombia.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-32-14.jpg"
+  },
+  {
+    "nombre": "Salmon Roll",
+    "precio": 41500,
+    "descripcion": "Rollitos de salmón ahumado con rúgula, queso crema, mostaza, cebolla, aguacate y crujientes vegetales frescos. Acompañados de ensalada verde.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-33-03.jpg"
+  },
+  {
+    "nombre": "Zeus",
+    "precio": 41500,
+    "descripcion": "Flores de salmón ahumado sobre un crepe con aguacate rústico, chucrut de cebollas, crema agria, aceitunas moradas y germinados.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-33-45.jpg"
+  },
+  {
+    "nombre": "Salmón Ahumado",
+    "precio": 40900,
+    "descripcion": "Con crema agria, queso crema y cebollina, acompañado de lechugas y vinagreta de finas hierbas.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-34-26.jpg"
+  },
+  {
+    "nombre": "Salmón Rossé",
+    "precio": 39500,
+    "descripcion": "Rollitos de salmón ahumado, rellenos de espinaca con ricotta sobre un fondo de salsa rossé. (Sin crepe).",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-34-49.jpg"
+  },
+  {
+    "nombre": "Volcán del Caribe",
+    "precio": 38400,
+    "descripcion": "Un volcán de enyucado con camarones en su lava, germinados y especias caribeñas. (Sin crepe).",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-35-49.jpg"
+  },
+  {
+    "nombre": "Encanto Tropical",
+    "precio": 38900,
+    "descripcion": "Chontaduro con crema agria, aguacate, langostinos y calamares, crepe de enyucado y salsa de maní. Toda una mezcla de nuestro encanto tropical.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-36-37.jpg"
+  },
+  {
+    "nombre": "Camarones al Ají Panka",
+    "precio": 40500,
+    "descripcion": "Con todos los sabores del Perú. Con puré de frijol al cilantro, aguacate, rúgula, filamentos de pimentón y cebolla roja.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-37-17.jpg"
+  },
+  {
+    "nombre": "Waffle Madame",
+    "precio": 28500,
+    "descripcion": "Sánduche de waffle con mezcla de quesos, lomo ahumado de cerdo y huevo, bañado en nuestra salsa de queso parmesano.",
+    "categoria_busqueda": "Waffles",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-38-00.jpg"
+  },
+  {
+    "nombre": "Waffle Sándwich",
+    "precio": 31900,
+    "descripcion": "Con pechuga de pollo, tocineta, queso, tomate, rúgula y dijonnaise, acompañado con chips de arracacha de Cajamarca.",
+    "categoria_busqueda": "Waffles",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-38-40.jpg"
+  },
+  {
+    "nombre": "Waffle D'Choclo",
+    "precio": 15900,
+    "descripcion": "Waffle de maíz relleno de queso, con queso 7 cueros y suero costeño.",
+    "categoria_busqueda": "Waffles",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-39-36.jpg"
+  },
+  {
+    "nombre": "Mini Waffle Dalí",
+    "precio": 15300,
+    "descripcion": "Finas tajadas de queso, lomo ahumado de cerdo y un toque de ricotta.",
+    "categoria_busqueda": "Waffles",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-40-07.jpg"
+  },
+  {
+    "nombre": "Mini Waffle D'Yuca",
+    "precio": 8900,
+    "descripcion": "Un mini waffle con masa de yuca, mantequilla derretida y jalea de guayaba.",
+    "categoria_busqueda": "Waffles",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-40-49.jpg"
+  },
+  {
+    "nombre": "Pollo Trufa Mexicano",
+    "precio": 32500,
+    "descripcion": "Mezcla de sabores mexicanos con huitlacoche, aguacate y salsa de queso parmesano.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-41-42.jpg"
+  },
+  {
+    "nombre": "Pollo al Pastor",
+    "precio": 30600,
+    "descripcion": "Crepe de pollo en su salsa característica, acompañado de piña asada y picadillo mexicano.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-44-46.jpg"
+  },
+  {
+    "nombre": "Pollo Peruano",
+    "precio": 30900,
+    "descripcion": "Típica preparación de ají de gallina limeño, salsa de aceitunas moradas, rúgula y huevo.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-45-24.jpg"
+  },
+  {
+    "nombre": "Pollo al Ají Panka",
+    "precio": 31900,
+    "descripcion": "Pollo con todos los sabores del Perú. Puré de frijol al cilantro, aguacate, rúgula, filamentos de pimentón y cebolla roja.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-45-56.jpg"
+  },
+  {
+    "nombre": "Pollo Mexicano",
+    "precio": 31300,
+    "descripcion": "Pollo en salsa mexicana y chipotle, queso rallado, lechuga, crema agria, ají y pico de gallo.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-47-42.jpg"
+  },
+  {
+    "nombre": "Pollo Thai",
+    "precio": 32400,
+    "descripcion": "Pechuga de pollo y champiñones Portobello, con una mezcla de sabores orientales a base de curry y maracuyá.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-48-21.jpg"
+  },
+  {
+    "nombre": "Palmitos",
+    "precio": 31300,
+    "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-48-55.jpg"
+  },
+  {
+    "nombre": "Calamares",
+    "precio": 34500,
+    "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-49-39.jpg"
+  },
+  {
+    "nombre": "Camarones",
+    "precio": 39900,
+    "descripcion": "Al curry, al ajillo o en salsa de la casa (Marco Polo).",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-50-22.jpg"
+  },
+  {
+    "nombre": "Camarones con Espinaca",
+    "precio": 40900,
+    "descripcion": "Versión con espinaca.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-50-57.jpg"
+  },
+  {
+    "nombre": "Atún en Salsa de la Casa",
+    "precio": 31500,
+    "descripcion": "Preparado en salsa de la casa (Marco Polo).",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-51-28.jpg"
+  },
+  {
+    "nombre": "Mar Encocado",
+    "precio": 40900,
+    "descripcion": "Pulpo, camarones, calamares y langostinos sobre quinua negra, bañados en salsa de coco y toques de coco crujiente.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-55-03.jpg"
+  },
+  {
+    "nombre": "Camarones Rosarito",
+    "precio": 40800,
+    "descripcion": "En salsa mexicana con chipotle, arcos de aguacate y frijol rojo cuarentano.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-55-47.jpg"
+  },
+  {
+    "nombre": "Ternera",
+    "precio": 30900,
+    "descripcion": "Puedes pedirlo también con espinaca y queso o champiñones.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-26-23-59-50.jpg"
+  },
+  {
+    "nombre": "Espinaca y Queso",
+    "precio": 30900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-00-39.jpg"
+  },
+  {
+    "nombre": "Champiñones",
+    "precio": 30800,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-04-23.jpg"
+  },
+  {
+    "nombre": "Stroganoff",
+    "precio": 35900,
+    "descripcion": "Julianas de lomo y champiñones en su salsa.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-07-40.jpg"
+  },
+  {
+    "nombre": "Mexicano",
+    "precio": 27900,
+    "descripcion": "Boloñesa en salsa mexicana, queso rallado, lechuga, crema agria, ají y pico de gallo.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-08-23.jpg"
+  },
+  {
+    "nombre": "Lomito Pimienta",
+    "precio": 36900,
+    "descripcion": "Julianas de lomo y pimienta del Putumayo en su salsa.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-09-00.jpg"
+  },
+  {
+    "nombre": "Roastbeef",
+    "precio": 34600,
+    "descripcion": "Tajadas de roastbeef y queso, cebollas asadas, rúgula, mayonesa chipotle y chucrut de cebollas.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-10-13.jpg"
+  },
+  {
+    "nombre": "Lomo Árabe",
+    "precio": 40600,
+    "descripcion": "Con especias del Medio Oriente y ensalada a su mejor estilo.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-11-36.jpg"
+  },
+  {
+    "nombre": "Pollo y Queso",
+    "precio": 26900,
+    "descripcion": "Base con opción de agregar ingredientes.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-12-11.jpg"
+  },
+  {
+    "nombre": "Champiñones",
+    "precio": 29900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-13-04.jpg"
+  },
+  {
+    "nombre": "Espinaca",
+    "precio": 29900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-13-45.jpg"
+  },
+  {
+    "nombre": "Espárragos",
+    "precio": 29900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-15-16.jpg"
+  },
+  {
+    "nombre": "Brócoli y Salsa de Queso Parmesano",
+    "precio": 32600,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-16-05.jpg"
+  },
+  {
+    "nombre": "Alcachofa y Salsa de Queso Parmesano",
+    "precio": 33500,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-16-42.jpg"
+  },
+  {
+    "nombre": "Pollo al Curry",
+    "precio": 29900,
+    "descripcion": "",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-17-27.jpg"
+  },
+  {
+    "nombre": "Pollo Chipotle",
+    "precio": 30800,
+    "descripcion": "Pollo con salsa chipotle, aguacate, pico de gallo, queso, maíz y crema agria, acompañado de rúgula.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-18-04.jpg"
+  },
+  {
+    "nombre": "Pollo en Salsa Verde Mexicana",
+    "precio": 31600,
+    "descripcion": "Salsa de tomatillo verde con pollo, queso, crema agria, pimentón asado y cilantro.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-18-41.jpg"
+  },
+  {
+    "nombre": "Pollo Rosarito",
+    "precio": 30800,
+    "descripcion": "Pollo en salsa mexicana con chipotle, arcos de aguacate y frijol rojo cuarentano.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-21-54.jpg"
+  },
+  {
+    "nombre": "Pollo al Curry al estilo Hindú",
+    "precio": 30600,
+    "descripcion": "Con maní, uvas pasas y chutney de mango.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-23-29.jpg"
+  },
+  {
+    "nombre": "Napolitana",
+    "precio": 23900,
+    "descripcion": "Espinaca, queso ricotta y parmesano, salsa napolitana o salsa rossé.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-24-03.jpg"
+  },
+  {
+    "nombre": "Natura",
+    "precio": 23900,
+    "descripcion": "Espinaca, queso, albahaca, tomates frescos, tomates secos y salsa napolitana.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-25-32.jpg"
+  },
+  {
+    "nombre": "Poblana",
+    "precio": 24900,
+    "descripcion": "Aguacate, queso, pico de gallo, salsa agria, lechuga y un toque mexicano de ají.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-26-23.jpg"
+  },
+  {
+    "nombre": "Toscana",
+    "precio": 24900,
+    "descripcion": "Queso, tomate, albahaca, champiñones frescos, salsa de champiñones y napolitana.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-27-34.jpg"
+  },
+  {
+    "nombre": "Vegan Boloñesa",
+    "precio": 21800,
+    "descripcion": "Tofu, espinaca, berenjenas y champiñones, con un toque especial de tahini.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-28-09.jpg"
+  },
+  {
+    "nombre": "Sombrero Vueltao Vegano",
+    "precio": 28500,
+    "descripcion": "Versión vegana con orellanas, puré de plátano maduro, aguacate, pico de gallo y crema agria de tofu.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-28-46.jpg"
+  },
+  {
+    "nombre": "Champiñón Fondue",
+    "precio": 31800,
+    "descripcion": "Champiñones bañados en una clásica salsa de quesos.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-29-24.jpg"
+  },
+  {
+    "nombre": "Normanda",
+    "precio": 25900,
+    "descripcion": "Champiñones frescos, variedad de quesos y salsa de champiñones.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-29-47.jpg"
+  },
+  {
+    "nombre": "Caprino",
+    "precio": 28900,
+    "descripcion": "Champiñones salteados, tomates secos, tomates frescos, pesto, reducción de balsámico y mozzarellina.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-30-21.jpg"
+  },
+  {
+    "nombre": "Boloñesa y Queso",
+    "precio": 22300,
+    "descripcion": "Puedes pedirlo también con lomo ahumado de cerdo o champiñones.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-30-46.jpg"
+  },
+  {
+    "nombre": "Lomo Ahumado de Cerdo",
+    "precio": 25900,
+    "descripcion": "",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-31-10.jpg"
+  },
+  {
+    "nombre": "Champiñones",
+    "precio": 24900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-31-31.jpg"
+  },
+  {
+    "nombre": "Sombrero Vueltao",
+    "precio": 29900,
+    "descripcion": "Carne desmechada preparada con hogao sobre puré de plátano maduro, acompañada de crema agria, aguacate y pico de gallo.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-31-37.jpg"
+  },
+  {
+    "nombre": "Cochinita Pibil",
+    "precio": 28500,
+    "descripcion": "Cerdo desmechado con tonos cítricos, acompañado de aguacate, lechuga, pico de gallo, cebolla encurtida y crema agria.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-32-12.jpg"
+  },
+  {
+    "nombre": "Ternera",
+    "precio": 30200,
+    "descripcion": "Puedes pedirlo también con espinaca y queso o champiñones.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-33-10.jpg"
+  },
+  {
+    "nombre": "Jamón y Queso",
+    "precio": 19600,
+    "descripcion": "Puedes pedirlo también con champiñones o espárragos.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-33-50.jpg"
+  },
+  {
+    "nombre": "Champiñones",
+    "precio": 23600,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-34-28.jpg"
+  },
+  {
+    "nombre": "Espárragos",
+    "precio": 23800,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-37-29.jpg"
+  },
+  {
+    "nombre": "Pavo, Queso tipo Holandés y Salsa Dijonnaise",
+    "precio": 30900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-37-59.jpg"
+  },
+  {
+    "nombre": "Sensación",
+    "precio": 24900,
+    "descripcion": "Lomo ahumado de cerdo, queso y huevo. Pídelo también con cebolla y tomate.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-38-11.jpg"
+  },
+  {
+    "nombre": "Sensación Colombia",
+    "precio": 27900,
+    "descripcion": "Carne desmechada, queso, huevo, crema agria y hogao.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-39-48.jpg"
+  },
+  {
+    "nombre": "Bretonne",
+    "precio": 23900,
+    "descripcion": "Lomo ahumado de cerdo, queso y huevo al estilo francés.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-40-32.jpg"
+  },
+  {
+    "nombre": "Bretonne Serrano",
+    "precio": 31900,
+    "descripcion": "Jamón serrano, queso y huevo.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-40-58.jpg"
+  },
+  {
+    "nombre": "Serrano",
+    "precio": 38500,
+    "descripcion": "Mozzarellina, jamón serrano, cebollas caramelizadas, tomate seco y rúgula.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-41-37.jpg"
+  },
+  {
+    "nombre": "French Connection",
+    "precio": 21400,
+    "descripcion": "Lomo ahumado de cerdo, queso ricotta y syrup.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-44-01.jpg"
+  },
+  {
+    "nombre": "Champiñones al Ajillo",
+    "precio": 21900,
+    "descripcion": "Crepe de champiñones en salsa al ajillo con queso.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-44-45.jpg"
+  },
+  {
+    "nombre": "Romana",
+    "precio": 21900,
+    "descripcion": "Mozzarellina, salsa napolitana con albahaca y queso parmesano.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-46-21.jpg"
+  },
+  {
+    "nombre": "Sicilia",
+    "precio": 24300,
+    "descripcion": "Mozzarellina, tomates secos, tomates frescos y albahaca.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-46-37.jpg"
+  },
+  {
+    "nombre": "Espinaca, Queso Feta y Champiñones Glaseados",
+    "precio": 32900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-48-24.jpg"
+  },
+  {
+    "nombre": "Champiñones, Alcachofa y Queso",
+    "precio": 26900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-00-50-09.jpg"
+  },
+  {
+    "nombre": "Napolitano",
+    "precio": 20900,
+    "descripcion": "Espinaca, queso ricotta y parmesano, salsa napolitana o salsa rossé.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-12-12.jpg"
+  },
+  {
+    "nombre": "Natura",
+    "precio": 23900,
+    "descripcion": "...",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-12-51.jpg"
+  },
+  {
+    "nombre": "Pollo Árabe",
+    "precio": 27900,
+    "descripcion": "Pechuga de pollo al horno, lechuga, tahini, trocitos de aceitunas y cebollas encurtidas.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-13-25.jpg"
+  },
+  {
+    "nombre": "Pavo",
+    "precio": 30800,
+    "descripcion": "Pan árabe relleno de pechuga de pavo, variedad de quesos y salsa dijonnaise.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-14-12.jpg"
+  },
+  {
+    "nombre": "Doble Pocket",
+    "precio": 24200,
+    "descripcion": "Pan árabe relleno de lomo ahumado de cerdo, salsa dijonnaise y variedad de quesos.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-14-45.jpg"
+  },
+  {
+    "nombre": "Popeye Pocket",
+    "precio": 22900,
+    "descripcion": "Pan árabe relleno de espinaca, lomo ahumado de cerdo, cebolla, huevo, champiñones y tomate, gratinado con queso, acompañado con salsa amarilla y vinagreta verde.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-16-04.jpg"
+  },
+  {
+    "nombre": "Tuna Pocket",
+    "precio": 28900,
+    "descripcion": "Pan árabe relleno de atún con champiñones, lechuga, gratinado con queso, acompañado con cascos de tomate fresco y rúgula.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-16-33.jpg"
+  },
+  {
+    "nombre": "Mozzarella Pocket",
+    "precio": 15900,
+    "descripcion": "Queso, salsa napolitana y albahaca.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-17-21.jpg"
+  },
+  {
+    "nombre": "Champiñón Pocket",
+    "precio": 28400,
+    "descripcion": "Portobello y champiñones salteados con albahaca, tomates secos y rúgula, gratinados con queso.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-17-47.jpg"
+  },
+  {
+    "nombre": "Huevo",
+    "precio": 28400,
+    "descripcion": "",
+    "categoria_busqueda": "Desayunos",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-19-31.jpg"
+  },
+  {
+    "nombre": "Aceite de Trufa",
+    "precio": 29400,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-27-33.jpg"
+  },
+  {
+    "nombre": "Pita en el Bosque",
+    "precio": 29800,
+    "descripcion": "Pita crujiente con champiñones, shiitake, espinaca, cebollas asadas, queso crema de almendras, peperoncino y aceite de trufa blanca.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-28-17.jpg"
+  },
+  {
+    "nombre": "Capresa",
+    "precio": 26900,
+    "descripcion": "Pan árabe relleno de mozzarellina, tomates frescos y secos, rúgula y pesto.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-30-02.jpg"
+  },
+  {
+    "nombre": "Ópera",
+    "precio": 28300,
+    "descripcion": "Mozzarellina, champiñón Portobello, tomates cherry, rúgula y queso parmesano.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-32-21.jpg"
+  },
+  {
+    "nombre": "Siciliana",
+    "precio": 26900,
+    "descripcion": "Queso, salsa napolitana, albahaca y tomates secos.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-33-11.jpg"
+  },
+  {
+    "nombre": "Siciliana",
+    "precio": 26900,
+    "descripcion": "Queso, salsa napolitana, tomates frescos, tomates secos, albahaca y aceite de oliva.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-35-13.jpg"
+  },
+  {
+    "nombre": "Vegetariana",
+    "precio": 24800,
+    "descripcion": "Queso, salsa napolitana, champiñones, cebolla, tomate, pimentón y apio.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-36-19.jpg"
+  },
+  {
+    "nombre": "Griega",
+    "precio": 26900,
+    "descripcion": "Queso, salsa napolitana, alcachofas, aceitunas moradas, cebolla, tomate y especias.",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-39-36.jpg"
+  },
+  {
+    "nombre": "Salsa de Pollo",
+    "precio": 12200,
+    "descripcion": "",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-58-39.jpg"
+  },
+  {
+    "nombre": "Salsa de Ternera",
+    "precio": 11800,
+    "descripcion": "",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-59-16.jpg"
+  },
+  {
+    "nombre": "Salsa de Champiñones",
+    "precio": 7200,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-10-59-59.jpg"
+  },
+  {
+    "nombre": "Pechuga de Pollo Miel con pimienta del Putumayo",
+    "precio": 9500,
+    "descripcion": "",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-00-28.jpg"
+  },
+  {
+    "nombre": "Pechuga de Pavo",
+    "precio": 14500,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-01-04.jpg"
+  },
+  {
+    "nombre": "Roastbeef",
+    "precio": 10200,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-04-33.jpg"
+  },
+  {
+    "nombre": "Salmón Ahumado",
+    "precio": 22800,
+    "descripcion": "",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-05-33.jpg"
+  },
+  {
+    "nombre": "Trucha Ahumada",
+    "precio": 18900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-06-21.jpg"
+  },
+  {
+    "nombre": "Boloñesa y Queso",
+    "precio": 27800,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-08-59.jpg"
+  },
+  {
+    "nombre": "Champiñón al Ajillo y Queso",
+    "precio": 26900,
+    "descripcion": "",
+    "categoria_busqueda": "Otros",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-09-57.jpg"
+  },
+  {
+    "nombre": "Ternera",
+    "precio": 34200,
+    "descripcion": "Puedes pedirlo también con champiñones.",
+    "categoria_busqueda": "Crepes Salados",
+    "imagen_fuente": "/imagenesmenucrepes/PHOTO-2026-04-27-11-11-10.jpg"
+  }
 ]

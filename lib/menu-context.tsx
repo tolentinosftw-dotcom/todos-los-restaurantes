@@ -26,7 +26,8 @@ const MenuContext = createContext<MenuContextType | undefined>(undefined)
 const PRODUCT_DATA_COUNT = sampleMenuData.reduce((total, category) => total + category.items.length, 0)
 const lastCategory = sampleMenuData[sampleMenuData.length - 1]
 const lastItem = lastCategory?.items[lastCategory.items.length - 1]
-const PRODUCT_DATA_SIGNATURE = `${PRODUCT_DATA_COUNT}:${sampleMenuData[0]?.items[0]?.image ?? ''}:${lastItem?.image ?? ''}`
+const firstItem = sampleMenuData[0]?.items[0]
+const PRODUCT_DATA_SIGNATURE = `${PRODUCT_DATA_COUNT}:${firstItem?.name ?? ''}:${firstItem?.price ?? 0}:${firstItem?.image ?? ''}:${lastItem?.name ?? ''}:${lastItem?.price ?? 0}:${lastItem?.image ?? ''}`
 const CATEGORY_RULES = [
   { id: 'jugos-bebidas', name: 'Jugos y Bebidas', words: ['jugo', 'jugos', 'jugi', 'limonada', 'batido', 'malteada', 'agua', 'gaseosa', 'soda', 'coca', 'schweppes', 'cerveza', 'vino', 'mimosa', 'cafe', 'café', 'capuccino', 'espresso', 'macchiato', 'chocolate', 'milo', 'chai', 'aromatica', 'aromática'] },
   { id: 'sopas-cremas', name: 'Sopas y Cremas', words: ['sopa', 'sopas', 'crema', 'cremas', 'lentejas', 'cebolla', 'ahuyama', 'covarachia', 'covarachía'] },
