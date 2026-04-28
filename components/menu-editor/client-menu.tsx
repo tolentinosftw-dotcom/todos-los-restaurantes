@@ -1,9 +1,9 @@
 'use client'
 
-import { memo, useEffect, useMemo, useState } from 'react'
+import { memo, startTransition, useEffect, useMemo, useState } from 'react'
 import { MenuCategory, MenuItem } from '@/lib/types'
 import { useMenu } from '@/lib/menu-context'
-import { formatMenuPrice, languages as supportedLanguages, translateText, uiCopy } from '@/lib/menu-i18n'
+import { formatMenuPrice, languages as supportedLanguages, preloadMenuTranslations, translateText, uiCopy } from '@/lib/menu-i18n'
 import { Search, Star, X } from 'lucide-react'
 
 type LanguageCode = 'es' | 'en' | 'fr' | 'it' | 'zh' | 'ja' | 'hi'
@@ -45,6 +45,22 @@ export function ClientMenu() {
 
     void loadSharedRatings()
   }, [])
+
+  useEffect(() => {
+    const values = [
+      style.headerText,
+      ...categories.flatMap((category) => [
+        category.name,
+        ...category.items.flatMap((item) => [item.name, item.description])
+      ])
+    ].filter(Boolean)
+
+    const schedule = window.requestIdleCallback ?? ((callback: IdleRequestCallback) => window.setTimeout(() => callback({ didTimeout: false, timeRemaining: () => 0 }), 1))
+    const cancel = window.cancelIdleCallback ?? window.clearTimeout
+    const handle = schedule(() => preloadMenuTranslations(values))
+
+    return () => cancel(handle)
+  }, [categories, style.headerText])
 
   const loadSharedRatings = async () => {
     try {
@@ -132,7 +148,7 @@ export function ClientMenu() {
         <div className="relative mx-auto max-w-5xl">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <img src={logoUrl} alt="Crepes & Waffles" className="h-14 w-14 rounded-full bg-white object-cover ring-2 ring-white/50" />
-            <LanguagePicker language={language} onChange={setLanguage} />
+            <LanguagePicker language={language} onChange={(nextLanguage) => startTransition(() => setLanguage(nextLanguage))} />
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75 sm:text-sm">{text.digitalMenu}</p>
           <h1 className="mt-2 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{translateText(style.headerText, language)}</h1>
@@ -366,12 +382,7 @@ function LanguagePicker({ language, onChange }: { language: LanguageCode; onChan
           title={item.label}
           aria-label={item.label}
         >
-          <img
-            src={`https://flagcdn.com/w40/${item.flag}.png`}
-            srcSet={`https://flagcdn.com/w80/${item.flag}.png 2x`}
-            alt={item.label}
-            className="h-6 w-6 rounded-full object-cover"
-          />
+          <span aria-hidden="true" className="text-xl leading-none">{item.emoji}</span>
         </button>
       ))}
     </div>

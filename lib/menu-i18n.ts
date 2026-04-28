@@ -1,13 +1,13 @@
 export type LanguageCode = 'es' | 'en' | 'fr' | 'it' | 'zh' | 'ja' | 'hi'
 
-export const languages: { code: LanguageCode; flag: string; label: string; locale: string; currency: string }[] = [
-  { code: 'es', flag: 'co', label: 'Español', locale: 'es-CO', currency: 'COP' },
-  { code: 'en', flag: 'gb', label: 'English', locale: 'en-US', currency: 'COP' },
-  { code: 'fr', flag: 'fr', label: 'Français', locale: 'fr-FR', currency: 'COP' },
-  { code: 'it', flag: 'it', label: 'Italiano', locale: 'it-IT', currency: 'COP' },
-  { code: 'zh', flag: 'cn', label: '中文', locale: 'zh-CN', currency: 'COP' },
-  { code: 'ja', flag: 'jp', label: '日本語', locale: 'ja-JP', currency: 'COP' },
-  { code: 'hi', flag: 'in', label: 'हिन्दी', locale: 'hi-IN', currency: 'COP' }
+export const languages: { code: LanguageCode; emoji: string; label: string; locale: string; currency: string }[] = [
+  { code: 'es', emoji: 'ES', label: 'Espanol', locale: 'es-CO', currency: 'COP' },
+  { code: 'en', emoji: 'EN', label: 'English', locale: 'en-US', currency: 'COP' },
+  { code: 'fr', emoji: 'FR', label: 'Francais', locale: 'fr-FR', currency: 'COP' },
+  { code: 'it', emoji: 'IT', label: 'Italiano', locale: 'it-IT', currency: 'COP' },
+  { code: 'zh', emoji: 'ZH', label: 'Chinese', locale: 'zh-CN', currency: 'COP' },
+  { code: 'ja', emoji: 'JA', label: 'Japanese', locale: 'ja-JP', currency: 'COP' },
+  { code: 'hi', emoji: 'HI', label: 'Hindi', locale: 'hi-IN', currency: 'COP' }
 ]
 
 type UiCopy = {
@@ -27,15 +27,15 @@ type UiCopy = {
 
 export const uiCopy: Record<LanguageCode, UiCopy> = {
   es: {
-    digitalMenu: 'Menú digital',
+    digitalMenu: 'Menu digital',
     search: 'Buscar crepes, waffles o ingredientes',
     all: 'Todo',
     emptyTitle: 'No encontramos productos',
-    emptyText: 'Prueba con otra búsqueda o categoría.',
+    emptyText: 'Prueba con otra busqueda o categoria.',
     close: 'Cerrar',
     viewImage: 'Ver imagen grande',
     favoritesTitle: 'Favoritos mejor valorados',
-    favoritesText: 'Los productos que tus clientes marcaron con más estrellas.',
+    favoritesText: 'Los productos que tus clientes marcaron con mas estrellas.',
     favoritesTab: 'Favoritos',
     ratingLabel: 'Calificar producto',
     pendingPrice: 'Precio pendiente'
@@ -55,105 +55,144 @@ export const uiCopy: Record<LanguageCode, UiCopy> = {
     pendingPrice: 'Price pending'
   },
   fr: {
-    digitalMenu: 'Menu numérique',
-    search: 'Rechercher crêpes, gaufres ou ingrédients',
+    digitalMenu: 'Menu numerique',
+    search: 'Rechercher crepes, gaufres ou ingredients',
     all: 'Tout',
-    emptyTitle: 'Aucun produit trouvé',
-    emptyText: 'Essayez une autre recherche ou catégorie.',
+    emptyTitle: 'Aucun produit trouve',
+    emptyText: 'Essayez une autre recherche ou categorie.',
     close: 'Fermer',
     viewImage: 'Voir la grande image',
-    favoritesTitle: 'Favoris les mieux notés',
-    favoritesText: 'Les produits que vos clients ont le mieux notés.',
+    favoritesTitle: 'Favoris les mieux notes',
+    favoritesText: 'Les produits les mieux notes par vos clients.',
     favoritesTab: 'Favoris',
     ratingLabel: 'Noter le produit',
-    pendingPrice: 'Prix à définir'
+    pendingPrice: 'Prix a definir'
   },
   it: {
     digitalMenu: 'Menu digitale',
-    search: 'Cerca crêpes, waffle o ingredienti',
+    search: 'Cerca crepes, waffle o ingredienti',
     all: 'Tutto',
     emptyTitle: 'Nessun prodotto trovato',
     emptyText: 'Prova un altra ricerca o categoria.',
     close: 'Chiudi',
     viewImage: 'Vedi immagine grande',
-    favoritesTitle: 'Preferiti più votati',
+    favoritesTitle: 'Preferiti piu votati',
     favoritesText: 'I prodotti che i clienti hanno valutato meglio.',
     favoritesTab: 'Preferiti',
     ratingLabel: 'Valuta prodotto',
     pendingPrice: 'Prezzo da definire'
   },
   zh: {
-    digitalMenu: '电子菜单',
-    search: '搜索可丽饼、华夫饼或配料',
-    all: '全部',
-    emptyTitle: '未找到产品',
-    emptyText: '请尝试其他搜索或分类。',
-    close: '关闭',
-    viewImage: '查看大图',
-    favoritesTitle: '评分最高的收藏',
-    favoritesText: '客户给出最多星级的产品。',
-    favoritesTab: '收藏',
-    ratingLabel: '评价产品',
-    pendingPrice: '价格待定'
+    digitalMenu: '\u6570\u5b57\u83dc\u5355',
+    search: '\u641c\u7d22\u53ef\u4e3d\u997c\u3001\u534e\u592b\u997c\u6216\u914d\u6599',
+    all: '\u5168\u90e8',
+    emptyTitle: '\u672a\u627e\u5230\u4ea7\u54c1',
+    emptyText: '\u8bf7\u5c1d\u8bd5\u5176\u4ed6\u641c\u7d22\u6216\u5206\u7c7b\u3002',
+    close: '\u5173\u95ed',
+    viewImage: '\u67e5\u770b\u5927\u56fe',
+    favoritesTitle: '\u8bc4\u5206\u6700\u9ad8\u7684\u6700\u7231',
+    favoritesText: '\u5ba2\u4eba\u8bc4\u5206\u6700\u9ad8\u7684\u4ea7\u54c1\u3002',
+    favoritesTab: '\u6700\u7231',
+    ratingLabel: '\u8bc4\u5206',
+    pendingPrice: '\u4ef7\u683c\u5f85\u5b9a'
   },
   ja: {
-    digitalMenu: 'デジタルメニュー',
-    search: 'クレープ、ワッフル、材料を検索',
-    all: 'すべて',
-    emptyTitle: '商品が見つかりません',
-    emptyText: '別の検索語またはカテゴリを試してください。',
-    close: '閉じる',
-    viewImage: '画像を大きく表示',
-    favoritesTitle: '高評価のお気に入り',
-    favoritesText: 'お客様が最も高く評価した商品。',
-    favoritesTab: 'お気に入り',
-    ratingLabel: '商品を評価',
-    pendingPrice: '価格未設定'
+    digitalMenu: '\u30c7\u30b8\u30bf\u30eb\u30e1\u30cb\u30e5\u30fc',
+    search: '\u30af\u30ec\u30fc\u30d7\u3001\u30ef\u30c3\u30d5\u30eb\u3001\u6750\u6599\u3092\u691c\u7d22',
+    all: '\u3059\u3079\u3066',
+    emptyTitle: '\u5546\u54c1\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093',
+    emptyText: '\u5225\u306e\u691c\u7d22\u307e\u305f\u306f\u30ab\u30c6\u30b4\u30ea\u30fc\u3092\u8a66\u3057\u3066\u304f\u3060\u3055\u3044\u3002',
+    close: '\u9589\u3058\u308b',
+    viewImage: '\u5927\u304d\u306a\u753b\u50cf\u3092\u898b\u308b',
+    favoritesTitle: '\u9ad8\u8a55\u4fa1\u306e\u304a\u6c17\u306b\u5165\u308a',
+    favoritesText: '\u304a\u5ba2\u69d8\u304c\u9ad8\u304f\u8a55\u4fa1\u3057\u305f\u5546\u54c1\u3002',
+    favoritesTab: '\u304a\u6c17\u306b\u5165\u308a',
+    ratingLabel: '\u8a55\u4fa1\u3059\u308b',
+    pendingPrice: '\u4fa1\u683c\u672a\u5b9a'
   },
   hi: {
-    digitalMenu: 'डिजिटल मेनू',
-    search: 'क्रेप्स, वॉफल्स या सामग्री खोजें',
-    all: 'सभी',
-    emptyTitle: 'कोई उत्पाद नहीं मिला',
-    emptyText: 'दूसरी खोज या श्रेणी आजमाएं।',
-    close: 'बंद करें',
-    viewImage: 'बड़ी तस्वीर देखें',
-    favoritesTitle: 'सबसे पसंदीदा',
-    favoritesText: 'जिन उत्पादों को ग्राहकों ने सबसे ज्यादा सितारे दिए।',
-    favoritesTab: 'पसंदीदा',
-    ratingLabel: 'उत्पाद को रेट करें',
-    pendingPrice: 'कीमत बाकी'
+    digitalMenu: '\u0921\u093f\u091c\u093f\u091f\u0932 \u092e\u0947\u0928\u094d\u092f\u0942',
+    search: '\u0915\u094d\u0930\u0947\u092a\u094d\u0938, \u0935\u093e\u092b\u0932 \u092f\u093e \u0938\u093e\u092e\u0917\u094d\u0930\u0940 \u0916\u094b\u091c\u0947\u0902',
+    all: '\u0938\u092d\u0940',
+    emptyTitle: '\u0915\u094b\u0908 \u0909\u0924\u094d\u092a\u093e\u0926 \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u093e',
+    emptyText: '\u0926\u0942\u0938\u0930\u0940 \u0916\u094b\u091c \u092f\u093e \u0936\u094d\u0930\u0947\u0923\u0940 \u0906\u091c\u092e\u093e\u090f\u0902\u0964',
+    close: '\u092c\u0902\u0926 \u0915\u0930\u0947\u0902',
+    viewImage: '\u092c\u0921\u093c\u0940 \u091b\u0935\u093f \u0926\u0947\u0916\u0947\u0902',
+    favoritesTitle: '\u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 \u0930\u0947\u091f\u0947\u0921 \u092a\u0938\u0902\u0926\u0940\u0926\u093e',
+    favoritesText: '\u0917\u094d\u0930\u093e\u0939\u0915\u094b\u0902 \u0926\u094d\u0935\u093e\u0930\u093e \u0938\u092c\u0938\u0947 \u0905\u091a\u094d\u091b\u0947 \u0930\u0947\u091f \u0915\u093f\u090f \u0917\u090f \u0909\u0924\u094d\u092a\u093e\u0926\u0964',
+    favoritesTab: '\u092a\u0938\u0902\u0926\u0940\u0926\u093e',
+    ratingLabel: '\u0930\u0947\u091f \u0915\u0930\u0947\u0902',
+    pendingPrice: '\u092e\u0942\u0932\u094d\u092f \u092c\u093e\u0915\u0940'
   }
 }
 
-const phraseTranslations: Record<string, Partial<Record<LanguageCode, string>>> = {
-  'Crepes & Waffles Interior': {
-    en: 'Crepes & Waffles Interior',
-    fr: 'Crepes & Waffles Intérieur',
-    it: 'Crepes & Waffles Interno',
-    zh: '室内可丽饼与华夫饼',
-    ja: 'クレープ＆ワッフル インテリア',
-    hi: 'क्रेप्स और वॉफल्स इंटीरियर'
+const phraseTranslations: Partial<Record<LanguageCode, Record<string, string>>> = {
+  en: {
+    'Jugos y Batidos': 'Juices and Shakes',
+    'Sopas y Entradas': 'Soups and Starters',
+    Ensaladas: 'Salads',
+    Bebidas: 'Drinks',
+    'Especiales de Mar': 'Seafood Specials',
+    Waffles: 'Waffles',
+    'Crepes y Platos Salados': 'Savory Crepes and Plates',
+    Mora: 'Blackberry',
+    Mango: 'Mango',
+    Fresa: 'Strawberry',
+    Mandarina: 'Tangerine',
+    Guanabana: 'Soursop',
+    Feijoa: 'Feijoa'
   },
-  'Jugos y Batidos': { en: 'Juices and Shakes', fr: 'Jus et Milk-shakes', it: 'Succhi e Frullati', zh: '果汁和奶昔', ja: 'ジュースとシェイク', hi: 'जूस और शेक' },
-  'Sopas y Entradas': { en: 'Soups and Starters', fr: 'Soupes et Entrées', it: 'Zuppe e Antipasti', zh: '汤和开胃菜', ja: 'スープと前菜', hi: 'सूप और स्टार्टर' },
-  Ensaladas: { en: 'Salads', fr: 'Salades', it: 'Insalate', zh: '沙拉', ja: 'サラダ', hi: 'सलाद' },
-  Bebidas: { en: 'Drinks', fr: 'Boissons', it: 'Bevande', zh: '饮品', ja: 'ドリンク', hi: 'पेय' },
-  'Especiales de Mar': { en: 'Seafood Specials', fr: 'Spécialités de la Mer', it: 'Specialità di Mare', zh: '海鲜特色', ja: 'シーフードスペシャル', hi: 'समुद्री विशेष' },
-  Waffles: { en: 'Waffles', fr: 'Gaufres', it: 'Waffle', zh: '华夫饼', ja: 'ワッフル', hi: 'वॉफल्स' },
-  'Crepes y Platos Salados': { en: 'Savory Crepes and Plates', fr: 'Crêpes et Plats Salés', it: 'Crêpes e Piatti Salati', zh: '咸味可丽饼和餐盘', ja: 'セイボリークレープと料理', hi: 'नमकीन क्रेप्स और व्यंजन' },
-  Otros: { en: 'Other', fr: 'Autres', it: 'Altri', zh: '其他', ja: 'その他', hi: 'अन्य' },
-  Mora: { en: 'Blackberry', fr: 'Mûre', it: 'Mora', zh: '黑莓', ja: 'ブラックベリー', hi: 'ब्लैकबेरी' },
-  Mango: { en: 'Mango', fr: 'Mangue', it: 'Mango', zh: '芒果', ja: 'マンゴー', hi: 'आम' },
-  Mandarina: { en: 'Tangerine', fr: 'Mandarine', it: 'Mandarino', zh: '橘子', ja: 'みかん', hi: 'संतरा' },
-  Fresa: { en: 'Strawberry', fr: 'Fraise', it: 'Fragola', zh: '草莓', ja: 'いちご', hi: 'स्ट्रॉबेरी' },
-  Guanábana: { en: 'Soursop', fr: 'Corossol', it: 'Guanabana', zh: '刺果番荔枝', ja: 'サワーソップ', hi: 'सीताफल जूस' },
-  'Waffle Madame': { en: 'Madame Waffle', fr: 'Gaufre Madame', it: 'Waffle Madame', zh: '夫人华夫饼', ja: 'マダムワッフル', hi: 'मैडम वॉफल' },
-  'Mini Waffle Dalí': { en: 'Mini Dali Waffle', fr: 'Mini Gaufre Dalí', it: 'Mini Waffle Dalí', zh: '迷你达利华夫饼', ja: 'ミニ ダリ ワッフル', hi: 'मिनी डाली वॉफल' }
+  fr: {
+    'Jugos y Batidos': 'Jus et milk-shakes',
+    'Sopas y Entradas': 'Soupes et entrees',
+    Ensaladas: 'Salades',
+    Bebidas: 'Boissons',
+    'Especiales de Mar': 'Specialites de la mer',
+    Waffles: 'Gaufres',
+    'Crepes y Platos Salados': 'Crepes salees et plats',
+    Mora: 'Mure',
+    Mango: 'Mangue',
+    Fresa: 'Fraise'
+  },
+  it: {
+    'Jugos y Batidos': 'Succhi e frullati',
+    'Sopas y Entradas': 'Zuppe e antipasti',
+    Ensaladas: 'Insalate',
+    Bebidas: 'Bevande',
+    'Especiales de Mar': 'Specialita di mare',
+    Waffles: 'Waffle',
+    'Crepes y Platos Salados': 'Crepes salate e piatti'
+  },
+  zh: {
+    'Jugos y Batidos': '\u679c\u6c41\u548c\u5976\u6614',
+    'Sopas y Entradas': '\u6c64\u548c\u524d\u83dc',
+    Ensaladas: '\u6c99\u62c9',
+    Bebidas: '\u996e\u54c1',
+    'Especiales de Mar': '\u6d77\u9c9c\u7279\u8272',
+    Waffles: '\u534e\u592b\u997c',
+    'Crepes y Platos Salados': '\u54b8\u53ef\u4e3d\u997c\u548c\u4e3b\u83dc'
+  },
+  ja: {
+    'Jugos y Batidos': '\u30b8\u30e5\u30fc\u30b9\u3068\u30b7\u30a7\u30a4\u30af',
+    'Sopas y Entradas': '\u30b9\u30fc\u30d7\u3068\u524d\u83dc',
+    Ensaladas: '\u30b5\u30e9\u30c0',
+    Bebidas: '\u30c9\u30ea\u30f3\u30af',
+    'Especiales de Mar': '\u30b7\u30fc\u30d5\u30fc\u30c9\u30b9\u30da\u30b7\u30e3\u30eb',
+    Waffles: '\u30ef\u30c3\u30d5\u30eb',
+    'Crepes y Platos Salados': '\u5869\u5473\u30af\u30ec\u30fc\u30d7\u3068\u6599\u7406'
+  },
+  hi: {
+    'Jugos y Batidos': '\u091c\u0942\u0938 \u0914\u0930 \u0936\u0947\u0915',
+    'Sopas y Entradas': '\u0938\u0942\u092a \u0914\u0930 \u0938\u094d\u091f\u093e\u0930\u094d\u091f\u0930',
+    Ensaladas: '\u0938\u0932\u093e\u0926',
+    Bebidas: '\u092a\u0947\u092f',
+    'Especiales de Mar': '\u0938\u0940\u092b\u0942\u0921 \u0938\u094d\u092a\u0947\u0936\u0932',
+    Waffles: '\u0935\u093e\u092b\u0932',
+    'Crepes y Platos Salados': '\u0928\u092e\u0915\u0940\u0928 \u0915\u094d\u0930\u0947\u092a\u094d\u0938 \u0914\u0930 \u0921\u093f\u0936'
+  }
 }
 
-const wordTranslations: Record<LanguageCode, Record<string, string>> = {
-  es: {},
+const wordTranslations: Partial<Record<LanguageCode, Record<string, string>>> = {
   en: {
     jugo: 'juice',
     jugos: 'juices',
@@ -171,7 +210,7 @@ const wordTranslations: Record<LanguageCode, Record<string, string>> = {
     waffles: 'waffles',
     pollo: 'chicken',
     queso: 'cheese',
-    champiñones: 'mushrooms',
+    champinones: 'mushrooms',
     chocolate: 'chocolate',
     helado: 'ice cream',
     agua: 'water',
@@ -189,21 +228,21 @@ const wordTranslations: Record<LanguageCode, Record<string, string>> = {
     batidos: 'milk-shakes',
     sopa: 'soupe',
     sopas: 'soupes',
-    entrada: 'entrée',
-    entradas: 'entrées',
+    entrada: 'entree',
+    entradas: 'entrees',
     ensalada: 'salade',
     ensaladas: 'salades',
-    crepe: 'crêpe',
-    crepes: 'crêpes',
+    crepe: 'crepe',
+    crepes: 'crepes',
     waffle: 'gaufre',
     waffles: 'gaufres',
     pollo: 'poulet',
     queso: 'fromage',
-    champiñones: 'champignons',
+    champinones: 'champignons',
     helado: 'glace',
     agua: 'eau',
     vino: 'vin',
-    cerveza: 'bière',
+    cerveza: 'biere',
     con: 'avec',
     y: 'et',
     de: 'de'
@@ -219,13 +258,13 @@ const wordTranslations: Record<LanguageCode, Record<string, string>> = {
     entradas: 'antipasti',
     ensalada: 'insalata',
     ensaladas: 'insalate',
-    crepe: 'crêpe',
-    crepes: 'crêpes',
+    crepe: 'crepe',
+    crepes: 'crepes',
     waffle: 'waffle',
     waffles: 'waffle',
     pollo: 'pollo',
     queso: 'formaggio',
-    champiñones: 'funghi',
+    champinones: 'funghi',
     helado: 'gelato',
     agua: 'acqua',
     vino: 'vino',
@@ -233,84 +272,6 @@ const wordTranslations: Record<LanguageCode, Record<string, string>> = {
     con: 'con',
     y: 'e',
     de: 'di'
-  },
-  zh: {
-    jugo: '果汁',
-    jugos: '果汁',
-    batido: '奶昔',
-    batidos: '奶昔',
-    sopa: '汤',
-    sopas: '汤',
-    entrada: '开胃菜',
-    entradas: '开胃菜',
-    ensalada: '沙拉',
-    ensaladas: '沙拉',
-    crepe: '可丽饼',
-    crepes: '可丽饼',
-    waffle: '华夫饼',
-    waffles: '华夫饼',
-    pollo: '鸡肉',
-    queso: '奶酪',
-    champiñones: '蘑菇',
-    helado: '冰淇淋',
-    agua: '水',
-    vino: '葡萄酒',
-    cerveza: '啤酒',
-    con: '配',
-    y: '和',
-    de: '的'
-  },
-  ja: {
-    jugo: 'ジュース',
-    jugos: 'ジュース',
-    batido: 'シェイク',
-    batidos: 'シェイク',
-    sopa: 'スープ',
-    sopas: 'スープ',
-    entrada: '前菜',
-    entradas: '前菜',
-    ensalada: 'サラダ',
-    ensaladas: 'サラダ',
-    crepe: 'クレープ',
-    crepes: 'クレープ',
-    waffle: 'ワッフル',
-    waffles: 'ワッフル',
-    pollo: 'チキン',
-    queso: 'チーズ',
-    champiñones: 'マッシュルーム',
-    helado: 'アイスクリーム',
-    agua: '水',
-    vino: 'ワイン',
-    cerveza: 'ビール',
-    con: '付き',
-    y: 'と',
-    de: 'の'
-  },
-  hi: {
-    jugo: 'जूस',
-    jugos: 'जूस',
-    batido: 'शेक',
-    batidos: 'शेक',
-    sopa: 'सूप',
-    sopas: 'सूप',
-    entrada: 'स्टार्टर',
-    entradas: 'स्टार्टर',
-    ensalada: 'सलाद',
-    ensaladas: 'सलाद',
-    crepe: 'क्रेप',
-    crepes: 'क्रेप्स',
-    waffle: 'वॉफल',
-    waffles: 'वॉफल्स',
-    pollo: 'चिकन',
-    queso: 'चीज',
-    champiñones: 'मशरूम',
-    helado: 'आइसक्रीम',
-    agua: 'पानी',
-    vino: 'वाइन',
-    cerveza: 'बीयर',
-    con: 'साथ',
-    y: 'और',
-    de: 'का'
   }
 }
 
@@ -319,40 +280,56 @@ const priceCache = new Map<string, string>()
 
 export function translateText(value: string, language: LanguageCode) {
   if (language === 'es' || !value) return value
+
   const cacheKey = `${language}:${value}`
   const cached = translationCache.get(cacheKey)
   if (cached !== undefined) return cached
 
-  const phrase = phraseTranslations[value]?.[language]
+  const phrase = phraseTranslations[language]?.[value]
   if (phrase) {
     translationCache.set(cacheKey, phrase)
     return phrase
   }
 
   const translatedValue = value.replace(/\p{L}+/gu, (word) => {
-    const translated = wordTranslations[language][word.toLowerCase()]
+    const translated = wordTranslations[language]?.[normalizeToken(word)]
     if (!translated) return word
     return isCapitalized(word) ? capitalize(translated) : translated
   })
+
   translationCache.set(cacheKey, translatedValue)
   return translatedValue
 }
 
 export function formatMenuPrice(price: number, language: LanguageCode) {
   if (price <= 0) return uiCopy[language].pendingPrice
+
   const cacheKey = `${language}:${price}`
   const cached = priceCache.get(cacheKey)
   if (cached) return cached
 
   const languageConfig = languages.find((item) => item.code === language) ?? languages[0]
-
   const formattedPrice = new Intl.NumberFormat(languageConfig.locale, {
     style: 'currency',
     currency: languageConfig.currency,
     minimumFractionDigits: 0
   }).format(price)
+
   priceCache.set(cacheKey, formattedPrice)
   return formattedPrice
+}
+
+export function preloadMenuTranslations(values: string[]) {
+  for (const language of languages) {
+    if (language.code === 'es') continue
+    for (const value of values) {
+      translateText(value, language.code)
+    }
+  }
+}
+
+function normalizeToken(value: string) {
+  return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 }
 
 function isCapitalized(value: string) {
