@@ -20,31 +20,42 @@ type TranslatedMenuCategory = Omit<MenuCategory, 'items'> & {
   items: TranslatedMenuItem[]
 }
 
+type RatingStats = { average: number; count: number; sum?: number }
+
 export function ClientMenu() {
   const { categories, style } = useMenu()
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
   const [language, setLanguage] = useState<LanguageCode>('es')
   const [selectedItem, setSelectedItem] = useState<TranslatedMenuItem | null>(null)
-  const [ratings, setRatings] = useState<Record<string, number>>({})
+  const [ratings, setRatings] = useState<Record<string, RatingStats>>({})
+  const [userRatings, setUserRatings] = useState<Record<string, number>>({})
   const text = uiCopy[language]
   const logoUrl = style.logoUrl || '/logo.webp'
   const showingFavorites = activeCategory === 'favorites'
 
   useEffect(() => {
-    const saved = window.localStorage.getItem('crepes-product-ratings')
-    if (!saved) return
+    const savedUserRatings = window.localStorage.getItem('crepes-product-user-ratings')
 
     try {
-      setRatings(JSON.parse(saved) as Record<string, number>)
+      if (savedUserRatings) setUserRatings(JSON.parse(savedUserRatings) as Record<string, number>)
     } catch {
-      window.localStorage.removeItem('crepes-product-ratings')
+      window.localStorage.removeItem('crepes-product-user-ratings')
     }
+
+    void loadSharedRatings()
   }, [])
 
-  useEffect(() => {
-    window.localStorage.setItem('crepes-product-ratings', JSON.stringify(ratings))
-  }, [ratings])
+  const loadSharedRatings = async () => {
+    try {
+      const response = await fetch('/api/ratings', { cache: 'no-store' })
+      if (!response.ok) return
+      const payload = await response.json() as { ratings?: Record<string, RatingStats> }
+      setRatings(payload.ratings ?? {})
+    } catch {
+      setRatings({})
+    }
+  }
 
   const translatedCategories = useMemo<TranslatedMenuCategory[]>(() => {
     return categories.map((category) => ({
@@ -93,8 +104,24 @@ export function ClientMenu() {
       })
   }, [ratings, translatedCategories])
 
-  const rateItem = (itemId: string, rating: number) => {
-    setRatings((current) => ({ ...current, [itemId]: rating }))
+  const rateItem = async (itemId: string, rating: number) => {
+    const previousRating = userRatings[itemId]
+    const nextUserRatings = { ...userRatings, [itemId]: rating }
+    setUserRatings(nextUserRatings)
+    window.localStorage.setItem('crepes-product-user-ratings', JSON.stringify(nextUserRatings))
+
+    try {
+      const response = await fetch('/api/ratings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ itemId, rating, previousRating })
+      })
+      if (!response.ok) throw new Error('Rating request failed')
+      const payload = await response.json() as { itemId: string; stats: RatingStats }
+      setRatings((current) => ({ ...current, [payload.itemId]: payload.stats }))
+    } catch {
+      await loadSharedRatings()
+    }
   }
 
   return (
@@ -145,7 +172,7 @@ export function ClientMenu() {
                 <MemoProductCard
                   key={item.id}
                   item={item}
-                  rating={ratings[item.id] ?? 0}
+                  rating={userRatings[item.id] ?? 0}
                   ratingStats={getRatingStats(item.id, ratings)}
                   textColor={style.textColor}
                   priceColor={style.priceColor}
@@ -166,7 +193,7 @@ export function ClientMenu() {
                 <MemoProductCard
                   key={item.id}
                   item={item}
-                  rating={ratings[item.id] ?? 0}
+                  rating={userRatings[item.id] ?? 0}
                   ratingStats={getRatingStats(item.id, ratings)}
                   textColor={style.textColor}
                   priceColor={style.priceColor}
@@ -363,9 +390,9 @@ function CategoryButton({ active, label, color, onClick }: { active: boolean; la
   )
 }
 
-function getRatingStats(itemId: string, ratings: Record<string, number>) {
-  const userRating = ratings[itemId] ?? 0
+function getRatingStats(itemId: string, ratings: Record<string, RatingStats>) {
+  const stats = ratings[itemId]
 
-  if (!userRating) return { average: 0, count: 0 }
-  return { average: userRating, count: 1 }
+  if (!stats || stats.count <= 0) return { average: 0, count: 0 }
+  return { average: stats.average, count: stats.count }
 }
