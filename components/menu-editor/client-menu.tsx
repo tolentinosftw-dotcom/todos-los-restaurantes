@@ -1,270 +1,23 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
-import { MenuItem } from '@/lib/types'
+import { memo, useEffect, useMemo, useState } from 'react'
+import { MenuCategory, MenuItem } from '@/lib/types'
 import { useMenu } from '@/lib/menu-context'
 import { formatMenuPrice, languages as supportedLanguages, translateText, uiCopy } from '@/lib/menu-i18n'
 import { Search, Star, X } from 'lucide-react'
 
 type LanguageCode = 'es' | 'en' | 'fr' | 'it' | 'zh' | 'ja' | 'hi'
-
-const languages: { code: LanguageCode; flag: string; label: string }[] = [
-  { code: 'es', flag: 'co', label: 'Español' },
-  { code: 'en', flag: 'gb', label: 'English' },
-  { code: 'fr', flag: 'fr', label: 'Français' },
-  { code: 'it', flag: 'it', label: 'Italiano' },
-  { code: 'zh', flag: 'cn', label: '中文' },
-  { code: 'ja', flag: 'jp', label: '日本語' },
-  { code: 'hi', flag: 'in', label: 'हिन्दी' }
-]
-
-const ui = {
-  es: {
-    digitalMenu: 'Menú digital',
-    search: 'Buscar crepes, waffles o ingredientes',
-    all: 'Todo',
-    emptyTitle: 'No encontramos productos',
-    emptyText: 'Prueba con otra búsqueda o categoría.',
-    close: 'Cerrar',
-    viewImage: 'Ver imagen grande',
-    favoritesTitle: 'Favoritos mejor valorados',
-    favoritesText: 'Los productos que tus clientes marcaron con más estrellas.',
-    favoritesTab: 'Favoritos',
-    ratingLabel: 'Calificar producto'
-  },
-  en: {
-    digitalMenu: 'Digital menu',
-    search: 'Search crepes, waffles, or ingredients',
-    all: 'All',
-    emptyTitle: 'No products found',
-    emptyText: 'Try another search or category.',
-    close: 'Close',
-    viewImage: 'View large image',
-    favoritesTitle: 'Top-rated favorites',
-    favoritesText: 'Products your customers marked with the most stars.',
-    favoritesTab: 'Favorites',
-    ratingLabel: 'Rate product'
-  },
-  fr: {
-    digitalMenu: 'Menu numérique',
-    search: 'Rechercher des crêpes, gaufres ou ingrédients',
-    all: 'Tout',
-    emptyTitle: 'Aucun produit trouvé',
-    emptyText: 'Essayez une autre recherche ou catégorie.',
-    close: 'Fermer',
-    viewImage: 'Voir la grande image',
-    favoritesTitle: 'Favoris les mieux notés',
-    favoritesText: 'Les produits que vos clients ont le mieux notés.',
-    favoritesTab: 'Favoris',
-    ratingLabel: 'Noter le produit'
-  },
-  it: {
-    digitalMenu: 'Menu digitale',
-    search: 'Cerca crêpes, waffle o ingredienti',
-    all: 'Tutto',
-    emptyTitle: 'Nessun prodotto trovato',
-    emptyText: 'Prova un’altra ricerca o categoria.',
-    close: 'Chiudi',
-    viewImage: 'Vedi immagine grande',
-    favoritesTitle: 'Preferiti più votati',
-    favoritesText: 'I prodotti che i clienti hanno valutato meglio.',
-    favoritesTab: 'Preferiti',
-    ratingLabel: 'Valuta prodotto'
-  },
-  zh: {
-    digitalMenu: '电子菜单',
-    search: '搜索可丽饼、华夫饼或配料',
-    all: '全部',
-    emptyTitle: '未找到产品',
-    emptyText: '请尝试其他搜索或分类。',
-    close: '关闭',
-    viewImage: '查看大图',
-    favoritesTitle: '评分最高的收藏',
-    favoritesText: '客户给出最多星级的产品。',
-    favoritesTab: '收藏',
-    ratingLabel: '评价产品'
-  },
-  ja: {
-    digitalMenu: 'デジタルメニュー',
-    search: 'クレープ、ワッフル、材料を検索',
-    all: 'すべて',
-    emptyTitle: '商品が見つかりません',
-    emptyText: '別の検索語またはカテゴリを試してください。',
-    close: '閉じる',
-    viewImage: '画像を大きく表示',
-    favoritesTitle: '高評価のお気に入り',
-    favoritesText: 'お客様が最も高く評価した商品。',
-    favoritesTab: 'お気に入り',
-    ratingLabel: '商品を評価'
-  },
-  hi: {
-    digitalMenu: 'डिजिटल मेनू',
-    search: 'क्रेप्स, वॉफल्स या सामग्री खोजें',
-    all: 'सभी',
-    emptyTitle: 'कोई उत्पाद नहीं मिला',
-    emptyText: 'दूसरी खोज या श्रेणी आज़माएं।',
-    close: 'बंद करें',
-    viewImage: 'बड़ी तस्वीर देखें',
-    favoritesTitle: 'सबसे पसंदीदा',
-    favoritesText: 'जिन उत्पादों को ग्राहकों ने सबसे ज्यादा सितारे दिए।',
-    favoritesTab: 'पसंदीदा',
-    ratingLabel: 'उत्पाद को रेट करें'
-  }
+type TranslatedMenuItem = MenuItem & {
+  translatedName: string
+  translatedDescription: string
+  translatedPrice: string
+  translatedRatingLabel: string
+  translatedViewImageLabel: string
 }
 
-const translations: Record<string, Partial<Record<LanguageCode, string>>> = {
-  'Crepes & Waffles Interior': {
-    en: 'Crepes & Waffles Interior',
-    fr: 'Crepes & Waffles Intérieur',
-    it: 'Crepes & Waffles Interno',
-    zh: '室内可丽饼与华夫饼',
-    ja: 'クレープ＆ワッフル インテリア',
-    hi: 'क्रेप्स और वॉफल्स इंटीरियर'
-  },
-  'Menú digital editable con imágenes, precios y diseño propio': {
-    en: 'Editable digital menu with images, prices, and custom design',
-    fr: 'Menu numérique modifiable avec images, prix et design personnalisé',
-    it: 'Menu digitale modificabile con immagini, prezzi e design personalizzato',
-    zh: '可编辑的电子菜单，包含图片、价格和自定义设计',
-    ja: '画像、価格、独自デザインを編集できるデジタルメニュー',
-    hi: 'चित्रों, कीमतों और अपने डिज़ाइन वाला संपादन योग्य डिजिटल मेनू'
-  },
-  'Crepes Dulces': {
-    en: 'Sweet Crepes',
-    fr: 'Crêpes sucrées',
-    it: 'Crêpes dolci',
-    zh: '甜可丽饼',
-    ja: 'スイートクレープ',
-    hi: 'मीठे क्रेप्स'
-  },
-  Waffles: {
-    en: 'Waffles',
-    fr: 'Gaufres',
-    it: 'Waffle',
-    zh: '华夫饼',
-    ja: 'ワッフル',
-    hi: 'वॉफल्स'
-  },
-  'Crepes Salados': {
-    en: 'Savory Crepes',
-    fr: 'Crêpes salées',
-    it: 'Crêpes salate',
-    zh: '咸味可丽饼',
-    ja: 'セイボリークレープ',
-    hi: 'नमकीन क्रेप्स'
-  },
-  'Crepe de Nutella': {
-    en: 'Nutella Crepe',
-    fr: 'Crêpe au Nutella',
-    it: 'Crêpe alla Nutella',
-    zh: '榛子巧克力可丽饼',
-    ja: 'ヌテラクレープ',
-    hi: 'नुटेला क्रेप'
-  },
-  'Crepe relleno de Nutella, fresas frescas y crema batida.': {
-    en: 'Crepe filled with Nutella, fresh strawberries, and whipped cream.',
-    fr: 'Crêpe garnie de Nutella, fraises fraîches et crème fouettée.',
-    it: 'Crêpe farcita con Nutella, fragole fresche e panna montata.',
-    zh: '可丽饼内含榛子巧克力酱、新鲜草莓和打发奶油。',
-    ja: 'ヌテラ、新鮮ないちご、ホイップクリーム入りのクレープ。',
-    hi: 'नुटेला, ताज़ी स्ट्रॉबेरी और व्हिप्ड क्रीम से भरा क्रेप।'
-  },
-  'Crepe de Frutas': {
-    en: 'Fruit Crepe',
-    fr: 'Crêpe aux fruits',
-    it: 'Crêpe alla frutta',
-    zh: '水果可丽饼',
-    ja: 'フルーツクレープ',
-    hi: 'फ्रूट क्रेप'
-  },
-  'Mezcla de frutas de temporada, miel y helado de vainilla.': {
-    en: 'Seasonal fruit mix with honey and vanilla ice cream.',
-    fr: 'Mélange de fruits de saison, miel et glace à la vanille.',
-    it: 'Mix di frutta di stagione, miele e gelato alla vaniglia.',
-    zh: '时令水果、蜂蜜和香草冰淇淋。',
-    ja: '季節のフルーツ、はちみつ、バニラアイスクリーム。',
-    hi: 'मौसमी फलों, शहद और वेनिला आइसक्रीम का मिश्रण।'
-  },
-  'Crepe Banano Split': {
-    en: 'Banana Split Crepe',
-    fr: 'Crêpe banana split',
-    it: 'Crêpe banana split',
-    zh: '香蕉船可丽饼',
-    ja: 'バナナスプリットクレープ',
-    hi: 'बनाना स्प्लिट क्रेप'
-  },
-  'Banano, chocolate, helado y nueces caramelizadas.': {
-    en: 'Banana, chocolate, ice cream, and caramelized nuts.',
-    fr: 'Banane, chocolat, glace et noix caramélisées.',
-    it: 'Banana, cioccolato, gelato e noci caramellate.',
-    zh: '香蕉、巧克力、冰淇淋和焦糖坚果。',
-    ja: 'バナナ、チョコレート、アイスクリーム、キャラメリゼナッツ。',
-    hi: 'केला, चॉकलेट, आइसक्रीम और कैरामेलाइज़्ड नट्स।'
-  },
-  'Waffle Clásico': {
-    en: 'Classic Waffle',
-    fr: 'Gaufre classique',
-    it: 'Waffle classico',
-    zh: '经典华夫饼',
-    ja: 'クラシックワッフル',
-    hi: 'क्लासिक वॉफल'
-  },
-  'Waffle belga tradicional con mantequilla y miel de maple.': {
-    en: 'Traditional Belgian waffle with butter and maple syrup.',
-    fr: 'Gaufre belge traditionnelle avec beurre et sirop d’érable.',
-    it: 'Waffle belga tradizionale con burro e sciroppo d’acero.',
-    zh: '传统比利时华夫饼，配黄油和枫糖浆。',
-    ja: 'バターとメープルシロップを添えた伝統的なベルギーワッフル。',
-    hi: 'मक्खन और मेपल सिरप के साथ पारंपरिक बेल्जियन वॉफल।'
-  },
-  'Waffle con Helado': {
-    en: 'Waffle with Ice Cream',
-    fr: 'Gaufre avec glace',
-    it: 'Waffle con gelato',
-    zh: '冰淇淋华夫饼',
-    ja: 'アイスクリームワッフル',
-    hi: 'आइसक्रीम वॉफल'
-  },
-  'Waffle crujiente con dos bolas de helado y salsa de chocolate.': {
-    en: 'Crispy waffle with two scoops of ice cream and chocolate sauce.',
-    fr: 'Gaufre croustillante avec deux boules de glace et sauce au chocolat.',
-    it: 'Waffle croccante con due palline di gelato e salsa al cioccolato.',
-    zh: '酥脆华夫饼，配两球冰淇淋和巧克力酱。',
-    ja: 'アイスクリーム2スクープとチョコレートソースのサクサクワッフル。',
-    hi: 'दो स्कूप आइसक्रीम और चॉकलेट सॉस के साथ कुरकुरा वॉफल।'
-  },
-  'Crepe de Pollo': {
-    en: 'Chicken Crepe',
-    fr: 'Crêpe au poulet',
-    it: 'Crêpe al pollo',
-    zh: '鸡肉可丽饼',
-    ja: 'チキンクレープ',
-    hi: 'चिकन क्रेप'
-  },
-  'Pollo desmechado, champiñones y salsa bechamel.': {
-    en: 'Shredded chicken, mushrooms, and béchamel sauce.',
-    fr: 'Poulet effiloché, champignons et sauce béchamel.',
-    it: 'Pollo sfilacciato, funghi e salsa besciamella.',
-    zh: '手撕鸡肉、蘑菇和白酱。',
-    ja: 'ほぐしチキン、マッシュルーム、ベシャメルソース。',
-    hi: 'श्रेडेड चिकन, मशरूम और बेचमेल सॉस।'
-  },
-  'Crepe Caprese': {
-    en: 'Caprese Crepe',
-    fr: 'Crêpe caprese',
-    it: 'Crêpe caprese',
-    zh: '卡普雷塞可丽饼',
-    ja: 'カプレーゼクレープ',
-    hi: 'कैप्रेसे क्रेप'
-  },
-  'Tomate fresco, mozzarella, albahaca y reducción de balsámico.': {
-    en: 'Fresh tomato, mozzarella, basil, and balsamic reduction.',
-    fr: 'Tomate fraîche, mozzarella, basilic et réduction balsamique.',
-    it: 'Pomodoro fresco, mozzarella, basilico e riduzione di balsamico.',
-    zh: '新鲜番茄、马苏里拉、罗勒和香醋浓缩汁。',
-    ja: 'フレッシュトマト、モッツァレラ、バジル、バルサミコリダクション。',
-    hi: 'ताज़ा टमाटर, मोज़रेला, तुलसी और बाल्समिक रिडक्शन।'
-  }
+type TranslatedMenuCategory = Omit<MenuCategory, 'items'> & {
+  translatedName: string
+  items: TranslatedMenuItem[]
 }
 
 export function ClientMenu() {
@@ -272,7 +25,7 @@ export function ClientMenu() {
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
   const [language, setLanguage] = useState<LanguageCode>('es')
-  const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
+  const [selectedItem, setSelectedItem] = useState<TranslatedMenuItem | null>(null)
   const [ratings, setRatings] = useState<Record<string, number>>({})
   const text = uiCopy[language]
   const logoUrl = style.logoUrl || '/logo.webp'
@@ -293,25 +46,44 @@ export function ClientMenu() {
     window.localStorage.setItem('crepes-product-ratings', JSON.stringify(ratings))
   }, [ratings])
 
+  const translatedCategories = useMemo<TranslatedMenuCategory[]>(() => {
+    return categories.map((category) => ({
+      ...category,
+      translatedName: translateText(category.name, language),
+      items: category.items.map((item) => {
+        const translatedName = translateText(item.name, language)
+
+        return {
+          ...item,
+          translatedName,
+          translatedDescription: translateText(item.description, language),
+          translatedPrice: formatMenuPrice(item.price, language),
+          translatedRatingLabel: `${text.ratingLabel}: ${translatedName}`,
+          translatedViewImageLabel: `${text.viewImage}: ${translatedName}`
+        }
+      })
+    }))
+  }, [categories, language, text.ratingLabel, text.viewImage])
+
   const visibleCategories = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase()
 
     if (showingFavorites) return []
 
-    return categories
+    return translatedCategories
       .filter((category) => activeCategory === 'all' || category.id === activeCategory)
       .map((category) => ({
         ...category,
         items: category.items.filter((item) => {
           if (!normalizedQuery) return true
-          return `${translateText(item.name, language)} ${translateText(item.description, language)}`.toLowerCase().includes(normalizedQuery)
+          return `${item.translatedName} ${item.translatedDescription}`.toLowerCase().includes(normalizedQuery)
         })
       }))
       .filter((category) => category.items.length > 0)
-  }, [activeCategory, categories, language, query, showingFavorites])
+  }, [activeCategory, query, showingFavorites, translatedCategories])
 
   const favoriteItems = useMemo(() => {
-    return categories
+    return translatedCategories
       .flatMap((category) => category.items)
       .filter((item) => getRatingStats(item.id, ratings).count > 0)
       .sort((first, second) => {
@@ -319,7 +91,7 @@ export function ClientMenu() {
         const secondStats = getRatingStats(second.id, ratings)
         return secondStats.average - firstStats.average || secondStats.count - firstStats.count
       })
-  }, [categories, ratings])
+  }, [ratings, translatedCategories])
 
   const rateItem = (itemId: string, rating: number) => {
     setRatings((current) => ({ ...current, [itemId]: rating }))
@@ -354,8 +126,8 @@ export function ClientMenu() {
           <div className="flex gap-2 overflow-x-auto pb-1">
             <CategoryButton active={activeCategory === 'all'} label={text.all} onClick={() => setActiveCategory('all')} />
             <CategoryButton active={showingFavorites} label={text.favoritesTab} onClick={() => setActiveCategory('favorites')} />
-            {categories.map((category) => (
-              <CategoryButton key={category.id} active={activeCategory === category.id} label={translateText(category.name, language)} color={category.color} onClick={() => setActiveCategory(category.id)} />
+            {translatedCategories.map((category) => (
+              <CategoryButton key={category.id} active={activeCategory === category.id} label={category.translatedName} color={category.color} onClick={() => setActiveCategory(category.id)} />
             ))}
           </div>
         </div>
@@ -370,14 +142,11 @@ export function ClientMenu() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               {favoriteItems.map((item) => (
-                <ProductCard
+                <MemoProductCard
                   key={item.id}
                   item={item}
-                  language={language}
                   rating={ratings[item.id] ?? 0}
                   ratingStats={getRatingStats(item.id, ratings)}
-                  ratingLabel={text.ratingLabel}
-                  viewImageLabel={text.viewImage}
                   textColor={style.textColor}
                   priceColor={style.priceColor}
                   secondaryColor={style.secondaryColor}
@@ -391,17 +160,14 @@ export function ClientMenu() {
 
         {visibleCategories.map((category) => (
           <div key={category.id} className="mb-8">
-            <h2 className="mb-4 text-xl font-bold sm:text-2xl" style={{ color: category.color || style.primaryColor }}>{translateText(category.name, language)}</h2>
+            <h2 className="mb-4 text-xl font-bold sm:text-2xl" style={{ color: category.color || style.primaryColor }}>{category.translatedName}</h2>
             <div className="grid grid-cols-2 gap-3">
               {category.items.map((item) => (
-                <ProductCard
+                <MemoProductCard
                   key={item.id}
                   item={item}
-                  language={language}
                   rating={ratings[item.id] ?? 0}
                   ratingStats={getRatingStats(item.id, ratings)}
-                  ratingLabel={text.ratingLabel}
-                  viewImageLabel={text.viewImage}
                   textColor={style.textColor}
                   priceColor={style.priceColor}
                   secondaryColor={style.secondaryColor}
@@ -423,11 +189,11 @@ export function ClientMenu() {
       </section>
 
       {selectedItem && (
-        <ProductModal item={selectedItem} language={language} closeLabel={text.close} onClose={() => setSelectedItem(null)} priceColor={style.priceColor} textColor={style.textColor} secondaryColor={style.secondaryColor} />
+        <ProductModal item={selectedItem} closeLabel={text.close} onClose={() => setSelectedItem(null)} priceColor={style.priceColor} textColor={style.textColor} secondaryColor={style.secondaryColor} />
       )}
 
       <footer className="px-4 pb-5 pt-2 text-center text-[11px] text-[#8a5b3e]/45">
-        desarrollado por tolentinosw · tolentinosftw@gmail.com
+        desarrollado por tolentinosw Â· tolentinosftw@gmail.com
       </footer>
     </main>
   )
@@ -435,11 +201,8 @@ export function ClientMenu() {
 
 function ProductCard({
   item,
-  language,
   rating,
   ratingStats,
-  ratingLabel,
-  viewImageLabel,
   textColor,
   priceColor,
   secondaryColor,
@@ -447,12 +210,9 @@ function ProductCard({
   onOpen,
   onRate
 }: {
-  item: MenuItem
-  language: LanguageCode
+  item: TranslatedMenuItem
   rating: number
   ratingStats: { average: number; count: number }
-  ratingLabel: string
-  viewImageLabel: string
   textColor: string
   priceColor: string
   secondaryColor: string
@@ -465,12 +225,12 @@ function ProductCard({
       <button
         onClick={onOpen}
         className="flex flex-1 flex-col text-left transition-transform active:scale-[0.99]"
-        aria-label={`${viewImageLabel}: ${translateText(item.name, language)}`}
+        aria-label={item.translatedViewImageLabel}
       >
         <div className="aspect-square w-full shrink-0 overflow-hidden bg-[#faf7f1]">
           <img
             src={item.image || '/placeholder.jpg'}
-            alt={translateText(item.name, language)}
+            alt={item.translatedName}
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover object-center"
@@ -478,20 +238,22 @@ function ProductCard({
         </div>
         <div className="flex min-w-0 flex-1 flex-col p-3 pb-2">
           <div className="flex flex-col gap-1">
-            <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: textColor }}>{translateText(item.name, language)}</h3>
-            <p className="text-sm font-bold sm:text-base" style={{ color: priceColor }}>{formatMenuPrice(item.price, language)}</p>
+            <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: textColor }}>{item.translatedName}</h3>
+            <p className="text-sm font-bold sm:text-base" style={{ color: priceColor }}>{item.translatedPrice}</p>
           </div>
           {item.description && (
-            <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{translateText(item.description, language)}</p>
+            <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{item.translatedDescription}</p>
           )}
         </div>
       </button>
       <div className="border-t border-[#eadfce] px-2 py-2">
-        <RatingStars rating={rating} stats={ratingStats} label={`${ratingLabel}: ${translateText(item.name, language)}`} onRate={onRate} />
+        <RatingStars rating={rating} stats={ratingStats} label={item.translatedRatingLabel} onRate={onRate} />
       </div>
     </article>
   )
 }
+
+const MemoProductCard = memo(ProductCard)
 
 function RatingStars({
   rating,
@@ -528,15 +290,13 @@ function RatingStars({
 
 function ProductModal({
   item,
-  language,
   closeLabel,
   onClose,
   priceColor,
   textColor,
   secondaryColor
 }: {
-  item: MenuItem
-  language: LanguageCode
+  item: TranslatedMenuItem
   closeLabel: string
   onClose: () => void
   priceColor: string
@@ -547,7 +307,7 @@ function ProductModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4" onClick={onClose}>
       <article className="max-h-[92vh] w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-2xl" onClick={(event) => event.stopPropagation()}>
         <div className="relative bg-gray-100">
-          <img src={item.image || '/placeholder.jpg'} alt={translateText(item.name, language)} className="max-h-[58vh] w-full object-contain" />
+          <img src={item.image || '/placeholder.jpg'} alt={item.translatedName} className="max-h-[58vh] w-full object-contain" />
           <button
             onClick={onClose}
             className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-[#2f211b] shadow"
@@ -558,10 +318,10 @@ function ProductModal({
         </div>
         <div className="p-4 sm:p-5">
           <div className="flex items-start justify-between gap-4">
-            <h3 className="text-2xl font-bold leading-tight" style={{ color: textColor }}>{translateText(item.name, language)}</h3>
-            <p className="shrink-0 text-xl font-bold" style={{ color: priceColor }}>{formatMenuPrice(item.price, language)}</p>
+            <h3 className="text-2xl font-bold leading-tight" style={{ color: textColor }}>{item.translatedName}</h3>
+            <p className="shrink-0 text-xl font-bold" style={{ color: priceColor }}>{item.translatedPrice}</p>
           </div>
-          {item.description && <p className="mt-3 leading-7" style={{ color: secondaryColor }}>{translateText(item.description, language)}</p>}
+          {item.description && <p className="mt-3 leading-7" style={{ color: secondaryColor }}>{item.translatedDescription}</p>}
         </div>
       </article>
     </div>
@@ -603,24 +363,9 @@ function CategoryButton({ active, label, color, onClick }: { active: boolean; la
   )
 }
 
-function translate(value: string, language: LanguageCode) {
-  if (language === 'es') return value
-  return translations[value]?.[language] ?? value
-}
-
 function getRatingStats(itemId: string, ratings: Record<string, number>) {
   const userRating = ratings[itemId] ?? 0
 
   if (!userRating) return { average: 0, count: 0 }
   return { average: userRating, count: 1 }
-}
-
-function formatPrice(price: number) {
-  if (price <= 0) return 'Precio pendiente'
-
-  return new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-    minimumFractionDigits: 0
-  }).format(price)
 }

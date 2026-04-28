@@ -314,27 +314,45 @@ const wordTranslations: Record<LanguageCode, Record<string, string>> = {
   }
 }
 
+const translationCache = new Map<string, string>()
+const priceCache = new Map<string, string>()
+
 export function translateText(value: string, language: LanguageCode) {
   if (language === 'es' || !value) return value
-  const phrase = phraseTranslations[value]?.[language]
-  if (phrase) return phrase
+  const cacheKey = `${language}:${value}`
+  const cached = translationCache.get(cacheKey)
+  if (cached !== undefined) return cached
 
-  return value.replace(/\p{L}+/gu, (word) => {
+  const phrase = phraseTranslations[value]?.[language]
+  if (phrase) {
+    translationCache.set(cacheKey, phrase)
+    return phrase
+  }
+
+  const translatedValue = value.replace(/\p{L}+/gu, (word) => {
     const translated = wordTranslations[language][word.toLowerCase()]
     if (!translated) return word
     return isCapitalized(word) ? capitalize(translated) : translated
   })
+  translationCache.set(cacheKey, translatedValue)
+  return translatedValue
 }
 
 export function formatMenuPrice(price: number, language: LanguageCode) {
   if (price <= 0) return uiCopy[language].pendingPrice
+  const cacheKey = `${language}:${price}`
+  const cached = priceCache.get(cacheKey)
+  if (cached) return cached
+
   const languageConfig = languages.find((item) => item.code === language) ?? languages[0]
 
-  return new Intl.NumberFormat(languageConfig.locale, {
+  const formattedPrice = new Intl.NumberFormat(languageConfig.locale, {
     style: 'currency',
     currency: languageConfig.currency,
     minimumFractionDigits: 0
   }).format(price)
+  priceCache.set(cacheKey, formattedPrice)
+  return formattedPrice
 }
 
 function isCapitalized(value: string) {
