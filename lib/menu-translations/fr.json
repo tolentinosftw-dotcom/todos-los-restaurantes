@@ -1,0 +1,51 @@
+{
+  "ui": {
+    "digitalMenu": "Menu numerique",
+    "search": "Rechercher crepes, gaufres ou ingredients",
+    "all": "Tout",
+    "emptyTitle": "Aucun produit trouve",
+    "emptyText": "Essayez une autre recherche ou categorie.",
+    "close": "Fermer",
+    "viewImage": "Voir la grande image",
+    "favoritesTitle": "Favoris les mieux notes",
+    "favoritesText": "Les produits les mieux notes par vos clients.",
+    "favoritesTab": "Favoris",
+    "ratingLabel": "Noter le produit",
+    "pendingPrice": "Prix a definir"
+  },
+  "categories": {
+    "Jugos y Batidos": "Jus et milk-shakes",
+    "Sopas y Entradas": "Soupes et entrees",
+    "Ensaladas": "Salades",
+    "Bebidas": "Boissons",
+    "Especiales de Mar": "Specialites de la mer",
+    "Waffles": "Gaufres",
+    "Crepes y Platos Salados": "Crepes salees et plats",
+    "Otros": "Autres"
+  },
+  "products": {
+    "Mora": "Mure",
+    "Mango": "Mangue",
+    "Mandarina": "Mandarine",
+    "Fresa": "Fraise",
+    "Guanabana": "Corossol",
+    "Durazno": "Peche",
+    "Frambuesa": "Framboise",
+    "Cebolla Gratinada": "Soupe a l'oignon gratinee",
+    "Sopa de cebolla, con pan y queso gratinado.": "Soupe a l'oignon avec pain et fromage gratine.",
+    "Covarachia": "Covarachia",
+    "Sopa del Sol": "Soupe du Soleil",
+    "Mexicana con Pollo": "Mexicaine au poulet"
+  },
+  "words": {
+    "waffle": "gaufre",
+    "waffles": "gaufres",
+    "helado": "glace",
+    "pollo": "poulet",
+    "queso": "fromage",
+    "champinones": "champignons",
+    "con": "avec",
+    "y": "et",
+    "de": "de"
+  }
+}

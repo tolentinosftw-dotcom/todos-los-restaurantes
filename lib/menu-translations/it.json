@@ -1,0 +1,51 @@
+{
+  "ui": {
+    "digitalMenu": "Menu digitale",
+    "search": "Cerca crepes, waffle o ingredienti",
+    "all": "Tutto",
+    "emptyTitle": "Nessun prodotto trovato",
+    "emptyText": "Prova un altra ricerca o categoria.",
+    "close": "Chiudi",
+    "viewImage": "Vedi immagine grande",
+    "favoritesTitle": "Preferiti piu votati",
+    "favoritesText": "I prodotti che i clienti hanno valutato meglio.",
+    "favoritesTab": "Preferiti",
+    "ratingLabel": "Valuta prodotto",
+    "pendingPrice": "Prezzo da definire"
+  },
+  "categories": {
+    "Jugos y Batidos": "Succhi e frullati",
+    "Sopas y Entradas": "Zuppe e antipasti",
+    "Ensaladas": "Insalate",
+    "Bebidas": "Bevande",
+    "Especiales de Mar": "Specialita di mare",
+    "Waffles": "Waffle",
+    "Crepes y Platos Salados": "Crepes salate e piatti",
+    "Otros": "Altro"
+  },
+  "products": {
+    "Mora": "Mora",
+    "Mango": "Mango",
+    "Mandarina": "Mandarino",
+    "Fresa": "Fragola",
+    "Guanabana": "Guanabana",
+    "Durazno": "Pesca",
+    "Frambuesa": "Lampone",
+    "Cebolla Gratinada": "Cipolla gratinata",
+    "Sopa de cebolla, con pan y queso gratinado.": "Zuppa di cipolla con pane e formaggio gratinato.",
+    "Covarachia": "Covarachia",
+    "Sopa del Sol": "Zuppa del Sole",
+    "Mexicana con Pollo": "Messicana con pollo"
+  },
+  "words": {
+    "waffle": "waffle",
+    "waffles": "waffle",
+    "helado": "gelato",
+    "pollo": "pollo",
+    "queso": "formaggio",
+    "champinones": "funghi",
+    "con": "con",
+    "y": "e",
+    "de": "di"
+  }
+}

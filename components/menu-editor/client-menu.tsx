@@ -382,7 +382,7 @@ function LanguagePicker({ language, onChange }: { language: LanguageCode; onChan
           title={item.label}
           aria-label={item.label}
         >
-          <span aria-hidden="true" className="text-xl leading-none">{item.emoji}</span>
+          <span aria-hidden="true" className="text-xl leading-none">{item.flag}</span>
         </button>
       ))}
     </div>
