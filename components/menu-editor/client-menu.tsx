@@ -382,7 +382,7 @@ function LanguagePicker({ language, onChange }: { language: LanguageCode; onChan
           title={item.label}
           aria-label={item.label}
         >
-          <span aria-hidden="true" className="text-xl leading-none">{item.flag}</span>
+          <img src={item.flag} alt="" aria-hidden="true" className="h-6 w-6 rounded-full object-cover" />
         </button>
       ))}
     </div>

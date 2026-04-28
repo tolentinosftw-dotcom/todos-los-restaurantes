@@ -63,7 +63,7 @@ describe('ClientMenu', () => {
 
     expect(screen.getByRole('button', { name: 'Juices and Shakes' })).toBeInTheDocument()
     expect(screen.getByText('Blackberry')).toBeInTheDocument()
-    expect(screen.getByText(/juice natural with hielo/i)).toBeInTheDocument()
+    expect(screen.getByText(/natural juice with ice/i)).toBeInTheDocument()
   })
 
   it('uses category color on category buttons', () => {

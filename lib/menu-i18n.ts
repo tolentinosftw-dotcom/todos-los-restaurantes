@@ -58,13 +58,13 @@ const translationIndexes = Object.fromEntries(
 ) as Partial<Record<LanguageCode, Record<string, string>>>
 
 export const languages: { code: LanguageCode; flag: string; label: string; locale: string; currency: string }[] = [
-  { code: 'es', flag: '\u{1F1E8}\u{1F1F4}', label: 'Espanol', locale: 'es-CO', currency: 'COP' },
-  { code: 'en', flag: '\u{1F1EC}\u{1F1E7}', label: 'English', locale: 'en-US', currency: 'COP' },
-  { code: 'fr', flag: '\u{1F1EB}\u{1F1F7}', label: 'Francais', locale: 'fr-FR', currency: 'COP' },
-  { code: 'it', flag: '\u{1F1EE}\u{1F1F9}', label: 'Italiano', locale: 'it-IT', currency: 'COP' },
-  { code: 'zh', flag: '\u{1F1E8}\u{1F1F3}', label: 'Chinese', locale: 'zh-CN', currency: 'COP' },
-  { code: 'ja', flag: '\u{1F1EF}\u{1F1F5}', label: 'Japanese', locale: 'ja-JP', currency: 'COP' },
-  { code: 'hi', flag: '\u{1F1EE}\u{1F1F3}', label: 'Hindi', locale: 'hi-IN', currency: 'COP' }
+  { code: 'es', flag: '/flags/co.svg', label: 'Espanol', locale: 'es-CO', currency: 'COP' },
+  { code: 'en', flag: '/flags/gb.svg', label: 'English', locale: 'en-US', currency: 'COP' },
+  { code: 'fr', flag: '/flags/fr.svg', label: 'Francais', locale: 'fr-FR', currency: 'COP' },
+  { code: 'it', flag: '/flags/it.svg', label: 'Italiano', locale: 'it-IT', currency: 'COP' },
+  { code: 'zh', flag: '/flags/cn.svg', label: 'Chinese', locale: 'zh-CN', currency: 'COP' },
+  { code: 'ja', flag: '/flags/jp.svg', label: 'Japanese', locale: 'ja-JP', currency: 'COP' },
+  { code: 'hi', flag: '/flags/in.svg', label: 'Hindi', locale: 'hi-IN', currency: 'COP' }
 ]
 
 export const uiCopy: Record<LanguageCode, UiCopy> = {
@@ -128,6 +128,10 @@ function translateFromDictionary(value: string, language: LanguageCode) {
 function translateWords(value: string, language: LanguageCode) {
   const words = translationFiles[language]?.words
   if (!words) return value
+  const textTokens = value.match(/\p{L}+/gu) ?? []
+  const canTranslateEveryWord = textTokens.length > 0 && textTokens.every((word) => words[normalizeTextKey(word)])
+
+  if (!canTranslateEveryWord) return value
 
   return value.replace(/\p{L}+/gu, (word) => {
     const translated = words[normalizeTextKey(word)]
