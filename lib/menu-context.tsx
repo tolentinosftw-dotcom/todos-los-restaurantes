@@ -27,7 +27,7 @@ const PRODUCT_DATA_COUNT = sampleMenuData.reduce((total, category) => total + ca
 const lastCategory = sampleMenuData[sampleMenuData.length - 1]
 const lastItem = lastCategory?.items[lastCategory.items.length - 1]
 const firstItem = sampleMenuData[0]?.items[0]
-const PRODUCT_DATA_SIGNATURE = `${PRODUCT_DATA_COUNT}:${firstItem?.name ?? ''}:${firstItem?.price ?? 0}:${firstItem?.image ?? ''}:${lastItem?.name ?? ''}:${lastItem?.price ?? 0}:${lastItem?.image ?? ''}`
+const PRODUCT_DATA_SIGNATURE = `catalog-v3:${PRODUCT_DATA_COUNT}:${sampleMenuData.map(category => category.name).join('|')}:${firstItem?.name ?? ''}:${firstItem?.price ?? 0}:${firstItem?.image ?? ''}:${lastItem?.name ?? ''}:${lastItem?.price ?? 0}:${lastItem?.image ?? ''}`
 const CATEGORY_RULES = [
   { id: 'jugos-bebidas', name: 'Jugos y Bebidas', words: ['jugo', 'jugos', 'jugi', 'limonada', 'batido', 'malteada', 'agua', 'gaseosa', 'soda', 'coca', 'schweppes', 'cerveza', 'vino', 'mimosa', 'cafe', 'café', 'capuccino', 'espresso', 'macchiato', 'chocolate', 'milo', 'chai', 'aromatica', 'aromática'] },
   { id: 'sopas-cremas', name: 'Sopas y Cremas', words: ['sopa', 'sopas', 'crema', 'cremas', 'lentejas', 'cebolla', 'ahuyama', 'covarachia', 'covarachía'] },
@@ -56,7 +56,7 @@ export function MenuProvider({ children }: { children: ReactNode }) {
     try {
       const parsed = JSON.parse(saved) as { categories?: MenuCategory[]; style?: MenuStyle; dataSignature?: string }
       if (parsed.categories) {
-        setCategories(parsed.dataSignature === PRODUCT_DATA_SIGNATURE ? categorizeMenu(parsed.categories) : sampleMenuData)
+        setCategories(parsed.dataSignature === PRODUCT_DATA_SIGNATURE ? parsed.categories : sampleMenuData)
       }
       if (parsed.style) {
         const nextStyle = { ...defaultMenuStyle, ...parsed.style }
