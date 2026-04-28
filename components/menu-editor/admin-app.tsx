@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useMenu } from '@/lib/menu-context'
 import { ProductEditor } from '@/components/menu-editor/product-editor'
 import { DesignEditor } from '@/components/menu-editor/design-editor'
-import { MenuPreview } from '@/components/menu-editor/menu-preview'
+import { ClientMenu } from '@/components/menu-editor/client-menu'
 import { Button } from '@/components/ui/button'
 import {
   Download,
@@ -32,10 +32,11 @@ export function AdminApp() {
   ]
 
   const deviceWidths = {
-    mobile: 'max-w-[390px]',
-    tablet: 'max-w-[768px]',
-    desktop: 'max-w-full'
+    mobile: { width: 390, height: 844, label: '390 x 844' },
+    tablet: { width: 768, height: 1024, label: '768 x 1024' },
+    desktop: { width: 1280, height: 800, label: '1280 x 800' }
   }
+  const currentDevice = deviceWidths[previewDevice]
 
   const exportMenu = () => {
     const payload = JSON.stringify({ categories, style }, null, 2)
@@ -135,7 +136,7 @@ export function AdminApp() {
         </aside>
 
         <main className={`flex-1 ${activeTab !== 'preview' ? 'hidden lg:block' : ''}`} style={{ minHeight: 'calc(100vh - 64px)' }}>
-          <div className="sticky top-16 z-30 flex items-center justify-center gap-2 border-b border-gray-200 bg-gray-100 px-4 py-2">
+          <div className="sticky top-16 z-30 flex flex-wrap items-center justify-center gap-2 border-b border-gray-200 bg-gray-100 px-4 py-2">
             <span className="mr-2 text-sm text-gray-500">Vista previa:</span>
             <div className="flex items-center gap-1 rounded-lg bg-white p-1 shadow-sm">
               {[
@@ -155,16 +156,23 @@ export function AdminApp() {
                 </button>
               ))}
             </div>
+            <span className="ml-2 rounded-md bg-white px-2 py-1 text-xs font-medium text-gray-500 shadow-sm">{currentDevice.label}</span>
           </div>
 
-          <div className="flex min-h-full justify-center bg-gray-100 p-4">
+          <div className="flex min-h-full justify-center overflow-auto bg-gray-100 p-4">
             <div
-              className={`${deviceWidths[previewDevice]} w-full transition-all duration-300 ${
-                previewDevice !== 'desktop' ? 'overflow-hidden rounded-[24px] shadow-2xl' : ''
+              className={`shrink-0 overflow-hidden bg-white shadow-2xl transition-all duration-300 ${
+                previewDevice !== 'desktop' ? 'rounded-[28px]' : 'rounded-lg'
               }`}
-              style={previewDevice !== 'desktop' ? { border: '8px solid #1f2937' } : {}}
+              style={{
+                width: currentDevice.width,
+                height: currentDevice.height,
+                border: previewDevice !== 'desktop' ? '10px solid #1f2937' : '1px solid #d1d5db'
+              }}
             >
-              <MenuPreview />
+              <div className="h-full overflow-y-auto bg-white">
+                <ClientMenu />
+              </div>
             </div>
           </div>
         </main>
