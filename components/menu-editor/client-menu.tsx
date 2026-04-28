@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { MenuItem } from '@/lib/types'
 import { useMenu } from '@/lib/menu-context'
+import { formatMenuPrice, languages as supportedLanguages, translateText, uiCopy } from '@/lib/menu-i18n'
 import { Search, Star, X } from 'lucide-react'
 
 type LanguageCode = 'es' | 'en' | 'fr' | 'it' | 'zh' | 'ja' | 'hi'
@@ -273,7 +274,7 @@ export function ClientMenu() {
   const [language, setLanguage] = useState<LanguageCode>('es')
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
   const [ratings, setRatings] = useState<Record<string, number>>({})
-  const text = ui[language]
+  const text = uiCopy[language]
   const logoUrl = style.logoUrl || '/logo.webp'
   const showingFavorites = activeCategory === 'favorites'
 
@@ -303,7 +304,7 @@ export function ClientMenu() {
         ...category,
         items: category.items.filter((item) => {
           if (!normalizedQuery) return true
-          return `${translate(item.name, language)} ${translate(item.description, language)}`.toLowerCase().includes(normalizedQuery)
+          return `${translateText(item.name, language)} ${translateText(item.description, language)}`.toLowerCase().includes(normalizedQuery)
         })
       }))
       .filter((category) => category.items.length > 0)
@@ -335,7 +336,7 @@ export function ClientMenu() {
             <LanguagePicker language={language} onChange={setLanguage} />
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75 sm:text-sm">{text.digitalMenu}</p>
-          <h1 className="mt-2 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{translate(style.headerText, language)}</h1>
+          <h1 className="mt-2 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{translateText(style.headerText, language)}</h1>
         </div>
       </section>
 
@@ -354,7 +355,7 @@ export function ClientMenu() {
             <CategoryButton active={activeCategory === 'all'} label={text.all} onClick={() => setActiveCategory('all')} />
             <CategoryButton active={showingFavorites} label={text.favoritesTab} onClick={() => setActiveCategory('favorites')} />
             {categories.map((category) => (
-              <CategoryButton key={category.id} active={activeCategory === category.id} label={translate(category.name, language)} onClick={() => setActiveCategory(category.id)} />
+              <CategoryButton key={category.id} active={activeCategory === category.id} label={translateText(category.name, language)} color={category.color} onClick={() => setActiveCategory(category.id)} />
             ))}
           </div>
         </div>
@@ -390,7 +391,7 @@ export function ClientMenu() {
 
         {visibleCategories.map((category) => (
           <div key={category.id} className="mb-8">
-            <h2 className="mb-4 text-xl font-bold sm:text-2xl" style={{ color: style.primaryColor }}>{translate(category.name, language)}</h2>
+            <h2 className="mb-4 text-xl font-bold sm:text-2xl" style={{ color: category.color || style.primaryColor }}>{translateText(category.name, language)}</h2>
             <div className="grid grid-cols-2 gap-3">
               {category.items.map((item) => (
                 <ProductCard
@@ -404,6 +405,7 @@ export function ClientMenu() {
                   textColor={style.textColor}
                   priceColor={style.priceColor}
                   secondaryColor={style.secondaryColor}
+                  categoryColor={category.color}
                   onOpen={() => setSelectedItem(item)}
                   onRate={(rating) => rateItem(item.id, rating)}
                 />
@@ -441,6 +443,7 @@ function ProductCard({
   textColor,
   priceColor,
   secondaryColor,
+  categoryColor,
   onOpen,
   onRate
 }: {
@@ -453,20 +456,21 @@ function ProductCard({
   textColor: string
   priceColor: string
   secondaryColor: string
+  categoryColor?: string
   onOpen: () => void
   onRate: (rating: number) => void
 }) {
   return (
-    <article className="flex h-full min-h-[292px] w-full flex-col overflow-hidden rounded-lg border border-[#eadfce] bg-white text-left shadow-sm sm:min-h-[340px]">
+    <article className="flex h-full min-h-[292px] w-full flex-col overflow-hidden rounded-lg border bg-white text-left shadow-sm sm:min-h-[340px]" style={{ borderColor: categoryColor ? `${categoryColor}55` : '#eadfce' }}>
       <button
         onClick={onOpen}
         className="flex flex-1 flex-col text-left transition-transform active:scale-[0.99]"
-        aria-label={`${viewImageLabel}: ${translate(item.name, language)}`}
+        aria-label={`${viewImageLabel}: ${translateText(item.name, language)}`}
       >
         <div className="aspect-square w-full shrink-0 overflow-hidden bg-[#faf7f1]">
           <img
             src={item.image || '/placeholder.jpg'}
-            alt={translate(item.name, language)}
+            alt={translateText(item.name, language)}
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover object-center"
@@ -474,16 +478,16 @@ function ProductCard({
         </div>
         <div className="flex min-w-0 flex-1 flex-col p-3 pb-2">
           <div className="flex flex-col gap-1">
-            <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: textColor }}>{translate(item.name, language)}</h3>
-            <p className="text-sm font-bold sm:text-base" style={{ color: priceColor }}>{formatPrice(item.price)}</p>
+            <h3 className="line-clamp-2 text-sm font-bold leading-tight sm:text-base" style={{ color: textColor }}>{translateText(item.name, language)}</h3>
+            <p className="text-sm font-bold sm:text-base" style={{ color: priceColor }}>{formatMenuPrice(item.price, language)}</p>
           </div>
           {item.description && (
-            <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>
+            <p className="mt-1 line-clamp-3 text-xs leading-4 sm:text-sm sm:leading-5" style={{ color: secondaryColor }}>{translateText(item.description, language)}</p>
           )}
         </div>
       </button>
       <div className="border-t border-[#eadfce] px-2 py-2">
-        <RatingStars rating={rating} stats={ratingStats} label={`${ratingLabel}: ${translate(item.name, language)}`} onRate={onRate} />
+        <RatingStars rating={rating} stats={ratingStats} label={`${ratingLabel}: ${translateText(item.name, language)}`} onRate={onRate} />
       </div>
     </article>
   )
@@ -543,7 +547,7 @@ function ProductModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4" onClick={onClose}>
       <article className="max-h-[92vh] w-full max-w-lg overflow-hidden rounded-lg bg-white shadow-2xl" onClick={(event) => event.stopPropagation()}>
         <div className="relative bg-gray-100">
-          <img src={item.image || '/placeholder.jpg'} alt={translate(item.name, language)} className="max-h-[58vh] w-full object-contain" />
+          <img src={item.image || '/placeholder.jpg'} alt={translateText(item.name, language)} className="max-h-[58vh] w-full object-contain" />
           <button
             onClick={onClose}
             className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-[#2f211b] shadow"
@@ -554,10 +558,10 @@ function ProductModal({
         </div>
         <div className="p-4 sm:p-5">
           <div className="flex items-start justify-between gap-4">
-            <h3 className="text-2xl font-bold leading-tight" style={{ color: textColor }}>{translate(item.name, language)}</h3>
-            <p className="shrink-0 text-xl font-bold" style={{ color: priceColor }}>{formatPrice(item.price)}</p>
+            <h3 className="text-2xl font-bold leading-tight" style={{ color: textColor }}>{translateText(item.name, language)}</h3>
+            <p className="shrink-0 text-xl font-bold" style={{ color: priceColor }}>{formatMenuPrice(item.price, language)}</p>
           </div>
-          {item.description && <p className="mt-3 leading-7" style={{ color: secondaryColor }}>{translate(item.description, language)}</p>}
+          {item.description && <p className="mt-3 leading-7" style={{ color: secondaryColor }}>{translateText(item.description, language)}</p>}
         </div>
       </article>
     </div>
@@ -567,7 +571,7 @@ function ProductModal({
 function LanguagePicker({ language, onChange }: { language: LanguageCode; onChange: (language: LanguageCode) => void }) {
   return (
     <div className="flex max-w-full gap-1 overflow-x-auto rounded-full bg-white/15 p-1 backdrop-blur">
-      {languages.map((item) => (
+      {supportedLanguages.map((item) => (
         <button
           key={item.code}
           onClick={() => onChange(item.code)}
@@ -587,13 +591,12 @@ function LanguagePicker({ language, onChange }: { language: LanguageCode; onChan
   )
 }
 
-function CategoryButton({ active, label, onClick }: { active: boolean; label: string; onClick: () => void }) {
+function CategoryButton({ active, label, color, onClick }: { active: boolean; label: string; color?: string; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className={`h-10 shrink-0 rounded-full px-4 text-sm font-semibold transition-colors ${
-        active ? 'bg-[#7f271c] text-white' : 'bg-[#f4eadf] text-[#6c4a37] hover:bg-[#eadfce]'
-      }`}
+      className="h-10 shrink-0 rounded-full px-4 text-sm font-semibold transition-colors"
+      style={active ? { backgroundColor: color || '#7f271c', color: '#fff' } : { backgroundColor: color ? `${color}18` : '#f4eadf', color: color || '#6c4a37' }}
     >
       {label}
     </button>

@@ -20,6 +20,7 @@ interface RawProduct {
 export interface MenuCategory {
   id: string
   name: string
+  color?: string
   items: MenuItem[]
 }
 
@@ -93,7 +94,7 @@ function buildMenuData(products: RawProduct[]): MenuCategory[] {
     const categoryId = slugify(categoryName)
 
     if (!categories.has(categoryId)) {
-      categories.set(categoryId, { id: categoryId, name: categoryName, items: [] })
+      categories.set(categoryId, { id: categoryId, name: categoryName, color: getCategoryColor(categoryName), items: [] })
     }
 
     const category = categories.get(categoryId)!
@@ -113,6 +114,21 @@ function buildMenuData(products: RawProduct[]): MenuCategory[] {
   return Array.from(categories.values())
 }
 
+export function getCategoryColor(categoryName: string) {
+  const category = slugify(categoryName)
+  if (category.includes('jugos')) return '#2f8f6b'
+  if (category.includes('bebidas')) return '#2d6f9f'
+  if (category.includes('sopas')) return '#b86b23'
+  if (category.includes('ensaladas')) return '#4f8f3a'
+  if (category.includes('mar')) return '#237c8f'
+  if (category.includes('waffles')) return '#b06b2f'
+  if (category.includes('crepes')) return '#8f2f23'
+  if (category.includes('postres')) return '#9b4f7a'
+  if (category.includes('desayunos')) return '#8a6f2a'
+  if (category.includes('infantil')) return '#b24e63'
+  return '#7f271c'
+}
+
 function getCategoryName(product: RawProduct, index: number) {
   if (product.categoria_busqueda) return toTitleCase(product.categoria_busqueda)
 
@@ -129,7 +145,13 @@ function toTitleCase(value: string) {
     .replace(/[-_]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
-    .replace(/\b\w/g, (letter) => letter.toUpperCase())
+    .split(' ')
+    .map((word, index) => {
+      const lower = word.toLowerCase()
+      if (index > 0 && ['y', 'de', 'del', 'la', 'las', 'los'].includes(lower)) return lower
+      return lower.charAt(0).toUpperCase() + lower.slice(1)
+    })
+    .join(' ')
 }
 
 function slugify(value: string) {

@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useContext, useEffect, useState, ReactNode, Dispatch, SetStateAction } from 'react'
-import { MenuCategory, MenuStyle, MenuItem, defaultMenuStyle, sampleMenuData } from './types'
+import { MenuCategory, MenuStyle, MenuItem, defaultMenuStyle, getCategoryColor, sampleMenuData } from './types'
 
 interface MenuContextType {
   categories: MenuCategory[]
@@ -56,7 +56,7 @@ export function MenuProvider({ children }: { children: ReactNode }) {
     try {
       const parsed = JSON.parse(saved) as { categories?: MenuCategory[]; style?: MenuStyle; dataSignature?: string }
       if (parsed.categories) {
-        setCategories(parsed.dataSignature === PRODUCT_DATA_SIGNATURE ? parsed.categories : sampleMenuData)
+        setCategories(parsed.dataSignature === PRODUCT_DATA_SIGNATURE ? ensureCategoryColors(parsed.categories) : sampleMenuData)
       }
       if (parsed.style) {
         const nextStyle = { ...defaultMenuStyle, ...parsed.style }
@@ -86,6 +86,7 @@ export function MenuProvider({ children }: { children: ReactNode }) {
     const newCategory: MenuCategory = {
       id: Date.now().toString(),
       name,
+      color: getCategoryColor(name),
       items: []
     }
     setCategories(prev => [...prev, newCategory])
@@ -168,9 +169,9 @@ function categorizeMenu(categories: MenuCategory[]) {
   const buckets = new Map<string, MenuCategory>()
 
   for (const rule of CATEGORY_RULES) {
-    buckets.set(rule.id, { id: rule.id, name: rule.name, items: [] })
+    buckets.set(rule.id, { id: rule.id, name: rule.name, color: getCategoryColor(rule.name), items: [] })
   }
-  buckets.set('otros', { id: 'otros', name: 'Otros', items: [] })
+  buckets.set('otros', { id: 'otros', name: 'Otros', color: getCategoryColor('Otros'), items: [] })
 
   for (const item of categories.flatMap(category => category.items)) {
     const category = getItemCategory(item)
@@ -178,6 +179,13 @@ function categorizeMenu(categories: MenuCategory[]) {
   }
 
   return Array.from(buckets.values()).filter(category => category.items.length > 0)
+}
+
+function ensureCategoryColors(categories: MenuCategory[]) {
+  return categories.map((category) => ({
+    ...category,
+    color: category.color || getCategoryColor(category.name)
+  }))
 }
 
 function getItemCategory(item: MenuItem) {

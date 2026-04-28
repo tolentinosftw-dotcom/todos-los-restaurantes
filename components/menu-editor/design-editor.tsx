@@ -59,7 +59,7 @@ const colorPresets = [
 ]
 
 export function DesignEditor() {
-  const { style, updateStyle, setStyle } = useMenu()
+  const { categories, setCategories, style, updateStyle, setStyle } = useMenu()
 
   const uploadImage = (event: React.ChangeEvent<HTMLInputElement>, key: 'logoUrl' | 'heroImageUrl') => {
     const file = event.target.files?.[0]
@@ -118,6 +118,31 @@ export function DesignEditor() {
           <ColorPicker label="Texto" value={style.textColor} onChange={(value) => updateStyle({ textColor: value })} />
           <ColorPicker label="Precio" value={style.priceColor} onChange={(value) => updateStyle({ priceColor: value })} />
           <ColorPicker label="Acento" value={style.accentColor} onChange={(value) => updateStyle({ accentColor: value })} />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader className="pb-3">
+          <CardTitle className="flex items-center gap-2 text-lg">
+            <Palette className="h-5 w-5 text-[#b5884d]" />
+            Colores por categoría
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-3">
+          {categories.map((category) => (
+            <ColorPicker
+              key={category.id}
+              label={category.name}
+              value={category.color || style.primaryColor}
+              onChange={(value) => {
+                setCategories((current) =>
+                  current.map((entry) =>
+                    entry.id === category.id ? { ...entry, color: value } : entry
+                  )
+                )
+              }}
+            />
+          ))}
         </CardContent>
       </Card>
 

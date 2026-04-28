@@ -17,8 +17,8 @@ export function MenuPreview() {
             <h2
               className="mb-6 border-b-2 pb-2 font-bold"
               style={{
-                borderColor: style.accentColor,
-                color: style.primaryColor,
+                borderColor: category.color || style.accentColor,
+                color: category.color || style.primaryColor,
                 fontSize: `${style.categoryFontSize}px`,
                 textAlign: style.textAlign
               }}
@@ -26,7 +26,7 @@ export function MenuPreview() {
               {category.name}
             </h2>
             <div className={`menu-preview-grid grid ${spacing}`} style={{ gridTemplateColumns: `repeat(${style.columns}, minmax(0, 1fr))` }}>
-              {category.items.map((item) => <MenuItemCard key={item.id} item={item} style={style} />)}
+              {category.items.map((item) => <MenuItemCard key={item.id} item={item} categoryColor={category.color} style={style} />)}
             </div>
           </section>
         ))}
@@ -75,9 +75,9 @@ function MenuHeader({ style }: { style: MenuStyle }) {
   )
 }
 
-function MenuItemCard({ item, style }: { item: MenuItem; style: MenuStyle }) {
+function MenuItemCard({ item, categoryColor, style }: { item: MenuItem; categoryColor?: string; style: MenuStyle }) {
   const imageSize = getImageSize(style.imageSize)
-  const cardStyle = getCardStyle(style)
+  const cardStyle = getCardStyle(style, categoryColor)
   const price = formatPrice(item.price)
 
   if (style.imagePosition === 'background') {
@@ -129,13 +129,13 @@ function MenuText({ item, price, style, compact = false }: { item: MenuItem; pri
   )
 }
 
-function getCardStyle(style: MenuStyle): React.CSSProperties {
+function getCardStyle(style: MenuStyle, categoryColor?: string): React.CSSProperties {
   const base: React.CSSProperties = { borderRadius: `${style.borderRadius}px` }
 
   if (style.cardStyle === 'minimal') return { ...base, backgroundColor: 'transparent' }
-  if (style.cardStyle === 'bordered') return { ...base, backgroundColor: tint(style.backgroundColor, 8), border: `1px solid ${style.accentColor}` }
-  if (style.cardStyle === 'glass') return { ...base, backgroundColor: 'rgba(255,255,255,0.68)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.4)' }
-  return { ...base, backgroundColor: tint(style.backgroundColor, 8), boxShadow: '0 12px 30px rgba(55, 34, 20, 0.12)' }
+  if (style.cardStyle === 'bordered') return { ...base, backgroundColor: tint(style.backgroundColor, 8), border: `1px solid ${categoryColor || style.accentColor}` }
+  if (style.cardStyle === 'glass') return { ...base, backgroundColor: 'rgba(255,255,255,0.68)', backdropFilter: 'blur(10px)', border: `1px solid ${categoryColor || 'rgba(255,255,255,0.4)'}` }
+  return { ...base, backgroundColor: tint(style.backgroundColor, 8), border: `1px solid ${categoryColor ? `${categoryColor}44` : 'transparent'}`, boxShadow: '0 12px 30px rgba(55, 34, 20, 0.12)' }
 }
 
 function getImageSize(size: MenuStyle['imageSize']): React.CSSProperties {
