@@ -1,14 +1,12 @@
 import { NextRequest } from 'next/server'
 import { defaultRestaurant } from './restaurants'
 
-export const ADMIN_SESSION_COOKIE = 'restaurant_admin_session'
+export const ADMIN_SESSION_COOKIE = 'restaurant_owner_session'
 export const ADMIN_SESSION_MAX_AGE = 60 * 60 * 8
 
-const DEV_ADMIN_USER = 'admin'
-const DEV_ADMIN_PASSWORD = 'AdminMenu2026.'
+const ADMIN_USER = '123456789'
+const ADMIN_PASSWORD = '123456789a'
 const DEV_ADMIN_SECRET = 'restaurant-menu-session'
-const LEGACY_ADMIN_USER = 'Admincrepes1.'
-const LEGACY_ADMIN_PASSWORD = 'Adminwaffles1.'
 
 export type AdminRole = 'owner' | 'restaurant'
 
@@ -23,15 +21,11 @@ export interface AdminSessionPayload {
 }
 
 export function getAdminCredentials() {
-  const user = process.env.ADMIN_USER || (process.env.NODE_ENV === 'development' ? DEV_ADMIN_USER : '')
-  const password = process.env.ADMIN_PASSWORD || (process.env.NODE_ENV === 'development' ? DEV_ADMIN_PASSWORD : '')
-  const secret = process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_PASSWORD || DEV_ADMIN_SECRET
+  const user = ADMIN_USER
+  const password = ADMIN_PASSWORD
+  const secret = process.env.ADMIN_SESSION_SECRET || `${DEV_ADMIN_SECRET}:${password}`
 
   return { user, password, secret }
-}
-
-export function getLegacyAdminCredentials() {
-  return { user: LEGACY_ADMIN_USER, password: LEGACY_ADMIN_PASSWORD }
 }
 
 export async function createAdminSession(

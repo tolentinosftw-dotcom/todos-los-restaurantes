@@ -48,7 +48,7 @@ export function LoginGate() {
         <div className="mb-6 text-center">
           <img src="/placeholder-logo.png" alt="Menu platform" className="mx-auto mb-3 h-14 w-14 rounded-lg object-cover" />
           <h1 className="text-2xl font-bold text-[#2f211b]">Panel de menus</h1>
-          <p className="mt-1 text-sm text-[#8a5b3e]">Ingresa como dueno o restaurante.</p>
+          <p className="mt-1 text-sm text-[#8a5b3e]">Ingresa con el acceso unico.</p>
         </div>
 
         <div className="space-y-3">

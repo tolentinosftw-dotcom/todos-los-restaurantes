@@ -4,53 +4,28 @@ import {
   ADMIN_SESSION_MAX_AGE,
   createAdminSession,
   getAdminCredentials,
-  getLegacyAdminCredentials,
   secureCompare
 } from '@/lib/admin-auth'
-import { findStoredRestaurantByCredentials } from '@/lib/restaurant-store'
-
-const attempts = globalThis as typeof globalThis & { __adminLoginAttempts?: Map<string, { count: number; resetAt: number }> }
-attempts.__adminLoginAttempts ??= new Map()
 
 export async function POST(request: NextRequest) {
-  const clientId = getClientId(request)
-  const rateLimit = checkRateLimit(clientId)
-
-  if (!rateLimit.allowed) {
-    return NextResponse.json({ error: 'Demasiados intentos. Intenta de nuevo en unos minutos.' }, { status: 429 })
-  }
-
   const { user: expectedUser, password: expectedPassword } = getAdminCredentials()
 
   const body = await request.json().catch(() => null) as { user?: string; password?: string } | null
   const user = body?.user ?? ''
   const password = body?.password ?? ''
-  const restaurant = await findStoredRestaurantByCredentials(user, password)
-  const legacyCredentials = getLegacyAdminCredentials()
-  const ownerAdmin = Boolean(expectedUser && expectedPassword && secureCompare(user, expectedUser) && secureCompare(password, expectedPassword))
-  const legacyAdmin = secureCompare(user, legacyCredentials.user) && secureCompare(password, legacyCredentials.password)
+  const ownerAdmin = secureCompare(user, expectedUser) && secureCompare(password, expectedPassword)
 
-  if (!restaurant && !ownerAdmin && !legacyAdmin) {
-    registerFailedAttempt(clientId)
+  if (!ownerAdmin) {
     return NextResponse.json({ error: 'Usuario o contrasena incorrectos.' }, { status: 401 })
   }
 
-  attempts.__adminLoginAttempts?.delete(clientId)
-  const isOwner = ownerAdmin || legacyAdmin
-
   const response = NextResponse.json({
     ok: true,
-    role: isOwner ? 'owner' : 'restaurant',
-    restaurantId: restaurant?.id,
-    restaurantName: restaurant?.name
+    role: 'owner'
   })
   response.cookies.set({
     name: ADMIN_SESSION_COOKIE,
-    value: await createAdminSession(
-      isOwner
-        ? { role: 'owner', user }
-        : { role: 'restaurant', restaurant: restaurant!, user }
-    ),
+    value: await createAdminSession({ role: 'owner', user }),
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
@@ -59,29 +34,4 @@ export async function POST(request: NextRequest) {
   })
 
   return response
-}
-
-function getClientId(request: NextRequest) {
-  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'local'
-}
-
-function checkRateLimit(clientId: string) {
-  const current = attempts.__adminLoginAttempts?.get(clientId)
-  if (!current) return { allowed: true }
-
-  if (current.resetAt <= Date.now()) {
-    attempts.__adminLoginAttempts?.delete(clientId)
-    return { allowed: true }
-  }
-
-  return { allowed: current.count < 5 }
-}
-
-function registerFailedAttempt(clientId: string) {
-  const current = attempts.__adminLoginAttempts?.get(clientId)
-  const resetAt = Date.now() + 10 * 60 * 1000
-  attempts.__adminLoginAttempts?.set(clientId, {
-    count: (current?.count ?? 0) + 1,
-    resetAt: current?.resetAt && current.resetAt > Date.now() ? current.resetAt : resetAt
-  })
 }
