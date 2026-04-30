@@ -3,17 +3,14 @@ import {
   ADMIN_SESSION_COOKIE,
   ADMIN_SESSION_MAX_AGE,
   createAdminSession,
-  getAdminCredentials,
-  secureCompare
+  isOwnerLoginValid
 } from '@/lib/admin-auth'
 
 export async function POST(request: NextRequest) {
-  const { user: expectedUser, password: expectedPassword } = getAdminCredentials()
-
   const body = await request.json().catch(() => null) as { user?: string; password?: string } | null
   const user = body?.user ?? ''
   const password = body?.password ?? ''
-  const ownerAdmin = secureCompare(user, expectedUser) && secureCompare(password, expectedPassword)
+  const ownerAdmin = isOwnerLoginValid(user, password)
 
   if (!ownerAdmin) {
     return NextResponse.json({ error: 'Usuario o contrasena incorrectos.' }, { status: 401 })

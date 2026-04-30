@@ -28,6 +28,15 @@ export function getAdminCredentials() {
   return { user, password, secret }
 }
 
+export function isOwnerLoginValid(user: string, password: string) {
+  const { user: expectedUser, password: expectedPassword } = getAdminCredentials()
+  const normalizedUser = user.trim()
+  const normalizedPassword = password.trim()
+  const acceptedPasswords = [expectedPassword, `${expectedPassword}.`]
+
+  return secureCompare(normalizedUser, expectedUser) && acceptedPasswords.some((value) => secureCompare(normalizedPassword, value))
+}
+
 export async function createAdminSession(
   options: { role?: AdminRole; restaurant?: { id: string; name: string; user?: string }; user?: string } = {}
 ) {
