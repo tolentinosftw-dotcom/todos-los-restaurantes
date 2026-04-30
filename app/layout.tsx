@@ -7,18 +7,18 @@ const _geist = Geist({ subsets: ['latin'] })
 const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Constructor de Menú | Crepes & Waffles',
-  description: 'Frontend editable para crear menús digitales con productos, precios, imágenes y diseño personalizable.',
+  title: 'Dashboard de Menus Digitales',
+  description: 'Plataforma editable para crear usuarios de restaurantes y administrar menus digitales bilingues.',
   generator: 'Codex',
   icons: {
     icon: [
       {
-        url: '/logo.webp',
-        type: 'image/webp'
+        url: '/placeholder-logo.png',
+        type: 'image/png'
       }
     ],
-    shortcut: '/logo.webp',
-    apple: '/logo.webp'
+    shortcut: '/placeholder-logo.png',
+    apple: '/placeholder-logo.png'
   }
 }
 

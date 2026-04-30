@@ -3,7 +3,9 @@ import rawProducts from './productos.json'
 export interface MenuItem {
   id: string
   name: string
+  nameEn?: string
   description: string
+  descriptionEn?: string
   price: number
   image: string
   category: string
@@ -20,6 +22,7 @@ interface RawProduct {
 export interface MenuCategory {
   id: string
   name: string
+  nameEn?: string
   color?: string
   items: MenuItem[]
 }
@@ -50,7 +53,9 @@ export interface MenuStyle {
   logoUrl: string
   heroImageUrl: string
   headerText: string
+  headerTextEn?: string
   headerSubtitle: string
+  headerSubtitleEn?: string
   headerStyle: 'centered' | 'left' | 'overlay'
 }
 
@@ -79,8 +84,10 @@ export const defaultMenuStyle: MenuStyle = {
   showLogo: true,
   logoUrl: '/logo.webp',
   heroImageUrl: 'https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=1600&q=80',
-  headerText: 'Crepes & Waffles Interior',
+  headerText: 'Menu digital',
+  headerTextEn: 'Digital menu',
   headerSubtitle: '',
+  headerSubtitleEn: '',
   headerStyle: 'centered'
 }
 

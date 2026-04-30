@@ -23,7 +23,7 @@ type TranslatedMenuCategory = Omit<MenuCategory, 'items'> & {
 type RatingStats = { average: number; count: number; sum?: number }
 
 export function ClientMenu() {
-  const { categories, style } = useMenu()
+  const { categories, style, restaurant } = useMenu()
   const [query, setQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('all')
   const [language, setLanguage] = useState<LanguageCode>('es')
@@ -35,16 +35,16 @@ export function ClientMenu() {
   const showingFavorites = activeCategory === 'favorites'
 
   useEffect(() => {
-    const savedUserRatings = window.localStorage.getItem('crepes-product-user-ratings')
+    const savedUserRatings = window.localStorage.getItem(`restaurant-product-user-ratings:${restaurant.id}`)
 
     try {
       if (savedUserRatings) setUserRatings(JSON.parse(savedUserRatings) as Record<string, number>)
     } catch {
-      window.localStorage.removeItem('crepes-product-user-ratings')
+      window.localStorage.removeItem(`restaurant-product-user-ratings:${restaurant.id}`)
     }
 
     void loadSharedRatings()
-  }, [])
+  }, [restaurant.id])
 
   useEffect(() => {
     const values = [
@@ -76,14 +76,14 @@ export function ClientMenu() {
   const translatedCategories = useMemo<TranslatedMenuCategory[]>(() => {
     return categories.map((category) => ({
       ...category,
-      translatedName: translateText(category.name, language),
+      translatedName: getLocalizedText(category.name, category.nameEn, language),
       items: category.items.map((item) => {
-        const translatedName = translateText(item.name, language)
+        const translatedName = getLocalizedText(item.name, item.nameEn, language)
 
         return {
           ...item,
           translatedName,
-          translatedDescription: translateText(item.description, language),
+          translatedDescription: getLocalizedText(item.description, item.descriptionEn, language),
           translatedPrice: formatMenuPrice(item.price, language),
           translatedRatingLabel: `${text.ratingLabel}: ${translatedName}`,
           translatedViewImageLabel: `${text.viewImage}: ${translatedName}`
@@ -124,7 +124,7 @@ export function ClientMenu() {
     const previousRating = userRatings[itemId]
     const nextUserRatings = { ...userRatings, [itemId]: rating }
     setUserRatings(nextUserRatings)
-    window.localStorage.setItem('crepes-product-user-ratings', JSON.stringify(nextUserRatings))
+    window.localStorage.setItem(`restaurant-product-user-ratings:${restaurant.id}`, JSON.stringify(nextUserRatings))
 
     try {
       const response = await fetch('/api/ratings', {
@@ -147,11 +147,16 @@ export function ClientMenu() {
         <div className="absolute inset-0" style={{ background: `linear-gradient(to right, ${style.primaryColor}f5, ${style.primaryColor}b8)` }} />
         <div className="relative mx-auto max-w-5xl">
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <img src={logoUrl} alt="Crepes & Waffles" className="h-14 w-14 rounded-full bg-white object-cover ring-2 ring-white/50" />
+            <img src={logoUrl} alt={restaurant.name} className="h-14 w-14 rounded-full bg-white object-cover ring-2 ring-white/50" />
             <LanguagePicker language={language} onChange={(nextLanguage) => startTransition(() => setLanguage(nextLanguage))} />
           </div>
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75 sm:text-sm">{text.digitalMenu}</p>
-          <h1 className="mt-2 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{translateText(style.headerText, language)}</h1>
+          <h1 className="mt-2 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{getLocalizedText(style.headerText, style.headerTextEn, language)}</h1>
+          {(language === 'en' ? style.headerSubtitleEn : style.headerSubtitle) && (
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/85 sm:text-base">
+              {getLocalizedText(style.headerSubtitle, style.headerSubtitleEn, language)}
+            </p>
+          )}
         </div>
       </section>
 
@@ -399,6 +404,11 @@ function CategoryButton({ active, label, color, onClick }: { active: boolean; la
       {label}
     </button>
   )
+}
+
+function getLocalizedText(value: string, englishValue: string | undefined, language: LanguageCode) {
+  if (language === 'en' && englishValue?.trim()) return englishValue
+  return translateText(value, language)
 }
 
 function getRatingStats(itemId: string, ratings: Record<string, RatingStats>) {

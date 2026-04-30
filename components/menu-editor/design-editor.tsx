@@ -1,7 +1,6 @@
 'use client'
 
 import { useMenu } from '@/lib/menu-context'
-import { defaultMenuStyle } from '@/lib/types'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -13,7 +12,7 @@ const fontFamilies = ['Georgia', 'Arial', 'Times New Roman', 'Montserrat', 'Lora
 
 const colorPresets = [
   {
-    name: 'Crepes cálido',
+    name: 'Calido',
     colors: {
       backgroundColor: '#fff8ef',
       primaryColor: '#7f271c',
@@ -59,7 +58,7 @@ const colorPresets = [
 ]
 
 export function DesignEditor() {
-  const { categories, setCategories, style, updateStyle, setStyle } = useMenu()
+  const { categories, setCategories, style, updateStyle, setStyle, restaurant } = useMenu()
 
   const uploadImage = (event: React.ChangeEvent<HTMLInputElement>, key: 'logoUrl' | 'heroImageUrl') => {
     const file = event.target.files?.[0]
@@ -97,7 +96,7 @@ export function DesignEditor() {
               </button>
             ))}
           </div>
-          <Button variant="outline" className="mt-3 w-full" onClick={() => setStyle(defaultMenuStyle)}>
+          <Button variant="outline" className="mt-3 w-full" onClick={() => setStyle(restaurant.style)}>
             <RotateCcw className="mr-2 h-4 w-4" />
             Restaurar predeterminado
           </Button>
@@ -214,12 +213,20 @@ export function DesignEditor() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <Label>Título del menú</Label>
+            <Label>Titulo del menu en espanol</Label>
             <Input value={style.headerText} onChange={(event) => updateStyle({ headerText: event.target.value })} className="mt-1" />
           </div>
           <div>
-            <Label>Subtítulo</Label>
+            <Label>Menu title in English</Label>
+            <Input value={style.headerTextEn || ''} onChange={(event) => updateStyle({ headerTextEn: event.target.value })} className="mt-1" />
+          </div>
+          <div>
+            <Label>Subtitulo en espanol</Label>
             <Input value={style.headerSubtitle} onChange={(event) => updateStyle({ headerSubtitle: event.target.value })} className="mt-1" />
+          </div>
+          <div>
+            <Label>Subtitle in English</Label>
+            <Input value={style.headerSubtitleEn || ''} onChange={(event) => updateStyle({ headerSubtitleEn: event.target.value })} className="mt-1" />
           </div>
           <ChoiceGroup label="Estilo de encabezado" value={style.headerStyle} options={['centered', 'left', 'overlay']} onChange={(value) => updateStyle({ headerStyle: value as typeof style.headerStyle })} />
         </CardContent>

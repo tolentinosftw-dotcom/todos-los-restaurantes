@@ -28,7 +28,15 @@ export function LoginGate() {
         return
       }
 
-      window.location.assign('/admin')
+      const payload = await response.json().catch(() => null) as { role?: 'owner' | 'restaurant'; restaurantId?: string } | null
+      const from = new URLSearchParams(window.location.search).get('from')
+
+      if (payload?.role === 'owner') {
+        window.location.assign(from?.startsWith('/admin/') ? from : '/admin/dashboard')
+        return
+      }
+
+      window.location.assign(payload?.restaurantId ? `/admin/restaurante/${payload.restaurantId}` : '/admin')
     } finally {
       setLoading(false)
     }
@@ -38,9 +46,9 @@ export function LoginGate() {
     <main className="flex min-h-screen items-center justify-center bg-[#f6efe6] px-4">
       <form onSubmit={submit} className="w-full max-w-sm rounded-lg border border-[#e6d7c5] bg-white p-6 shadow-xl">
         <div className="mb-6 text-center">
-          <img src="/logo.webp" alt="Crepes & Waffles" className="mx-auto mb-3 h-14 w-14 rounded-lg object-cover" />
-          <h1 className="text-2xl font-bold text-[#2f211b]">Area de admin</h1>
-          <p className="mt-1 text-sm text-[#8a5b3e]">Ingresa para editar el menu.</p>
+          <img src="/placeholder-logo.png" alt="Menu platform" className="mx-auto mb-3 h-14 w-14 rounded-lg object-cover" />
+          <h1 className="text-2xl font-bold text-[#2f211b]">Panel de menus</h1>
+          <p className="mt-1 text-sm text-[#8a5b3e]">Ingresa como dueno o restaurante.</p>
         </div>
 
         <div className="space-y-3">

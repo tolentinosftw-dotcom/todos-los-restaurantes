@@ -1,7 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { formatMenuPrice, translateText, uiCopy } from './menu-i18n'
+import { formatMenuPrice, languages, translateText, uiCopy } from './menu-i18n'
 
 describe('menu i18n', () => {
+  it('exposes Spanish and English as the menu languages', () => {
+    expect(languages.map((language) => language.code)).toEqual(['es', 'en'])
+    expect(languages.map((language) => language.label)).toEqual(['Espanol', 'English'])
+  })
+
   it('translates category buttons and known product names from JSON dictionaries', () => {
     expect(translateText('Jugos y Batidos', 'en')).toBe('Juices and Shakes')
     expect(translateText('Jugos y Batidos', 'zh')).toBe('\u679c\u6c41\u548c\u5976\u6614')

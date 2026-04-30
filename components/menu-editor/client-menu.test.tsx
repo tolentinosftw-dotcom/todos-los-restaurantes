@@ -5,41 +5,62 @@ import { ClientMenu } from './client-menu'
 
 const categories = [
   {
-    id: 'jugos-y-batidos',
-    name: 'Jugos y Batidos',
+    id: 'platos-fuertes',
+    name: 'Platos fuertes',
+    nameEn: 'Main dishes',
     color: '#2f8f6b',
     items: [
       {
-        id: 'mora',
-        name: 'Mora',
-        description: 'Jugo natural con hielo.',
-        price: 7900,
-        image: '/imagenesmenucrepes/mora.jpg',
-        category: 'jugos-y-batidos'
+        id: 'burger',
+        name: 'Hamburguesa artesanal',
+        nameEn: 'Craft burger',
+        description: 'Carne de la casa con queso y salsa especial.',
+        descriptionEn: 'House patty with cheese and special sauce.',
+        price: 28000,
+        image: '/imagenesmenu/burger.jpg',
+        category: 'platos-fuertes'
       }
     ]
   },
   {
-    id: 'waffles',
-    name: 'Waffles',
+    id: 'bebidas',
+    name: 'Bebidas',
+    nameEn: 'Drinks',
     color: '#b06b2f',
     items: [
       {
-        id: 'waffle',
-        name: 'Waffle con helado',
-        description: 'Waffle con helado y chocolate.',
-        price: 15000,
-        image: '/imagenesmenucrepes/waffle.jpg',
-        category: 'waffles'
+        id: 'limonada',
+        name: 'Limonada natural',
+        nameEn: 'Fresh lemonade',
+        description: 'Limonada fresca con hierbabuena.',
+        descriptionEn: 'Fresh lemonade with mint.',
+        price: 8000,
+        image: '/imagenesmenu/limonada.jpg',
+        category: 'bebidas'
       }
     ]
   }
 ]
 
+const style = {
+  ...defaultMenuStyle,
+  headerText: 'Burger House',
+  headerTextEn: 'Burger House',
+  headerSubtitle: 'Menu editable en espanol.',
+  headerSubtitleEn: 'Editable menu in English.'
+}
+
 vi.mock('@/lib/menu-context', () => ({
   useMenu: () => ({
     categories,
-    style: defaultMenuStyle
+    style,
+    restaurant: {
+      id: 'burger-house',
+      name: 'Burger House',
+      logoUrl: '/placeholder-logo.png',
+      heroImageUrl: style.heroImageUrl,
+      style
+    }
   })
 }))
 
@@ -51,25 +72,35 @@ describe('ClientMenu', () => {
   it('renders products, prices and category controls from menu data', () => {
     render(<ClientMenu />)
 
-    expect(screen.getByRole('button', { name: /Jugos y Batidos/i })).toBeInTheDocument()
-    expect(screen.getByText('Mora')).toBeInTheDocument()
-    expect(screen.getByText(/\$ 7\.900|\$7\.900/)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /Platos fuertes/i })).toBeInTheDocument()
+    expect(screen.getByText('Hamburguesa artesanal')).toBeInTheDocument()
+    expect(screen.getByText(/\$ 28\.000|\$28\.000/)).toBeInTheDocument()
   })
 
-  it('translates product names, descriptions and category buttons when language changes', () => {
+  it('uses editable English names, descriptions and category labels when language changes', () => {
     render(<ClientMenu />)
 
     fireEvent.click(screen.getByRole('button', { name: 'English' }))
 
-    expect(screen.getByRole('button', { name: 'Juices and Shakes' })).toBeInTheDocument()
-    expect(screen.getByText('Blackberry')).toBeInTheDocument()
-    expect(screen.getByText(/natural juice with ice/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Main dishes' })).toBeInTheDocument()
+    expect(screen.getByText('Craft burger')).toBeInTheDocument()
+    expect(screen.getByText(/house patty with cheese/i)).toBeInTheDocument()
+    expect(screen.getByText('Editable menu in English.')).toBeInTheDocument()
+  })
+
+  it('only exposes Spanish and English in the language picker', () => {
+    render(<ClientMenu />)
+
+    expect(screen.getByRole('button', { name: 'Espanol' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'English' })).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Francais' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: 'Italiano' })).not.toBeInTheDocument()
   })
 
   it('uses category color on category buttons', () => {
     render(<ClientMenu />)
 
-    const categoryButton = screen.getByRole('button', { name: 'Jugos y Batidos' })
+    const categoryButton = screen.getByRole('button', { name: 'Platos fuertes' })
     expect(categoryButton).toHaveStyle({ color: '#2f8f6b' })
   })
 })

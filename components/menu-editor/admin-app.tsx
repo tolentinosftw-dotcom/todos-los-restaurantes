@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import {
   Download,
   Eye,
+  LayoutDashboard,
   Menu,
   Monitor,
   Palette,
@@ -19,8 +20,8 @@ import {
   X
 } from 'lucide-react'
 
-export function AdminApp() {
-  const { activeTab, setActiveTab, categories, style } = useMenu()
+export function AdminApp({ ownerMode = false }: { ownerMode?: boolean }) {
+  const { activeTab, setActiveTab, categories, style, restaurant } = useMenu()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [previewDevice, setPreviewDevice] = useState<'mobile' | 'tablet' | 'desktop'>('desktop')
   const [status, setStatus] = useState('')
@@ -44,14 +45,14 @@ export function AdminApp() {
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.download = 'menu-crepes-waffles.json'
+    link.download = `menu-${restaurant.id}.json`
     link.click()
     URL.revokeObjectURL(url)
     setStatus('Menú exportado como JSON')
   }
 
   const publishDemo = async () => {
-    const demoUrl = `${window.location.origin}/cliente`
+    const demoUrl = `${window.location.origin}/cliente?restaurante=${restaurant.id}`
     await navigator.clipboard?.writeText(demoUrl)
     setStatus('Link del cliente copiado')
     setActiveTab('preview')
@@ -70,10 +71,10 @@ export function AdminApp() {
               {sidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
             <div className="flex min-w-0 items-center gap-3">
-              <img src="/logo.webp" alt="Crepes & Waffles" className="h-10 w-10 shrink-0 rounded-lg object-cover" />
+              <img src={style.logoUrl || restaurant.logoUrl} alt={restaurant.name} className="h-10 w-10 shrink-0 rounded-lg object-cover" />
               <div className="min-w-0">
                 <h1 className="truncate font-bold text-[#2f211b]">Constructor de menú</h1>
-                <p className="truncate text-xs text-[#8a5b3e]">Área de administración</p>
+                <p className="truncate text-xs text-[#8a5b3e]">{restaurant.name} · area de administracion</p>
               </div>
             </div>
           </div>
@@ -95,6 +96,14 @@ export function AdminApp() {
 
           <div className="flex items-center gap-2">
             {status && <span className="hidden text-xs text-[#6c4a37] xl:block">{status}</span>}
+            {ownerMode && (
+              <Button variant="outline" size="sm" className="hidden sm:flex" asChild>
+                <a href="/admin/dashboard">
+                  <LayoutDashboard className="mr-2 h-4 w-4" />
+                  Dashboard
+                </a>
+              </Button>
+            )}
             <Button variant="outline" size="sm" className="hidden sm:flex" onClick={exportMenu}>
               <Download className="mr-2 h-4 w-4" />
               Exportar

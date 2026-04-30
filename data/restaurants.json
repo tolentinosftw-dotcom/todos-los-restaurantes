@@ -1,0 +1,882 @@
+[
+  {
+    "id": "la-parrilla",
+    "name": "La Parrilla",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#8f2f23",
+      "secondaryColor": "#7a4a2b",
+      "textColor": "#2f211b",
+      "priceColor": "#8f2f23",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "La Parrilla",
+      "headerTextEn": "The Grill",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante01",
+    "password": "MenuRest01.",
+    "categories": [
+      {
+        "id": "cortes",
+        "name": "Cortes a la parrilla",
+        "nameEn": "Grilled cuts",
+        "color": "#8f2f23",
+        "items": [
+          {
+            "id": "la-parrilla-bife",
+            "name": "Bife de chorizo",
+            "nameEn": "Sirloin steak",
+            "description": "Corte jugoso con chimichurri y papas rusticas.",
+            "descriptionEn": "Juicy cut with chimichurri and rustic potatoes.",
+            "price": 42000,
+            "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",
+            "category": "cortes"
+          },
+          {
+            "id": "la-parrilla-costillas",
+            "name": "Costillas BBQ",
+            "nameEn": "BBQ ribs",
+            "description": "Costillas glaseadas, ensalada fresca y maiz asado.",
+            "descriptionEn": "Glazed ribs, fresh salad, and grilled corn.",
+            "price": 39000,
+            "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=900&q=80",
+            "category": "cortes"
+          },
+          {
+            "id": "la-parrilla-pollo",
+            "name": "Pollo carbonero",
+            "nameEn": "Charcoal chicken",
+            "description": "Medio pollo marinado con hierbas y limon.",
+            "descriptionEn": "Half chicken marinated with herbs and lemon.",
+            "price": 32000,
+            "image": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=900&q=80",
+            "category": "cortes"
+          }
+        ]
+      },
+      {
+        "id": "acompanantes",
+        "name": "Acompanantes",
+        "nameEn": "Sides",
+        "color": "#7a4a2b",
+        "items": [
+          {
+            "id": "la-parrilla-papas",
+            "name": "Papas criollas",
+            "nameEn": "Creole potatoes",
+            "description": "Papas doradas con sal de la casa.",
+            "descriptionEn": "Golden potatoes with house salt.",
+            "price": 9000,
+            "image": "https://images.unsplash.com/photo-1518013431117-eb1465fa5752?auto=format&fit=crop&w=900&q=80",
+            "category": "acompanantes"
+          },
+          {
+            "id": "la-parrilla-ensalada",
+            "name": "Ensalada de la huerta",
+            "nameEn": "Garden salad",
+            "description": "Hojas verdes, tomate, aguacate y vinagreta.",
+            "descriptionEn": "Greens, tomato, avocado, and vinaigrette.",
+            "price": 12000,
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",
+            "category": "acompanantes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sushi-nikkei",
+    "name": "Sushi Nikkei",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#1f6f78",
+      "secondaryColor": "#4f6b67",
+      "textColor": "#2f211b",
+      "priceColor": "#1f6f78",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Sushi Nikkei",
+      "headerTextEn": "Nikkei Sushi",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante02",
+    "password": "MenuRest02.",
+    "categories": [
+      {
+        "id": "rolls",
+        "name": "Rollos especiales",
+        "nameEn": "Signature rolls",
+        "color": "#1f6f78",
+        "items": [
+          {
+            "id": "sushi-nikkei-acevichado",
+            "name": "Roll acevichado",
+            "nameEn": "Acevichado roll",
+            "description": "Pescado blanco, aguacate y salsa acevichada.",
+            "descriptionEn": "White fish, avocado, and ceviche sauce.",
+            "price": 34000,
+            "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?auto=format&fit=crop&w=900&q=80",
+            "category": "rolls"
+          },
+          {
+            "id": "sushi-nikkei-tempura",
+            "name": "Tempura roll",
+            "nameEn": "Tempura roll",
+            "description": "Langostino crocante, queso crema y salsa teriyaki.",
+            "descriptionEn": "Crispy prawn, cream cheese, and teriyaki sauce.",
+            "price": 36000,
+            "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?auto=format&fit=crop&w=900&q=80",
+            "category": "rolls"
+          },
+          {
+            "id": "sushi-nikkei-salmon",
+            "name": "Salmon spicy",
+            "nameEn": "Spicy salmon",
+            "description": "Salmon, pepino, aguacate y mayo picante.",
+            "descriptionEn": "Salmon, cucumber, avocado, and spicy mayo.",
+            "price": 38000,
+            "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=900&q=80",
+            "category": "rolls"
+          }
+        ]
+      },
+      {
+        "id": "entradas",
+        "name": "Entradas",
+        "nameEn": "Starters",
+        "color": "#4f6b67",
+        "items": [
+          {
+            "id": "sushi-nikkei-gyozas",
+            "name": "Gyozas de cerdo",
+            "nameEn": "Pork gyozas",
+            "description": "Gyozas doradas con salsa ponzu.",
+            "descriptionEn": "Golden gyozas with ponzu sauce.",
+            "price": 21000,
+            "image": "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=900&q=80",
+            "category": "entradas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trattoria-luna",
+    "name": "Trattoria Luna",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#2f7d4f",
+      "secondaryColor": "#7b5f38",
+      "textColor": "#2f211b",
+      "priceColor": "#2f7d4f",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Trattoria Luna",
+      "headerTextEn": "Luna Trattoria",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante03",
+    "password": "MenuRest03.",
+    "categories": [
+      {
+        "id": "pastas",
+        "name": "Pastas",
+        "nameEn": "Pastas",
+        "color": "#2f7d4f",
+        "items": [
+          {
+            "id": "trattoria-luna-carbonara",
+            "name": "Spaghetti carbonara",
+            "nameEn": "Spaghetti carbonara",
+            "description": "Panceta, parmesano y pimienta negra.",
+            "descriptionEn": "Pancetta, parmesan, and black pepper.",
+            "price": 31000,
+            "image": "https://images.unsplash.com/photo-1608756687911-aa1599ab3bd9?auto=format&fit=crop&w=900&q=80",
+            "category": "pastas"
+          },
+          {
+            "id": "trattoria-luna-pesto",
+            "name": "Fettuccine al pesto",
+            "nameEn": "Fettuccine with pesto",
+            "description": "Albahaca, nueces, parmesano y aceite de oliva.",
+            "descriptionEn": "Basil, nuts, parmesan, and olive oil.",
+            "price": 29000,
+            "image": "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=900&q=80",
+            "category": "pastas"
+          }
+        ]
+      },
+      {
+        "id": "pizzas",
+        "name": "Pizzas artesanales",
+        "nameEn": "Artisan pizzas",
+        "color": "#7b5f38",
+        "items": [
+          {
+            "id": "trattoria-luna-margarita",
+            "name": "Pizza margarita",
+            "nameEn": "Margherita pizza",
+            "description": "Tomate, mozzarella fresca y albahaca.",
+            "descriptionEn": "Tomato, fresh mozzarella, and basil.",
+            "price": 33000,
+            "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
+            "category": "pizzas"
+          },
+          {
+            "id": "trattoria-luna-prosciutto",
+            "name": "Pizza prosciutto",
+            "nameEn": "Prosciutto pizza",
+            "description": "Prosciutto, rugula y parmesano.",
+            "descriptionEn": "Prosciutto, arugula, and parmesan.",
+            "price": 38000,
+            "image": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=900&q=80",
+            "category": "pizzas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cafe-andino",
+    "name": "Cafe Andino",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#7a3f28",
+      "secondaryColor": "#6c5a44",
+      "textColor": "#2f211b",
+      "priceColor": "#7a3f28",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Cafe Andino",
+      "headerTextEn": "Andean Coffee",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante04",
+    "password": "MenuRest04.",
+    "categories": [
+      {
+        "id": "cafes",
+        "name": "Cafe de origen",
+        "nameEn": "Origin coffee",
+        "color": "#7a3f28",
+        "items": [
+          {
+            "id": "cafe-andino-filtrado",
+            "name": "Cafe filtrado",
+            "nameEn": "Pour-over coffee",
+            "description": "Preparacion manual con granos seleccionados.",
+            "descriptionEn": "Manual brew with selected beans.",
+            "price": 9000,
+            "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+            "category": "cafes"
+          },
+          {
+            "id": "cafe-andino-latte",
+            "name": "Latte de la casa",
+            "nameEn": "House latte",
+            "description": "Espresso doble con leche texturizada.",
+            "descriptionEn": "Double espresso with textured milk.",
+            "price": 11000,
+            "image": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80",
+            "category": "cafes"
+          }
+        ]
+      },
+      {
+        "id": "panaderia",
+        "name": "Panaderia",
+        "nameEn": "Bakery",
+        "color": "#6c5a44",
+        "items": [
+          {
+            "id": "cafe-andino-croissant",
+            "name": "Croissant de almendra",
+            "nameEn": "Almond croissant",
+            "description": "Hojaldre horneado con crema de almendra.",
+            "descriptionEn": "Baked pastry with almond cream.",
+            "price": 12000,
+            "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80",
+            "category": "panaderia"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "burger-house",
+    "name": "Burger House",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#9a3c1f",
+      "secondaryColor": "#5e4a3b",
+      "textColor": "#2f211b",
+      "priceColor": "#9a3c1f",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Burger House",
+      "headerTextEn": "Burger House",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante05",
+    "password": "MenuRest05.",
+    "categories": [
+      {
+        "id": "hamburguesas",
+        "name": "Hamburguesas",
+        "nameEn": "Burgers",
+        "color": "#9a3c1f",
+        "items": [
+          {
+            "id": "burger-house-clasica",
+            "name": "Clasica House",
+            "nameEn": "House classic",
+            "description": "Carne artesanal, cheddar, lechuga y salsa especial.",
+            "descriptionEn": "Craft patty, cheddar, lettuce, and special sauce.",
+            "price": 28000,
+            "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80",
+            "category": "hamburguesas"
+          },
+          {
+            "id": "burger-house-doble",
+            "name": "Doble queso",
+            "nameEn": "Double cheese",
+            "description": "Doble carne, doble queso y cebolla caramelizada.",
+            "descriptionEn": "Double patty, double cheese, and caramelized onion.",
+            "price": 34000,
+            "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80",
+            "category": "hamburguesas"
+          }
+        ]
+      },
+      {
+        "id": "bebidas",
+        "name": "Bebidas",
+        "nameEn": "Drinks",
+        "color": "#5e4a3b",
+        "items": [
+          {
+            "id": "burger-house-limonada",
+            "name": "Limonada natural",
+            "nameEn": "Fresh lemonade",
+            "description": "Limonada fresca con hierbabuena.",
+            "descriptionEn": "Fresh lemonade with mint.",
+            "price": 8000,
+            "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=900&q=80",
+            "category": "bebidas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "taco-real",
+    "name": "Taco Real",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#2f8f6b",
+      "secondaryColor": "#805326",
+      "textColor": "#2f211b",
+      "priceColor": "#2f8f6b",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Taco Real",
+      "headerTextEn": "Royal Taco",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante06",
+    "password": "MenuRest06.",
+    "categories": [
+      {
+        "id": "tacos",
+        "name": "Tacos",
+        "nameEn": "Tacos",
+        "color": "#2f8f6b",
+        "items": [
+          {
+            "id": "taco-real-pastor",
+            "name": "Tacos al pastor",
+            "nameEn": "Al pastor tacos",
+            "description": "Cerdo adobado, pina, cilantro y cebolla.",
+            "descriptionEn": "Marinated pork, pineapple, cilantro, and onion.",
+            "price": 24000,
+            "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80",
+            "category": "tacos"
+          },
+          {
+            "id": "taco-real-birria",
+            "name": "Tacos de birria",
+            "nameEn": "Birria tacos",
+            "description": "Carne suave con consome y queso.",
+            "descriptionEn": "Tender beef with consomme and cheese.",
+            "price": 28000,
+            "image": "https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=900&q=80",
+            "category": "tacos"
+          }
+        ]
+      },
+      {
+        "id": "antojos",
+        "name": "Antojos",
+        "nameEn": "Cravings",
+        "color": "#805326",
+        "items": [
+          {
+            "id": "taco-real-guacamole",
+            "name": "Guacamole real",
+            "nameEn": "Royal guacamole",
+            "description": "Aguacate, pico de gallo y totopos.",
+            "descriptionEn": "Avocado, pico de gallo, and tortilla chips.",
+            "price": 16000,
+            "image": "https://images.unsplash.com/photo-1600335895229-6e75511892c8?auto=format&fit=crop&w=900&q=80",
+            "category": "antojos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mar-azul",
+    "name": "Mar Azul",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#237c8f",
+      "secondaryColor": "#386b75",
+      "textColor": "#2f211b",
+      "priceColor": "#237c8f",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Mar Azul",
+      "headerTextEn": "Blue Sea",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante07",
+    "password": "MenuRest07.",
+    "categories": [
+      {
+        "id": "pescados",
+        "name": "Pescados",
+        "nameEn": "Fish",
+        "color": "#237c8f",
+        "items": [
+          {
+            "id": "mar-azul-pargo",
+            "name": "Pargo frito",
+            "nameEn": "Fried snapper",
+            "description": "Pargo entero con arroz con coco y patacon.",
+            "descriptionEn": "Whole snapper with coconut rice and plantain.",
+            "price": 46000,
+            "image": "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?auto=format&fit=crop&w=900&q=80",
+            "category": "pescados"
+          },
+          {
+            "id": "mar-azul-salmon",
+            "name": "Salmon a la plancha",
+            "nameEn": "Grilled salmon",
+            "description": "Salmon con vegetales y salsa de limon.",
+            "descriptionEn": "Salmon with vegetables and lemon sauce.",
+            "price": 48000,
+            "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80",
+            "category": "pescados"
+          }
+        ]
+      },
+      {
+        "id": "ceviches",
+        "name": "Ceviches",
+        "nameEn": "Ceviches",
+        "color": "#386b75",
+        "items": [
+          {
+            "id": "mar-azul-ceviche",
+            "name": "Ceviche mixto",
+            "nameEn": "Mixed ceviche",
+            "description": "Mariscos, leche de tigre y crocante de maiz.",
+            "descriptionEn": "Seafood, tiger milk, and crispy corn.",
+            "price": 34000,
+            "image": "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?auto=format&fit=crop&w=900&q=80",
+            "category": "ceviches"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "verde-vivo",
+    "name": "Verde Vivo",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#4f8f3a",
+      "secondaryColor": "#596f3b",
+      "textColor": "#2f211b",
+      "priceColor": "#4f8f3a",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Verde Vivo",
+      "headerTextEn": "Living Green",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante08",
+    "password": "MenuRest08.",
+    "categories": [
+      {
+        "id": "bowls",
+        "name": "Bowls saludables",
+        "nameEn": "Healthy bowls",
+        "color": "#4f8f3a",
+        "items": [
+          {
+            "id": "verde-vivo-quinoa",
+            "name": "Bowl de quinoa",
+            "nameEn": "Quinoa bowl",
+            "description": "Quinoa, garbanzos, aguacate y vegetales.",
+            "descriptionEn": "Quinoa, chickpeas, avocado, and vegetables.",
+            "price": 26000,
+            "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80",
+            "category": "bowls"
+          },
+          {
+            "id": "verde-vivo-proteina",
+            "name": "Bowl proteico",
+            "nameEn": "Protein bowl",
+            "description": "Arroz integral, tofu, edamame y ajonjoli.",
+            "descriptionEn": "Brown rice, tofu, edamame, and sesame.",
+            "price": 28000,
+            "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=900&q=80",
+            "category": "bowls"
+          }
+        ]
+      },
+      {
+        "id": "jugos",
+        "name": "Jugos naturales",
+        "nameEn": "Fresh juices",
+        "color": "#596f3b",
+        "items": [
+          {
+            "id": "verde-vivo-verde",
+            "name": "Jugo verde",
+            "nameEn": "Green juice",
+            "description": "Pepino, manzana, apio y limon.",
+            "descriptionEn": "Cucumber, apple, celery, and lemon.",
+            "price": 12000,
+            "image": "https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=900&q=80",
+            "category": "jugos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dulce-mesa",
+    "name": "Dulce Mesa",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#9b4f7a",
+      "secondaryColor": "#76506a",
+      "textColor": "#2f211b",
+      "priceColor": "#9b4f7a",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Dulce Mesa",
+      "headerTextEn": "Sweet Table",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante09",
+    "password": "MenuRest09.",
+    "categories": [
+      {
+        "id": "postres",
+        "name": "Postres",
+        "nameEn": "Desserts",
+        "color": "#9b4f7a",
+        "items": [
+          {
+            "id": "dulce-mesa-cheesecake",
+            "name": "Cheesecake de frutos rojos",
+            "nameEn": "Berry cheesecake",
+            "description": "Cremoso cheesecake con salsa de frutos rojos.",
+            "descriptionEn": "Creamy cheesecake with berry sauce.",
+            "price": 18000,
+            "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=900&q=80",
+            "category": "postres"
+          },
+          {
+            "id": "dulce-mesa-brownie",
+            "name": "Brownie tibio",
+            "nameEn": "Warm brownie",
+            "description": "Brownie con helado de vainilla.",
+            "descriptionEn": "Brownie with vanilla ice cream.",
+            "price": 16000,
+            "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+            "category": "postres"
+          }
+        ]
+      },
+      {
+        "id": "bebidas-dulces",
+        "name": "Bebidas dulces",
+        "nameEn": "Sweet drinks",
+        "color": "#76506a",
+        "items": [
+          {
+            "id": "dulce-mesa-malteada",
+            "name": "Malteada de vainilla",
+            "nameEn": "Vanilla milkshake",
+            "description": "Malteada cremosa con crema batida.",
+            "descriptionEn": "Creamy milkshake with whipped cream.",
+            "price": 14000,
+            "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=80",
+            "category": "bebidas-dulces"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sabores-oriente",
+    "name": "Sabores de Oriente",
+    "logoUrl": "/placeholder-logo.png",
+    "heroImageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1600&q=80",
+    "style": {
+      "backgroundColor": "#fff8ef",
+      "primaryColor": "#6f4aa0",
+      "secondaryColor": "#5c5578",
+      "textColor": "#2f211b",
+      "priceColor": "#6f4aa0",
+      "accentColor": "#d8b56d",
+      "titleFontSize": 18,
+      "descriptionFontSize": 14,
+      "priceFontSize": 16,
+      "categoryFontSize": 25,
+      "fontFamily": "Georgia",
+      "imageSize": "medium",
+      "imagePosition": "left",
+      "cardStyle": "shadow",
+      "columns": 2,
+      "spacing": "normal",
+      "textAlign": "left",
+      "borderRadius": 8,
+      "showLogo": true,
+      "logoUrl": "/placeholder-logo.png",
+      "heroImageUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1600&q=80",
+      "headerText": "Sabores de Oriente",
+      "headerTextEn": "Eastern Flavors",
+      "headerSubtitle": "",
+      "headerSubtitleEn": "",
+      "headerStyle": "centered"
+    },
+    "user": "restaurante10",
+    "password": "MenuRest10.",
+    "categories": [
+      {
+        "id": "wok",
+        "name": "Wok y arroz",
+        "nameEn": "Wok and rice",
+        "color": "#6f4aa0",
+        "items": [
+          {
+            "id": "sabores-oriente-pad-thai",
+            "name": "Pad thai",
+            "nameEn": "Pad thai",
+            "description": "Fideos de arroz, mani, vegetales y salsa tamarindo.",
+            "descriptionEn": "Rice noodles, peanuts, vegetables, and tamarind sauce.",
+            "price": 32000,
+            "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=900&q=80",
+            "category": "wok"
+          },
+          {
+            "id": "sabores-oriente-arroz",
+            "name": "Arroz cantones",
+            "nameEn": "Cantonese rice",
+            "description": "Arroz salteado con vegetales, huevo y soya.",
+            "descriptionEn": "Fried rice with vegetables, egg, and soy.",
+            "price": 26000,
+            "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=900&q=80",
+            "category": "wok"
+          }
+        ]
+      },
+      {
+        "id": "dim-sum",
+        "name": "Dim sum",
+        "nameEn": "Dim sum",
+        "color": "#5c5578",
+        "items": [
+          {
+            "id": "sabores-oriente-bao",
+            "name": "Bao de cerdo",
+            "nameEn": "Pork bao",
+            "description": "Pan al vapor con cerdo glaseado.",
+            "descriptionEn": "Steamed bun with glazed pork.",
+            "price": 19000,
+            "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=80",
+            "category": "dim-sum"
+          }
+        ]
+      }
+    ]
+  }
+]

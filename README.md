@@ -1,3 +1,5 @@
-# crepes-and-waffles
+# todos-los-restaurantes
 
-Frontend editable para un menú digital de Crepes & Waffles.
+Dashboard editable para administrar menus digitales de multiples restaurantes.
+
+Incluye un panel maestro para crear usuarios, editar perfiles y manejar menus independientes con productos, precios, imagenes, diseno y textos en espanol e ingles.

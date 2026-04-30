@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Check, Edit2, FolderTree, ImagePlus, Plus, Trash2, X } from 'lucide-react'
 
-const emptyItem = { name: '', description: '', price: 0, image: '' }
+const emptyItem = { name: '', nameEn: '', description: '', descriptionEn: '', price: 0, image: '' }
 
 export function ProductEditor() {
   const {
@@ -29,6 +29,7 @@ export function ProductEditor() {
   const [newCategoryName, setNewCategoryName] = useState('')
   const [editingCategory, setEditingCategory] = useState<string | null>(null)
   const [editCategoryName, setEditCategoryName] = useState('')
+  const [editCategoryNameEn, setEditCategoryNameEn] = useState('')
   const [showItemForm, setShowItemForm] = useState<string | null>(null)
   const [editingItem, setEditingItem] = useState<string | null>(null)
   const [newItem, setNewItem] = useState(emptyItem)
@@ -45,7 +46,9 @@ export function ProductEditor() {
     if (!newItem.name.trim()) return
     addItem(categoryId, {
       name: newItem.name.trim(),
+      nameEn: newItem.nameEn.trim(),
       description: newItem.description.trim(),
+      descriptionEn: newItem.descriptionEn.trim(),
       price: newItem.price,
       image: newItem.image || '/placeholder.jpg'
     })
@@ -74,7 +77,9 @@ export function ProductEditor() {
         files.map(async (file, index) => ({
           id: `bulk-${Date.now()}-${index}`,
           name: cleanFileName(file.name),
+          nameEn: cleanFileName(file.name),
           description: 'Producto pendiente por editar.',
+          descriptionEn: 'Product pending editing.',
           price: 0,
           image: await readFileAsDataUrl(file),
           category: 'pendientes'
@@ -185,21 +190,26 @@ export function ProductEditor() {
             <div className="flex items-start justify-between gap-2">
               <div className="min-w-0 flex-1">
                 {editingCategory === category.id ? (
-                  <div className="flex items-center gap-2">
-                    <Input value={editCategoryName} onChange={(event) => setEditCategoryName(event.target.value)} autoFocus />
-                    <Button
-                      size="icon"
-                      variant="ghost"
-                      onClick={() => {
-                        if (editCategoryName.trim()) updateCategory(category.id, editCategoryName.trim())
-                        setEditingCategory(null)
-                      }}
-                    >
-                      <Check className="h-4 w-4 text-green-700" />
-                    </Button>
-                    <Button size="icon" variant="ghost" onClick={() => setEditingCategory(null)}>
-                      <X className="h-4 w-4 text-red-600" />
-                    </Button>
+                  <div className="space-y-2">
+                    <Input value={editCategoryName} onChange={(event) => setEditCategoryName(event.target.value)} placeholder="Categoria en espanol" autoFocus />
+                    <Input value={editCategoryNameEn} onChange={(event) => setEditCategoryNameEn(event.target.value)} placeholder="Category in English" />
+                    <div className="flex justify-end gap-1">
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => {
+                          if (editCategoryName.trim()) {
+                            updateCategory(category.id, { name: editCategoryName.trim(), nameEn: editCategoryNameEn.trim() })
+                          }
+                          setEditingCategory(null)
+                        }}
+                      >
+                        <Check className="h-4 w-4 text-green-700" />
+                      </Button>
+                      <Button size="icon" variant="ghost" onClick={() => setEditingCategory(null)}>
+                        <X className="h-4 w-4 text-red-600" />
+                      </Button>
+                    </div>
                   </div>
                 ) : (
                   <button
@@ -220,6 +230,7 @@ export function ProductEditor() {
                   onClick={() => {
                     setEditingCategory(category.id)
                     setEditCategoryName(category.name)
+                    setEditCategoryNameEn(category.nameEn || '')
                   }}
                 >
                   <Edit2 className="h-4 w-4 text-[#7f271c]" />
@@ -287,14 +298,25 @@ export function ProductEditor() {
                     />
                     <div className="flex-1 space-y-2">
                       <Input
-                        placeholder="Nombre del producto"
+                        placeholder="Nombre en espanol"
                         value={newItem.name}
                         onChange={(event) => setNewItem((prev) => ({ ...prev, name: event.target.value }))}
+                      />
+                      <Input
+                        placeholder="Name in English"
+                        value={newItem.nameEn}
+                        onChange={(event) => setNewItem((prev) => ({ ...prev, nameEn: event.target.value }))}
                       />
                       <Textarea
                         placeholder="Descripción"
                         value={newItem.description}
                         onChange={(event) => setNewItem((prev) => ({ ...prev, description: event.target.value }))}
+                        className="min-h-20"
+                      />
+                      <Textarea
+                        placeholder="Description in English"
+                        value={newItem.descriptionEn}
+                        onChange={(event) => setNewItem((prev) => ({ ...prev, descriptionEn: event.target.value }))}
                         className="min-h-20"
                       />
                       <Input
@@ -399,15 +421,19 @@ function EditItemForm({
 }) {
   const [editData, setEditData] = useState({
     name: item.name,
+    nameEn: item.nameEn || '',
     description: item.description,
+    descriptionEn: item.descriptionEn || '',
     price: item.price,
     category: categoryId
   })
 
   return (
     <div className="space-y-2">
-      <Input value={editData.name} onChange={(event) => setEditData((prev) => ({ ...prev, name: event.target.value }))} />
+      <Input value={editData.name} onChange={(event) => setEditData((prev) => ({ ...prev, name: event.target.value }))} placeholder="Nombre en espanol" />
+      <Input value={editData.nameEn} onChange={(event) => setEditData((prev) => ({ ...prev, nameEn: event.target.value }))} placeholder="Name in English" />
       <Textarea value={editData.description} onChange={(event) => setEditData((prev) => ({ ...prev, description: event.target.value }))} className="min-h-16" />
+      <Textarea value={editData.descriptionEn} onChange={(event) => setEditData((prev) => ({ ...prev, descriptionEn: event.target.value }))} className="min-h-16" placeholder="Description in English" />
       <select
         value={editData.category}
         onChange={(event) => setEditData((prev) => ({ ...prev, category: event.target.value }))}

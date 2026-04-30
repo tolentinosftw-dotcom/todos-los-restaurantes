@@ -1,26 +1,54 @@
 import { NextRequest } from 'next/server'
+import { defaultRestaurant } from './restaurants'
 
-export const ADMIN_SESSION_COOKIE = 'crepes_admin_session'
+export const ADMIN_SESSION_COOKIE = 'restaurant_admin_session'
 export const ADMIN_SESSION_MAX_AGE = 60 * 60 * 8
 
-const DEV_ADMIN_USER = 'Admincrepes1.'
-const DEV_ADMIN_PASSWORD = 'Adminwaffles1.'
+const DEV_ADMIN_USER = 'admin'
+const DEV_ADMIN_PASSWORD = 'AdminMenu2026.'
+const DEV_ADMIN_SECRET = 'restaurant-menu-session'
+const LEGACY_ADMIN_USER = 'Admincrepes1.'
+const LEGACY_ADMIN_PASSWORD = 'Adminwaffles1.'
+
+export type AdminRole = 'owner' | 'restaurant'
+
+export interface AdminSessionPayload {
+  sub: 'admin'
+  role: AdminRole
+  restaurantId?: string
+  restaurantName?: string
+  user: string
+  exp: number
+  nonce: string
+}
 
 export function getAdminCredentials() {
   const user = process.env.ADMIN_USER || (process.env.NODE_ENV === 'development' ? DEV_ADMIN_USER : '')
   const password = process.env.ADMIN_PASSWORD || (process.env.NODE_ENV === 'development' ? DEV_ADMIN_PASSWORD : '')
-  const secret = process.env.ADMIN_SESSION_SECRET || password
+  const secret = process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_PASSWORD || DEV_ADMIN_SECRET
 
   return { user, password, secret }
 }
 
-export async function createAdminSession() {
+export function getLegacyAdminCredentials() {
+  return { user: LEGACY_ADMIN_USER, password: LEGACY_ADMIN_PASSWORD }
+}
+
+export async function createAdminSession(
+  options: { role?: AdminRole; restaurant?: { id: string; name: string; user?: string }; user?: string } = {}
+) {
   const { secret } = getAdminCredentials()
+  const role = options.role ?? 'restaurant'
+  const restaurant = options.restaurant ?? defaultRestaurant
   const payload = {
     sub: 'admin',
+    role,
+    restaurantId: role === 'restaurant' ? restaurant.id : undefined,
+    restaurantName: role === 'restaurant' ? restaurant.name : undefined,
+    user: options.user ?? restaurant.user ?? 'admin',
     exp: Date.now() + ADMIN_SESSION_MAX_AGE * 1000,
     nonce: crypto.randomUUID()
-  }
+  } satisfies AdminSessionPayload
   const encodedPayload = base64UrlEncode(JSON.stringify(payload))
   const signature = await signValue(encodedPayload, secret)
 
@@ -34,20 +62,30 @@ export async function isAdminSessionValid(request: NextRequest) {
   return verifyAdminSession(session)
 }
 
-export async function verifyAdminSession(session: string) {
+export async function getAdminSession(session?: string | null) {
+  if (!session) return null
+
   const { secret } = getAdminCredentials()
   const [encodedPayload, signature] = session.split('.')
-  if (!encodedPayload || !signature || !secret) return false
+  if (!encodedPayload || !signature || !secret) return null
 
   const expectedSignature = await signValue(encodedPayload, secret)
-  if (!secureCompare(signature, expectedSignature)) return false
+  if (!secureCompare(signature, expectedSignature)) return null
 
   try {
-    const payload = JSON.parse(base64UrlDecode(encodedPayload)) as { sub?: string; exp?: number }
-    return payload.sub === 'admin' && typeof payload.exp === 'number' && payload.exp > Date.now()
+    const payload = JSON.parse(base64UrlDecode(encodedPayload)) as Partial<AdminSessionPayload>
+    if (payload.sub !== 'admin' || typeof payload.exp !== 'number' || payload.exp <= Date.now()) return null
+    if ((payload.role !== 'owner' && payload.role !== 'restaurant') || !payload.user) return null
+    if (payload.role === 'restaurant' && (!payload.restaurantId || !payload.restaurantName)) return null
+
+    return payload as AdminSessionPayload
   } catch {
-    return false
+    return null
   }
+}
+
+export async function verifyAdminSession(session: string) {
+  return Boolean(await getAdminSession(session))
 }
 
 export function secureCompare(actual: string, expected: string) {

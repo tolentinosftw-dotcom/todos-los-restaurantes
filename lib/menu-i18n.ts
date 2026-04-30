@@ -31,7 +31,7 @@ type UiCopy = {
 
 const esUi: UiCopy = {
   digitalMenu: 'Menu digital',
-  search: 'Buscar crepes, waffles o ingredientes',
+  search: 'Buscar productos o ingredientes',
   all: 'Todo',
   emptyTitle: 'No encontramos productos',
   emptyText: 'Prueba con otra busqueda o categoria.',
@@ -59,12 +59,7 @@ const translationIndexes = Object.fromEntries(
 
 export const languages: { code: LanguageCode; flag: string; label: string; locale: string; currency: string }[] = [
   { code: 'es', flag: '/flags/co.svg', label: 'Espanol', locale: 'es-CO', currency: 'COP' },
-  { code: 'en', flag: '/flags/gb.svg', label: 'English', locale: 'en-US', currency: 'COP' },
-  { code: 'fr', flag: '/flags/fr.svg', label: 'Francais', locale: 'fr-FR', currency: 'COP' },
-  { code: 'it', flag: '/flags/it.svg', label: 'Italiano', locale: 'it-IT', currency: 'COP' },
-  { code: 'zh', flag: '/flags/cn.svg', label: 'Chinese', locale: 'zh-CN', currency: 'COP' },
-  { code: 'ja', flag: '/flags/jp.svg', label: 'Japanese', locale: 'ja-JP', currency: 'COP' },
-  { code: 'hi', flag: '/flags/in.svg', label: 'Hindi', locale: 'hi-IN', currency: 'COP' }
+  { code: 'en', flag: '/flags/gb.svg', label: 'English', locale: 'en-US', currency: 'COP' }
 ]
 
 export const uiCopy: Record<LanguageCode, UiCopy> = {

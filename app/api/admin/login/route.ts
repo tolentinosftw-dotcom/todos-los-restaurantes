@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { ADMIN_SESSION_COOKIE, ADMIN_SESSION_MAX_AGE, createAdminSession, getAdminCredentials, secureCompare } from '@/lib/admin-auth'
+import {
+  ADMIN_SESSION_COOKIE,
+  ADMIN_SESSION_MAX_AGE,
+  createAdminSession,
+  getAdminCredentials,
+  getLegacyAdminCredentials,
+  secureCompare
+} from '@/lib/admin-auth'
+import { findStoredRestaurantByCredentials } from '@/lib/restaurant-store'
 
 const attempts = globalThis as typeof globalThis & { __adminLoginAttempts?: Map<string, { count: number; resetAt: number }> }
 attempts.__adminLoginAttempts ??= new Map()
@@ -14,26 +22,35 @@ export async function POST(request: NextRequest) {
 
   const { user: expectedUser, password: expectedPassword } = getAdminCredentials()
 
-  if (!expectedUser || !expectedPassword) {
-    return NextResponse.json({ error: 'Credenciales de admin no configuradas.' }, { status: 503 })
-  }
-
   const body = await request.json().catch(() => null) as { user?: string; password?: string } | null
   const user = body?.user ?? ''
   const password = body?.password ?? ''
-  const isValid = secureCompare(user, expectedUser) && secureCompare(password, expectedPassword)
+  const restaurant = await findStoredRestaurantByCredentials(user, password)
+  const legacyCredentials = getLegacyAdminCredentials()
+  const ownerAdmin = Boolean(expectedUser && expectedPassword && secureCompare(user, expectedUser) && secureCompare(password, expectedPassword))
+  const legacyAdmin = secureCompare(user, legacyCredentials.user) && secureCompare(password, legacyCredentials.password)
 
-  if (!isValid) {
+  if (!restaurant && !ownerAdmin && !legacyAdmin) {
     registerFailedAttempt(clientId)
     return NextResponse.json({ error: 'Usuario o contrasena incorrectos.' }, { status: 401 })
   }
 
   attempts.__adminLoginAttempts?.delete(clientId)
+  const isOwner = ownerAdmin || legacyAdmin
 
-  const response = NextResponse.json({ ok: true })
+  const response = NextResponse.json({
+    ok: true,
+    role: isOwner ? 'owner' : 'restaurant',
+    restaurantId: restaurant?.id,
+    restaurantName: restaurant?.name
+  })
   response.cookies.set({
     name: ADMIN_SESSION_COOKIE,
-    value: await createAdminSession(),
+    value: await createAdminSession(
+      isOwner
+        ? { role: 'owner', user }
+        : { role: 'restaurant', restaurant: restaurant!, user }
+    ),
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict',
